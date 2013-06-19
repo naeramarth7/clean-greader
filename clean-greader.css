@@ -421,3 +421,33 @@ div.cdmHeader img[src$="images/mark_unset.svg"]:hover {
   content: url("img/blank_icon.gif");
   opacity: 0.2;
 }
+
+/* feed title - checkbox  wrapper */
+.claro div.dijitCheckBox {
+  background-image: none;
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  margin: 0 2px 0 2px;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+}
+
+/* feed title - checkbox */
+input[type="checkbox"] {
+  opacity: 0;
+  position: relative;
+  left: -5px;
+  height: 16px;
+}
+
+/* feed title - checkbox wrapper (checked) */
+.claro div.dijitCheckBox.dijitChecked {
+  background-image: url("/tt-rss/themes/img/checkmark.png");
+  background-position: -5px -5px;
+}
+
+/* feed title - checkbox wrapper (hover) */
+.claro div.dijitCheckBox:hover {
+  background-color: #eee;
+}
