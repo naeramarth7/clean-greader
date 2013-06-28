@@ -253,7 +253,7 @@ div.cdm.expandable.Selected {
 div.cdm.expandable:first-of-type { border-top-width: 0; }
 
 /* feed header (general) */
-div.cdm.expandable div.cdmHeader { background-color: #eee; }
+div.cdm.expandable div.cdmHeader { background-color: #eee;}
 div.cdm.expandable div.cdmHeader a.title { font-weight: normal; }
 
 /* feed header (unread) */
@@ -275,7 +275,8 @@ div#headlines-frame div.cdm.expandable div.cdmHeader div.hlFeed a {
   color: #737373;
   font-style: normal;
   font-size: 9px;
-  padding: 1px 8px;
+  padding: 2px 8px;
+  vertical-align: middle;
 }
 
 /* feed indicator (hover) */
