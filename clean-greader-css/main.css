@@ -488,8 +488,6 @@ input[type="checkbox"] {
 .claro .dijitToolbar .dijitValidationTextBox {
   border: 1px solid rgb(198, 198, 198);
   background: #f5f5f5;
-  x-background-image: -webkit-linear-gradient(top, rgb(248, 248, 248), rgb(236, 236, 236));
-  x-border-radius: 2px;
   margin: 0px 4px;
 }
 
@@ -503,11 +501,10 @@ input[type="checkbox"] {
 .claro .dijitComboButton:hover,
 .claro .dijitToolbar .dijitValidationTextBox:hover {
   background: #fff;
-  x-background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(236, 236, 236));
   border: 1px solid rgb(187, 187, 187);
 }
 
-.claro .dijitToolbar .dijitDropDownButton .dijitDownArrowButton:after,
+.claro .dijitToolbar .dijitDropDownButton .dijitButtonText:after,
 .claro .dijitToolbar .dijitComboButton .dijitButtonNode.dijitDownArrowButton, 
 .claro .dijitToolbar .dijitValidationTextBox .dijitButtonContents:after {
   -webkit-transition: none !important;
@@ -522,12 +519,10 @@ input[type="checkbox"] {
   border: 0px solid black;
   position: relative;
   opacity: 0.4;
-  width: 16px;
-  height: 16px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 
-.claro .dijitToolbar .dijitDropDownButton .dijitDownArrowButton:after { background-position: -23px -117px; }
+.claro .dijitToolbar .dijitDropDownButton .dijitButtonText:after { background-position: -23px -120px; }
 .claro .dijitToolbar .dijitComboButton .dijitButtonNode.dijitDownArrowButton { background-position: -23px -117px; }
 .claro .dijitToolbar .dijitValidationTextBox .dijitButtonContents:after { background-position: -23px -123px; }
 
@@ -545,6 +540,12 @@ input[type="checkbox"] {
 .claro .dijitToolbar .dijitComboButton .dijitDownArrowButton,
 .claro .dijitToolbar .dijitValidationTextBox .dijitButtonContents {
   border: 0px solid #fff;
+}
+
+.claro .dijitToolbar .dijitDropDownButton .dijitButtonNode {
+  border: none;
+  border-radius: none;
+  background: transparent;
 }
 
 /* popup menu */
