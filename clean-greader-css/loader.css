@@ -1,0 +1,43 @@
+/**
+  *  File:         loader.css
+  ***************************
+  *
+  *  Description:  outsourced css part for styles on the loading page
+  *  
+  *  Author:       Sven Flickinger (naeramarth7)
+  *  File Created: 2013-06-28
+**/
+
+/**
+  * main elements
+**/
+
+.claro #overlay_inner {
+  margin-top: 10%; 
+}
+
+.claro #overlay_inner .insensitive {
+  text-align: center;
+}
+
+.claro div[role="progressbar"] {
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.claro .dijitProgressBar.dijitProgressBarEmpty {
+  background: transparent;
+  border: 1px solid #d8d8d8;
+  padding: 2px;
+}
+
+.claro .dijitProgressBar.dijitProgressBarEmpty .dijitProgressBarFull {
+  border-right: 0px solid transparent;
+  margin: 2px 0px;
+}
+
+.claro .dijitProgressBar.dijitProgressBarEmpty .dijitProgressBarFull .dijitProgressBarTile {
+  background-color: #d8d8d8;
+  background-image: -webkit-repeating-linear-gradient(-45deg, transparent, transparent 12px, rgba(255,255,255,.5) 12px, rgba(255,255,255,.5) 28px);
+  background-image:         repeating-linear-gradient(-45deg, transparent, transparent 12px, rgba(255,255,255,.5) 12px, rgba(255,255,255,.5) 28px);
+}
