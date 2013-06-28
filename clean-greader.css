@@ -38,6 +38,10 @@
   * main elements
 **/
 
+:focus {
+  outline: none;
+}
+
 /* vertical splitter ( -> disable) */
 .claro .dijitSplitterV {
   border-width: 0;
@@ -486,10 +490,10 @@ input[type="checkbox"] {
 
 
 /**
-  * WORK IN PROGRESS
+  * controls
 **/
 
-/* drop down menus */
+/* drop down menus in main toolbar */
 .claro .dijitToolbar .dijitDropDownButton .dijitButtonNode,
 .claro .dijitToolbar .dijitComboButton .dijitButtonNode,
 .claro .dijitToolbar .dijitValidationTextBox {
@@ -591,3 +595,41 @@ input[type="checkbox"] {
   border-width: 1px 0;
   border-color: rgba(0, 0, 0, 0);
 }
+
+/* drop down menus in headlines toolbar */
+div#headlines-toolbar .dijitValidationTextBoxLabel {
+  color: #737373;
+  font-size: 12px;
+  border-bottom: 2px solid transparent;
+  margin: 0;
+  padding: 4px 18px;
+}
+
+div#headlines-toolbar .dijitValidationTextBoxLabel:hover {
+  color: #333333;
+  border-bottom: 2px solid #dd4b39;
+}
+
+.claro #headlines-toolbar .dijitValidationTextBox {
+  -webkit-transition: none !important;
+  -moz-transition:    none !important;
+  -o-transition:      none !important;
+  -ms-transition:     none !important;
+  transition:         none !important;
+
+  border: 0px solid rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  
+  vertical-align: bottom;
+  top: 1px;
+}
+
+.claro #headlines-toolbar .dijitValidationTextBox:hover { background: transparent; }
+.claro #headlines-toolbar .dijitValidationTextBox .dijitArrowButtonContainer { display: none; }
+.claro #headlines-toolbar .dijitValidationTextBox .dijitButtonContents { border: 0px solid #fff; }
+
+
+
+/**
+  * SPACE FOR WORK IN PROGRESS
+**/
