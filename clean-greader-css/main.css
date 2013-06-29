@@ -253,7 +253,7 @@ div.cdm.expandable.Selected {
 div.cdm.expandable:first-of-type { border-top-width: 0; }
 
 /* feed header (general) */
-div.cdm.expandable div.cdmHeader { background-color: #eee;}
+div.cdm.expandable div.cdmHeader { background-color: #eee; padding-top: 2px}
 div.cdm.expandable div.cdmHeader a.title { font-weight: normal; }
 
 /* feed header (unread) */
@@ -543,10 +543,13 @@ input[type="checkbox"] {
   border: 0px solid #fff;
 }
 
+
+.claro .dijitToolbar .dijitComboButton .dijitButtonNode,
 .claro .dijitToolbar .dijitDropDownButton .dijitButtonNode {
+  background: transparent;
+  background-image: none;
   border: none;
   border-radius: none;
-  background: transparent;
 }
 
 /* popup menu */
@@ -603,9 +606,3 @@ div#headlines-toolbar .dijitValidationTextBoxLabel:hover {
 .claro #headlines-toolbar .dijitValidationTextBox:hover { background: transparent; }
 .claro #headlines-toolbar .dijitValidationTextBox .dijitArrowButtonContainer { display: none; }
 .claro #headlines-toolbar .dijitValidationTextBox .dijitButtonContents { border: 0px solid #fff; }
-
-
-
-/**
-  * SPACE FOR WORK IN PROGRESS
-**/
