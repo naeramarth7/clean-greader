@@ -298,6 +298,53 @@ img.tinyFeedIcon {
 
 
 /**
+  * feed content
+**/
+div.cdmContentInner {
+  display: block;
+  float: left;
+  max-width: 600px;
+}
+
+div.cdmContentInner p,
+div.cdmContentInner div,
+div.cdmContentInner ul {
+   max-width: none;
+}
+
+/* main feed image */
+div.cdmContentInner div[xmlns="http://www.w3.org/1999/xhtml"]:first-child a img,
+div.cdmContentInner p:first-of-type img,
+div.cdmContentInner > span:first-child > span:first-child > img:first-child {
+  float: left;
+  margin: 0 32px 16px 0 !important;
+  max-height: 128px;
+  max-width: 128px;
+  width: auto;
+}
+
+/* images (except of main) and vides*/
+div.cdmContentInner p > img,
+div.cdmContentInner p > a:not([href*="feedburner"]) > img,
+div.cdmContentInner div > img,
+div.cdmContentInner div > a:not([href*="feedburner"]) > img,
+div.cdmContentInner p iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* tables */
+div.cdmContentInner table {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+
+
+/**
   * icons
 **/
 
