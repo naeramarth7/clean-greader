@@ -473,7 +473,7 @@ input[type="checkbox"] {
 
 /* feed title - checkbox wrapper (checked) */
 .claro div.dijitCheckBox.dijitChecked {
-  background-image: url("/tt-rss/themes/../clean-greader-img/checkmark.png");
+  background-image: url("../clean-greader-img/checkmark.png");
   background-position: -5px -5px;
 }
 
