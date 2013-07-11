@@ -4,7 +4,7 @@ clean-greader is a tiny tiny rss (1.8) theme based on the latest Google Reader a
 
 ### Screenshot
 2013-06-18 | tt-rss v1.8.30d2d8a | Google Chrome Beta 28.0.1500.44
-![](https://raw.github.com/naeramarth7/clean-greader/master/img/preview.png)
+![](https://raw.github.com/naeramarth7/clean-greader/master/clean-greader-img/preview.png)
 
 ### Tiny Tiny RSS Settings
 * Combined feed display [x]
