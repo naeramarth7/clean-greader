@@ -158,8 +158,12 @@ div#toolbar {
 div#toolbar > div.dijitToolbar {
   background-color:#fff;
   border: none;
-  padding: 12px 6px;
+  padding: 4px 4px 6px;
   position:relative;
+}
+
+#toolbar div.actionChooser {
+  padding: 0;
 }
 
 div#headlines-toolbar {
@@ -170,19 +174,25 @@ div#headlines-toolbar {
   height: auto;
   margin: 0 10px 0 0;
   padding: 0 6px;
+  line-height: normal;
 }
 
 /* selection [all, unread, ...] */
 div#headlines-toolbar > a {
+  position: relative;
+  bottom: 4px;
+  display: inline;
+  position: relative;
   color: #737373;
-  padding: 5px;
+  padding: 2px 4px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
 /* selection [all, unread, ...] (hover) */
 div#headlines-toolbar > a:hover {
   color: #000;
   border-bottom: 2px solid #dd4b39;
-  padding: 4px 5px;
+  padding: 2px 4px;
 }
 
 /* selection [all, unread, ...] pseudo element #1 */
@@ -204,6 +214,15 @@ div#headlines-toolbar > a:after {
   margin-right: -12px;
 }
 
+div#headlines-toolbar > span.r {
+  display: inline-block;
+  line-height: normal;
+  float: right;
+  vertical-align: baseline;
+  position: relative;
+  top: 6px;
+}
+
 
 
 /**
@@ -221,7 +240,7 @@ div#headlines-frame {
   border-bottom-width: 2px;
   margin: 10px 10px 10px 0;
   position: relative;
-  top: 34px !important;
+  top: 30px !important;
   height: auto !important;
   bottom: 0 !important;
 }
@@ -510,6 +529,11 @@ body#ttrssMain.claro .dijitToolbar .dijitButton .dijitButtonNode .dijitButtonCon
   opacity: 0.8;
 }
 
+#selected_prompt,
+#feed_title {
+  display: none;
+}
+
 
 /**
   * controls
@@ -570,8 +594,13 @@ body#ttrssMain.claro .dijitToolbar .dijitButton .dijitButtonNode .dijitButtonCon
   background-color: transparent;
 }
 
-.claro .dijitToolbar .dijitDropDownButton .dijitButtonText:after { background-position: -23px -120px; }
-.claro .dijitToolbar .dijitComboButton .dijitButtonNode.dijitDownArrowButton { background-position: -23px -117px; }
+.claro .dijitToolbar .dijitDropDownButton .dijitButtonText {
+  height: 14px;
+}
+
+
+.claro .dijitToolbar .dijitDropDownButton .dijitButtonText:after { background-position: -21px -124px; }
+.claro .dijitToolbar .dijitComboButton .dijitButtonNode.dijitDownArrowButton { background-position: -23px -118px; }
 .claro .dijitToolbar .dijitValidationTextBox .dijitButtonContents:after { background-position: -23px -123px; }
 
 .claro .dijitToolbar .dijitValidationTextBox .dijitArrowButtonContainer {
@@ -597,6 +626,16 @@ body#ttrssMain.claro .dijitToolbar .dijitButton .dijitButtonNode .dijitButtonCon
   background-image: none;
   border: none;
   border-radius: none;
+}
+
+.claro .dijitButtonText,
+.claro .dijitSelectLabel {
+  margin: 0;
+  padding: 0;
+}
+
+.dijitReset.dijitInline.dijitButtonText {
+  vertical-align: top; 
 }
 
 /* popup menu */
@@ -628,7 +667,7 @@ div#headlines-toolbar .dijitValidationTextBoxLabel {
   font-size: 12px;
   border-bottom: 2px solid transparent;
   margin: 0;
-  padding: 4px 18px;
+  padding: 2px 18px;
 }
 
 div#headlines-toolbar .dijitValidationTextBoxLabel:hover {
