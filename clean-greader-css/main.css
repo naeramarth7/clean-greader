@@ -494,7 +494,7 @@ input[type="checkbox"] {
   padding: 2px;
 }
 
-.claro .dijitToolbar .dijitButton .dijitButtonNode .dijitButtonContents {
+body#ttrssMain.claro .dijitToolbar .dijitButton .dijitButtonNode .dijitButtonContents {
   background-image: url("../clean-greader-img/leftright.jpg");
   background-repeat: no-repeat;
   background-size: 20px;
