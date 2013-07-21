@@ -71,6 +71,15 @@ div#feeds-holder {
 }
 
 /* tree row */
+body#ttrssMain #feedTree div.dijitTreeRow {
+  height: 18px;
+  line-height: 18px;
+}
+
+body#ttrssMain #feedTree div.dijitTreeRow span.dijitTreeContent {
+  vertical-align: middle;  
+}
+
 div#feeds-holder div.dijitTreeRow {
   -moz-transition:    none !important;
   -ms-transition:     none !important;
@@ -109,7 +118,7 @@ div#feedTree .counterNode {
   font-weight: normal;
   font-size: 10px;
   text-shadow: none;
-  margin: 2px 8px 0;
+  margin: 0 4px;
   padding: 0;
 }
 
@@ -402,25 +411,37 @@ div.cdmContentInner table {
 }
 
 .dijitTreeIcon.feedIcon:not([src^="feed-icons"]),
-div#headlines-toolbar img[src$="images/pub_set.svg"] {
+/* 1.8 */ div#headlines-toolbar img[src$="images/pub_set.svg"],
+/* 1.8 */ div#headlines-toolbar img[src$="images/pub_set.png"] {
   background-image: url("../clean-greader-img/clean-greader-001.png");
   content: url("../clean-greader-img/blank_icon.gif");
   opacity: 0.4;
 }
 
 /* all articles   */
-.dijitTreeIcon.feedIcon[src$="images/tag.png"]            { background-position: -23px -82px; }
+/* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/tag.png"],
+/* 1.9 */ .dijitTreeIcon.feedIcon[src$="images/folder.png"]
+{ background-position: -23px -82px; }
 /* fresh articles */
-.dijitTreeIcon.feedIcon[src$="images/fresh.png"]          { background-position: -23px -100px; }
+.dijitTreeIcon.feedIcon[src$="images/fresh.png"]
+{ background-position: -23px -100px; }
 /* starred        */
-.dijitTreeIcon.feedIcon[src$="images/mark_set.svg"]       { background-image: url("../clean-greader-img//clean-greader-002.png"); background-position: -52px -2px; }
+/* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/mark_set.svg"],
+/* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/star.png"]
+{ background-image: url("../clean-greader-img//clean-greader-002.png"); background-position: -52px -2px; }
 /* published      */
-.dijitTreeIcon.feedIcon[src$="images/pub_set.svg"],
-div#headlines-toolbar img[src$="images/pub_set.svg"]      { background-position: -2px -79px; }
+/* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/pub_set.svg"],
+          div#headlines-toolbar img[src$="images/pub_set.svg"],
+/* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/feed.png"],
+          div#headlines-toolbar img[src$="images/pub_set.png"]
+{ background-position: -2px -79px; }
 /* archived       */
-.dijitTreeIcon.feedIcon[src$="images/archive.png"]        { background-position: -44px -120px; }
+.dijitTreeIcon.feedIcon[src$="images/archive.png"]
+{ background-position: -44px -120px; }
 /* recently read  */
-.dijitTreeIcon.feedIcon[src$="images/recently_read.png"]  { background-position: -87px -121px; }
+/* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/recently_read.png"],
+/* 1.9 */ .dijitTreeIcon.feedIcon[src$="images/time.png"]
+{ background-position: -87px -121px; }
 
 /* feed header icons */
 /* published */
