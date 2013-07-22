@@ -232,6 +232,10 @@ div#headlines-toolbar > a {
   border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
+div#headlines-toolbar > a:nth-child(2) {
+  margin-left: -32px;
+}
+
 /* selection [all, unread, ...] (hover) */
 div#headlines-toolbar > a:hover {
   color: #000;
