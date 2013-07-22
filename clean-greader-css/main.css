@@ -56,6 +56,39 @@ body#ttrssMain #feedTree {
   * feed tree / navigation
 **/
 
+/* custom */
+div#feeds-holder:before {
+  background-color: #fff;
+  background-image: url('http://www.cimatics.com/cms_site/img/rss_logo.gif');
+  background-size: 56px 56px;
+  background-position: 12px 0px;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+
+  content: "tiny tiny rss";
+  color: #333;
+  font-size: 24px;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  line-height: 64px;
+  x-text-align: center;
+  
+  
+  display: block;
+  position: absolute;
+  top: -81px;
+  left: -1px;
+  width: 180px;
+  height: 37px;
+  
+  border: 0 solid #d8d8d8;
+  border-width: 1px 1px 2px 1px;
+  
+  padding: 16px 8px;
+  padding-left: 68px;
+  margin: -3px 0 0 0;
+}
+
 /* main */
 div#feeds-holder {
   -moz-box-shadow:    none;
@@ -65,9 +98,11 @@ div#feeds-holder {
   background-color: #ffffff;
   border: 0 solid #d8d8d8;
   border-width: 1px 1px 2px 1px;
-  margin: 10px;
+  margin: 93px 10px 10px;
   padding: 16px 8px;
   width: 240px !important;
+  
+  overflow: visible;
 }
 
 /* tree row */
