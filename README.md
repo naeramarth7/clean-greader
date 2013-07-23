@@ -37,3 +37,7 @@ Same as Installation - just overwrite the files.
 | `Combined feed display`                          | `enabled`  |
 | `Automatically expand articles in combined mode` | `disabled` |
 | `Show content preview in headlines list`         | `disabled` |
+
+---
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=naeramarth7&url=https://github.com/naeramarth7/clean-greader&title=clean-greader&language=&tags=github&category=software) 
