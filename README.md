@@ -1,12 +1,39 @@
 # clean-greader
 
-clean-greader is a tiny tiny rss (1.8) theme based on the latest Google Reader and inspired by other Google Services.
+clean-greader is a tiny tiny rss (1.9) theme based on the latest Google Reader and inspired by other Google Services.
 
-### Screenshot
-2013-07-15 | tt-rss v1.8.776b195 | Chromium 28.0.1500.52 on Linux Mint 15
+## Screenshot
 ![](https://raw.github.com/naeramarth7/clean-greader/master/clean-greader-img/preview.png)
 
-### Tiny Tiny RSS Settings
-* Combined feed display [x]
-* Automatically expand articles in combined mode [ ]
-* Show content preview in headlines list [ ]
+## Installation
+### Using Git
+Assuming, that your tt-rss instance is located at /usr/share/tt-rss:
+```bash
+cd /usr/share/tt-rss/themes
+git clone https://github.com/naeramarth7/clean-greader
+ln -s ./clean-greader/clean-greader.css ./clean-greader.css
+ln -s ./clean-greader/clean-greader-css ./clean-greader-css
+ln -s ./clean-greader/clean-greader-img ./clean-greader-img
+```
+
+### Manual
+1. Download the package using the "Download ZIP" button on the right
+2. Copy the content of the clean-greader-master folder into you tt-rss/themes folder (e. g. /usr/share/tt-rss/themes)
+
+## Update
+### Using git
+Assuming, that your tt-rss instance is located at /usr/share/tt-rss:
+```bash
+cd /usr/share/tt-rss/themes/clean-greader
+git pull
+```
+
+### Manual
+Same as Installation - just overwrite the files.
+
+## Tiny Tiny RSS Settings
+| Setting                                          | Value      |
+|:------------------------------------------------ |:----------:|
+| `Combined feed display`                          | `enabled`  |
+| `Automatically expand articles in combined mode` | `disabled` |
+| `Show content preview in headlines list`         | `disabled` |
