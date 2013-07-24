@@ -303,6 +303,11 @@ div.cdm.expandable {
   margin: 0;
 }
 
+/* feed title */
+div.cdm.expandable div.cdmHeader span.titleWrap {
+  max-width: 0px;
+}
+
 /* single feed element (selected) */
 div.cdm.expandable.Selected {
   -moz-box-shadow:    none;
