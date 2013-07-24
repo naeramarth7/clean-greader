@@ -269,6 +269,11 @@ div#headlines-toolbar > span.r {
   top: 6px;
 }
 
+/* collapse button (removed in 1.9?) */
+span[widgetid="collapse_feeds_btn"] {
+  display: inline-block !important;
+}
+
 
 
 /**
