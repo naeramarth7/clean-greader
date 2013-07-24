@@ -324,6 +324,17 @@ div.cdm.expandable.Selected {
   border-width: 0 0 1px 0;
 }
 
+div.cdm.expandable.Selected:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: inherit;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 /* last feed element */
 div.cdm.expandable:first-of-type { border-top-width: 0; }
 
