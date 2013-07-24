@@ -29,7 +29,7 @@
 }
  
 ::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #EEE;
   margin: 1px 0 2px 0;
 }
  
