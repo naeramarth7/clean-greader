@@ -302,20 +302,23 @@ div#headlines-frame {
 }
 
 /* single feed element (general) */
-div.cdm.expandable {
-  background-color: #EEE;
+div.cdm.expandable,
+div.cdm.expanded {
+  background-color: #eee;
   border: 0 solid #d8d8d8;
   border-width: 0 0 1px 0;
   margin: 0;
 }
 
 /* feed title */
-div.cdm.expandable div.cdmHeader span.titleWrap {
+div.cdm.expandable div.cdmHeader span.titleWrap, 
+div.cdm.expanded div.cdmHeader span.titleWrap {
   max-width: 0px;
 }
 
 /* single feed element (selected) */
-div.cdm.expandable.Selected {
+div.cdm.expandable.Selected,
+div.cdm.expanded.Selected {
   -moz-box-shadow:    none;
   -webkit-box-shadow: none;
   box-shadow:         none;
@@ -325,7 +328,8 @@ div.cdm.expandable.Selected {
   border-width: 0 0 1px 0;
 }
 
-div.cdm.expandable.Selected:before {
+div.cdm.expandable.Selected:before,
+div.cdm.expanded.Selected:before {
   content: "";
   display: block;
   position: absolute;
@@ -337,25 +341,63 @@ div.cdm.expandable.Selected:before {
 }
 
 /* last feed element */
-div.cdm.expandable:first-of-type { border-top-width: 0; }
+div.cdm.expandable:first-of-type,
+div.cdm.expanded:first-of-type{
+  border-top-width: 0;
+}
 
 /* feed header (general) */
-div.cdm.expandable div.cdmHeader { background-color: #eee; padding-top: 2px}
-div.cdm.expandable div.cdmHeader a.title { font-weight: normal; }
+div.cdm.expandable div.cdmHeader,
+div.cdm.expanded div.cdmHeader, {
+  background-color: #eee !important;
+  padding-top: 2px
+}
+
+div.cdm.expandable div.cdmHeader a.title,
+div.cdm.expanded div.cdmHeader a.title {
+  font-weight: normal;
+  font-size: 12px;
+}
 
 /* feed header (unread) */
-div.cdm.expandable.Unread div.cdmHeader { background-color: #fff; }
-div.cdm.expandable.Unread div.cdmHeader a.title { font-weight: bold; }
+div.cdm.expandable.Unread div.cdmHeader,
+div.cdm.expanded.Unread div.cdmHeader,
+div.cdm.expanded.Unread {
+  background-color: #fff !important;
+}
+
+div.cdm.expandable.Unread div.cdmHeader a.title,
+div.cdm.expanded.Unread div.cdmHeader a.title {
+  font-weight: bold;
+}
 
 /* feed header (active) */
-div.cdm.expandable.active div.cdmHeader { background-color: #eee; }
-div.cdm.expandable.active div.cdmHeader a.title { color: #dd4b39; font-weight: bold; }
+div.cdm.expandable.active div.cdmHeader,
+div.cdm.expanded.active div.cdmHeader {
+  background-color: #eee !important;
+}
+
+div.cdm.expandable.active div.cdmHeader a.title,
+div.cdm.expanded.active div.cdmHeader a.title {
+  color: #dd4b39;
+  font-weight: bold;
+}
 
 /* feed header (hover, not active) */
-div.cdm.expandable:hover:not(.Selected) { background: #eee; border-left-color: #dd4b39; }
+div.cdm.expandable:hover:not(.Selected),
+div.cdm.expanded:hover:not(.Selected) {
+  background: #eee;
+  border-left-color: #dd4b39;
+}
+
+/* feed separator (in autoexpand mode) */
+div.cdm.expanded > hr {
+  display: none;
+}
 
 /* feed indicator */
 div#headlines-frame div.cdm.expandable div.cdmHeader div.hlFeed a,
+div#headlines-frame div.cdm.expanded div.cdmHeader div.hlFeed a,
 div#floatingTitle div.hlFeed a {
   background-color: rgba(255, 255, 255, 1) !important;
   border: 1px solid #d9d9d9;
@@ -369,6 +411,7 @@ div#floatingTitle div.hlFeed a {
 
 /* feed indicator (hover) */
 div#headlines-frame div.cdm.expandable div.cdmHeader div.hlFeed a:hover,
+div#headlines-frame div.cdm.expanded div.cdmHeader div.hlFeed a:hover,
 div#floatingTitle div.hlFeed a:hover {
   background-color: rgba(255, 255, 255, 1) !important;
   border: 1px solid #dd4b39;
@@ -848,6 +891,8 @@ div#floatingTitle img.hlScorePic {
 .claro .dijitToolbar .dijitComboButton .dijitDownArrowButton,
 .claro .dijitToolbar .dijitValidationTextBox .dijitButtonContents {
   border: 0px solid #fff;
+  font-weight: bold;
+  color: #333333;
 }
 
 
@@ -857,6 +902,8 @@ div#floatingTitle img.hlScorePic {
   background-image: none;
   border: none;
   border-radius: none;
+  font-weight: bold;
+  color: #333333;
 }
 
 .claro .dijitButtonText,
