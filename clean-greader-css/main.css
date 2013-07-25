@@ -480,7 +480,7 @@ div.cdmContentInner table {
   * icons
 **/
 
-.claro .dijitTreeIcon {
+.claro .dijitTreeIcon:not([src^="feed-icons"]) {
   opacity: 0.4;
 }
 
