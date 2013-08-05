@@ -866,14 +866,28 @@ div#floatingTitle img.hlScorePic {
 
 /* popup menu */
 .claro .dijitMenu {
+  display: block !important;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: none;
+}
+
+.dijitPopup.dijitMenuPopup {
+  overflow: hidden;
+}
+
+.dijitPopup.dijitMenuPopup .dijitMenuPassive {
+  max-height: 0;
+}
+
+.dijitPopup.dijitMenuPopup .dijitMenuActive {
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  max-height: 999px;
 }
 
 .claro .dijitMenuPopup .dijitMenuItemLabel {
   font-size: 12px;
 }
-
 
 .claro .dijitSelectSelectedOption *,
 .claro .dijitSelectMenu .dijitMenuItemSelected.dijitSelectSelectedOption td, .claro .dijitComboBoxMenu .dijitMenuItemSelected.dijitSelectSelectedOption {
