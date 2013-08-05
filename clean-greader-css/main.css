@@ -56,37 +56,6 @@ body#ttrssMain #feedTree {
   * feed tree / navigation
 **/
 
-/* custom */
-div#feeds-holder:before {
-  background-color: #fff;
-  background-image: url('http://www.cimatics.com/cms_site/img/rss_logo.gif');
-  background-size: 56px 56px;
-  background-position: 12px 0px;
-  background-repeat: no-repeat;
-  opacity: 0.7;
-
-  content: "tiny tiny rss";
-  color: #333;
-  font-size: 24px;
-  font-family: arial, sans-serif;
-  font-weight: bold;
-  line-height: 64px;
-  
-  display: block;
-  position: absolute;
-  top: -81px;
-  left: -1px;
-  width: 180px;
-  height: 37px;
-  
-  border: 0 solid #d8d8d8;
-  border-width: 1px 1px 2px 1px;
-  
-  padding: 16px 8px;
-  padding-left: 68px;
-  margin: -3px 0 0 0;
-}
-
 /* main */
 div#feeds-holder {
   -moz-box-shadow:    none;
@@ -96,12 +65,11 @@ div#feeds-holder {
   background-color: #ffffff;
   border: 0 solid #d8d8d8;
   border-width: 1px 1px 2px 1px;
-  margin: 91px 10px 10px;
+  margin: 10px;
   padding: 16px 8px;
   width: 240px !important;
-  
-  overflow: visible;
 }
+
 
 /* tree row */
 body#ttrssMain #feedTree div.dijitTreeRow {
@@ -114,19 +82,13 @@ body#ttrssMain #feedTree div.dijitTreeRow span.dijitTreeContent {
 }
 
 div#feeds-holder div.dijitTreeRow {
-  -moz-transition:    none !important;
-  -ms-transition:     none !important;
-  -o-transition:      none !important;
-  -webkit-transition: none !important;
-  transition:         none !important;
-
   padding-bottom: 2px;
   padding-top: 2px;
 }
 
 /* tree row (hover) */
 .claro .dijitTreeRowHover {
-  background-color: #EEE !important;
+  background-color: #eee !important;
   background-image: none;
   border: 1px solid rgba(0, 0, 0, 0);
   padding: 0;
@@ -156,7 +118,7 @@ div#feedTree .counterNode {
 }
 
 /* counter node (selected) */
-.claro #feedTree .dijitTreeRowSelected .counterNode {
+#feedTree .dijitTreeRowSelected .counterNode {
   color: #dd4b39;
   border-color: #dd4b39;
 }
@@ -268,6 +230,7 @@ div#headlines-toolbar > span.r {
   vertical-align: baseline;
   position: relative;
   top: 6px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 
 /* collapse button (removed in 1.9?) */
@@ -515,8 +478,7 @@ div.cdmContentInner table {
 }
 
 .dijitTreeIcon.feedIcon:not([src^="feed-icons"]),
-/* 1.8 */ div#headlines-toolbar img[src$="images/pub_set.svg"],
-/* 1.9 */ div#headlines-toolbar img[src$="images/pub_set.png"] {
+div#headlines-toolbar img[src*="images/pub_set."] {
   background-image: url("../clean-greader-img/clean-greader-001.png");
   opacity: 0.4;
   height: 0; padding-top: 16px;
@@ -524,30 +486,40 @@ div.cdmContentInner table {
 
 /* all articles   */
 /* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/tag.png"],
-/* 1.9 */ .dijitTreeIcon.feedIcon[src$="images/folder.png"]
-{ background-position: -23px -82px; }
+/* 1.9 */ .dijitTreeIcon.feedIcon[src$="images/folder.png"] {
+  background-position: -23px -82px;
+}
+
 /* fresh articles */
-.dijitTreeIcon.feedIcon[src$="images/fresh.png"]
-{ background-position: -23px -100px; }
+.dijitTreeIcon.feedIcon[src$="images/fresh.png"] {
+  background-position: -23px -100px;
+}
+
 /* starred        */
 /* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/mark_set.svg"],
-/* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/star.png"]
-{ background-image: url("../clean-greader-img//clean-greader-002.png"); background-position: -52px -2px; }
+/* 1.9 */ .dijitTreeIcon.feedIcon[src$="images/star.png"] {
+  background-image: url("../clean-greader-img//clean-greader-002.png"); background-position: -52px -2px;
+}
+
 /* published      */
 /* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/pub_set.svg"],
-/* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/feed.png"]
-{ background-position: -2px -79px; }
+/* 1.9 */ .dijitTreeIcon.feedIcon[src$="images/feed.png"] {
+  background-position: -2px -79px;
+}
+
 /* archived       */
-.dijitTreeIcon.feedIcon[src$="images/archive.png"]
-{ background-position: -44px -120px; }
+.dijitTreeIcon.feedIcon[src$="images/archive.png"] {
+  background-position: -44px -120px;
+}
+
 /* recently read  */
 /* 1.8 */ .dijitTreeIcon.feedIcon[src$="images/recently_read.png"],
-/* 1.9 */ .dijitTreeIcon.feedIcon[src$="images/time.png"]
-{ background-position: -87px -121px; }
+/* 1.9 */ .dijitTreeIcon.feedIcon[src$="images/time.png"] {
+  background-position: -87px -121px;
+}
 
 /* feedIcon in headlines-toolbar */
-/* 1.8 */ div#headlines-toolbar img[src$="images/pub_set.svg"],
-/* 1.9 */ div#headlines-toolbar img[src$="images/pub_set.png"] {
+div#headlines-toolbar img[src*="images/pub_set."] {
   background-position: -2px -79px;
   padding-bottom: 3px;
   padding-left: 16px;
@@ -561,8 +533,7 @@ div#headlines-toolbar span.r:after {
 }
 
 /* feedIcon in headlines-toolbar (mouseover) */
-/* 1.8 */ div#headlines-toolbar img[src$="images/pub_set.svg"]:hover,
-/* 1.9 */ div#headlines-toolbar img[src$="images/pub_set.png"]:hover {
+div#headlines-toolbar img[src*="images/pub_set."]:hover {
   opacity: 0.6;
 }
 
@@ -572,9 +543,8 @@ div#headlines-toolbar span.r:hover {
 
 /* feed header icons */
 /* published */
-/* 1.8 */ div.cdmHeader img[src$="images/pub_set.svg"],
-/* 1.9 */ div.cdmHeader img[src$="images/pub_set.png"],
-div#floatingTitle img[src$="images/pub_set.png"] {
+div.cdmHeader img[src*="images/pub_set."],
+div#floatingTitle img[src*="images/pub_set."] {
   background-image: url("../clean-greader-img/clean-greader-001.png");
   background-position: -2px -79px;
   opacity: 0.8;
@@ -582,9 +552,8 @@ div#floatingTitle img[src$="images/pub_set.png"] {
 }
 
 /* not published */
-/* 1.8 */ div.cdmHeader img[src$="images/pub_unset.svg"],
-/* 1.9 */ div.cdmHeader img[src$="images/pub_unset.png"],
-div#floatingTitle img[src$="images/pub_unset.png"] {
+div.cdmHeader img[src*="images/pub_unset."],
+div#floatingTitle img[src*="images/pub_unset."] {
   background-image: url("../clean-greader-img/clean-greader-001.png");
   background-position: -2px -79px;
   opacity: 0.2;
@@ -592,18 +561,16 @@ div#floatingTitle img[src$="images/pub_unset.png"] {
 }
 
 /* not published (mouseover)*/
-/* 1.8 */ div.cdmHeader img[src$="images/pub_unset.svg"]:hover,
-/* 1.9 */ div.cdmHeader img[src$="images/pub_unset.png"]:hover,
-div#floatingTitle img[src$="images/pub_unset.png"]:hover {
+div.cdmHeader img[src*="images/pub_unset."]:hover,
+div#floatingTitle img[src*="images/pub_unset."]:hover {
   background-image: url("../clean-greader-img/clean-greader-001.png");
   background-position: -2px -79px;
   opacity: 0.4;
 }
 
 /* starred */
-/* 1.8 */ div.cdmHeader img[src$="images/mark_set.svg"],
-/* 1.9 */ div.cdmHeader img[src$="images/mark_set.png"],
-div#floatingTitle img[src$="images/mark_set.png"] {
+div.cdmHeader img[src*="images/mark_set."],
+div#floatingTitle img[src*="images/mark_set."] {
   background-image: url("../clean-greader-img/clean-greader-002.png");
   background-position: -52px -2px;
   opacity: 0.8;
@@ -611,9 +578,8 @@ div#floatingTitle img[src$="images/mark_set.png"] {
 }
 
 /* not starred */
-/* 1.8 */ div.cdmHeader img[src$="images/mark_unset.svg"],
-/* 1.9 */ div.cdmHeader img[src$="images/mark_unset.png"],
-div#floatingTitle img[src$="images/mark_unset.png"] {
+div.cdmHeader img[src*="images/mark_unset."],
+div#floatingTitle img[src*="images/mark_unset."] {
   background-image: url("../clean-greader-img/clean-greader-002.png");
   background-position: -26px -2px;
   opacity: 0.2;
@@ -621,9 +587,8 @@ div#floatingTitle img[src$="images/mark_unset.png"] {
 }
 
 /* not starred (mouseover)*/
-/* 1.8 */ div.cdmHeader img[src$="images/mark_unset.svg"]:hover,
-/* 1.9 */ div.cdmHeader img[src$="images/mark_unset.png"]:hover,
-div#floatingTitle img[src$="images/mark_unset.png"]:hover {
+div.cdmHeader img[src*="images/mark_unset."]:hover,
+div#floatingTitle img[src*="images/mark_unset."]:hover {
   background-image: url("../clean-greader-img/clean-greader-002.png");
   background-position: -52px -2px;
   opacity: 0.2;
@@ -708,11 +673,6 @@ span.collapseBtn:hover:after
 
 /* resize containers button */
 .claro .dijitToolbar .dijitButton .dijitButtonNode:hover {
-  -webkit-transition: none !important;
-  -moz-transition:    none !important;
-  -o-transition:      none !important;
-  -ms-transition:     none !important;
-  transition:         none !important;
   background: rgba(0, 0, 0, 0);
   border: 0 solid #fff;
   padding: 2px;
@@ -801,12 +761,6 @@ div#floatingTitle img.hlScorePic {
 .claro .dijitToolbar .dijitDropDownButton .dijitButtonNode,
 .claro .dijitToolbar .dijitComboButton .dijitButtonNode,
 .claro .dijitToolbar .dijitValidationTextBox {
-  -webkit-transition: none !important;
-  -moz-transition:    none !important;
-  -o-transition:      none !important;
-  -ms-transition:     none !important;
-  transition:         none !important;
-
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
   padding: 0;
@@ -837,12 +791,6 @@ div#floatingTitle img.hlScorePic {
 .claro .dijitToolbar .dijitDropDownButton .dijitButtonContents:after,
 .claro .dijitToolbar .dijitComboButton .dijitButtonNode.dijitDownArrowButton, 
 .claro .dijitToolbar .dijitValidationTextBox .dijitButtonContents:after {
-  -webkit-transition: none !important;
-  -moz-transition:    none !important;
-  -o-transition:      none !important;
-  -ms-transition:     none !important;
-  transition:         none !important;
-
   content: "";
   display: block;
   float: right;
@@ -953,12 +901,6 @@ div#headlines-toolbar .dijitValidationTextBoxLabel:hover {
 }
 
 .claro #headlines-toolbar .dijitValidationTextBox {
-  -webkit-transition: none !important;
-  -moz-transition:    none !important;
-  -o-transition:      none !important;
-  -ms-transition:     none !important;
-  transition:         none !important;
-
   border: 0px solid rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
   
@@ -969,3 +911,66 @@ div#headlines-toolbar .dijitValidationTextBoxLabel:hover {
 .claro #headlines-toolbar .dijitValidationTextBox:hover { background: transparent; }
 .claro #headlines-toolbar .dijitValidationTextBox .dijitArrowButtonContainer { display: none; }
 .claro #headlines-toolbar .dijitValidationTextBox .dijitButtonContents { border: 0px solid #fff; }
+
+
+/* transitions 0.3s */
+.claro .dijitTreeRowHover,
+.claro .dijitToolbar .dijitDropDownButton,
+.claro .dijitToolbar .dijitDropDownButton:hover,
+.claro .dijitComboButton,
+.claro .dijitComboButton:hover,
+.claro .dijitToolbar .dijitValidationTextBox,
+.claro .dijitToolbar .dijitValidationTextBox:hover,
+div#headlines-toolbar .dijitValidationTextBoxLabel,
+div#headlines-toolbar .dijitValidationTextBoxLabel:hover,
+div#headlines-toolbar > a,
+div#headlines-toolbar > a:hover,
+div#headlines-toolbar span.r,
+div#headlines-toolbar span.r:hover,
+div#headlines-toolbar img[src*="images/pub_set"],
+div#headlines-toolbar img[src*="images/pub_set"]:hover,
+div.cdmHeader img,
+div.cdmHeader img:hover,
+.claro div.dijitCheckBox,
+.claro div.dijitCheckBox:hover,
+div#feedTree .counterNode,
+.claro .dijitTreeRow,
+div#headlines-frame div.cdm.expandable div.cdmHeader div.hlFeed a,
+div#headlines-frame div.cdm.expandable div.cdmHeader div.hlFeed a:hover,
+div#headlines-frame div.cdm.expanded div.cdmHeader div.hlFeed a,
+div#headlines-frame div.cdm.expanded div.cdmHeader div.hlFeed a:hover,
+div#floatingTitle div.hlFeed a,
+div#floatingTitle div.hlFeed a:hover {
+  -webkit-transition: 
+    border           0.3s ease-in-out,
+    opacity          0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    color            0.3s ease-in-out;
+  transition:
+    border           0.3s ease-in-out,
+    opacity          0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    color            0.3s ease-in-out;
+}
+
+
+
+/**
+  * experimental
+**/
+
+/* tested transition for opening feed
+.cdm.expandable div.cdmContent {
+  display: block !important;
+  overflow: hidden;
+
+  max-height: 0;
+}
+
+.cdm.expandable.active div.cdmContent {
+  transition: all 2s ease-in-out;
+  -webkit-transition: all 2s ease-in-out;
+  
+  max-height: 9999px;
+}
+*/
