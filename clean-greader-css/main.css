@@ -9,6 +9,19 @@
 **/
 
 /**
+  * overwrite some main elements controlled by style pattern
+  *   to be controllable via css (e. g. for transitions)
+**/
+
+#feeds-holder,  
+#header-wrap {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+
+/**
   * main elements
 **/
 
@@ -56,18 +69,24 @@ body#ttrssMain #feedTree {
   * feed tree / navigation
 **/
 
-/* main */
+/* navigation - outer */
 div#feeds-holder {
   -moz-box-shadow:    none;
   -webkit-box-shadow: none;
   box-shadow:         none;
 
+  border: none;
+  background: transparent;
+  margin: 0 10px 0 0;
+  padding: 10px 0 10px 10px;
+}
+
+/* navigation - inner */
+div#feedTree {
   background-color: #ffffff;
+  padding: 16px 8px;
   border: 0 solid #d8d8d8;
   border-width: 1px 1px 2px 1px;
-  margin: 10px;
-  padding: 16px 8px;
-  width: 240px !important;
 }
 
 
