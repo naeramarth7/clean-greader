@@ -9,14 +9,27 @@
 **/
 
 /**
-  * overwrite some main elements controlled by style pattern
+  * overwrite some main elements controlled by js
   *   to be controllable via css (e. g. for transitions)
 **/
 
-#feeds-holder,  
-#header-wrap {
-  width: 100% !important;
+div#feeds-holder,  
+div#header-wrap {
+  x-width: 100% !important;
   height: 100% !important;
+}
+
+div#header-wrap {
+  display: inline-block;
+  float: left;
+  position: relative;
+  x-left: 240px !important;
+}
+
+div#feeds-holder[style*="display: none"] {
+  display: block !important;
+  width: 0px !important;
+  margin: 0px;
 }
 
 
@@ -54,16 +67,9 @@
 html, body, body#ttrssMain, body#ttrssPrefs, body#ttrssLogin {
   height: 100% !important;
   background-color: #E5E5E5;
-  font-family: arial, sans-serif;
+  font-family: arial, sans-serif !important;
   font-size: 12px;
 }
-
-body#ttrssMain #feedTree {
-  font-family: arial, sans-serif;
-  font-size: 12px;
-}
-
-
 
 /**
   * feed tree / navigation
@@ -79,14 +85,18 @@ div#feeds-holder {
   background: transparent;
   margin: 0 10px 0 0;
   padding: 10px 0 10px 10px;
+  width: 220px !important;
 }
 
 /* navigation - inner */
 div#feedTree {
+  font-family: arial, sans-serif !important;
+  font-size: 12px;
   background-color: #ffffff;
   padding: 16px 8px;
   border: 0 solid #d8d8d8;
   border-width: 1px 1px 2px 1px;
+  width: auto !important;
 }
 
 
@@ -978,12 +988,14 @@ div#floatingTitle div.hlFeed a:hover {
     border           0.3s ease-in-out,
     opacity          0.3s ease-in-out,
     background-color 0.3s ease-in-out,
-    color            0.3s ease-in-out;
+    color            0.3s ease-in-out,
+    width            0.3s ease-in-out;
   transition:
     border           0.3s ease-in-out,
     opacity          0.3s ease-in-out,
     background-color 0.3s ease-in-out,
-    color            0.3s ease-in-out;
+    color            0.3s ease-in-out,
+    width            0.3s ease-in-out;
 }
 
 
