@@ -1,0 +1,50 @@
+/**
+  *  File:         _loader.scss
+  *****************************
+  *
+  *  Description:   loader used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+
+/***********
+  * LOADER *
+  ***********/
+
+.claro #overlay {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  
+  background: $clr-bg-active;
+  
+  z-index: 999;
+}
+
+.claro #overlay #overlay_inner {
+  margin-top: 10%;
+  
+  font-weight: bold;
+  
+  .insensitive { @include center-item; }
+}
+
+/* progress bar wrapper */
+.claro #overlay #overlay_inner div[role="progressbar"] {
+  @include center-item;
+}
+
+/* progress bar - whole bar  */
+.claro  #overlay #overlay_inner .dijitProgressBar.dijitProgressBarEmpty {
+  padding: 2px;
+  @include brdr-light;
+  
+  /* progress bar - current value (wrapper)  */
+  .dijitProgressBarFull {
+    top: 1px; bottom: 1px; left: 1px; right: 1px;
+    @include brdr-trans;
+    
+    /* progress bar - current value (inner) */
+    .dijitProgressBarTile { @include stripes-lightgrey; }
+  }
+}

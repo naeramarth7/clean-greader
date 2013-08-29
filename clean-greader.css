@@ -26,6 +26,6 @@
   * imports
 **/
 
-@import "default.css";
-@import "clean-greader-css/main.css";
-@import "clean-greader-css/loader.css";
+/*@import "default.css";*/
+@import "clean-greader/css/normalize.css";
+@import "clean-greader/css/main.css";

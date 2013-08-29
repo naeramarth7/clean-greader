@@ -1,0 +1,272 @@
+/**
+  *  File:         _button.scss
+  *****************************
+  *
+  *  Description:   buttons and everything depending on them used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+
+/* resets */
+.claro #collapse_feeds_btn,
+.claro #collapse_feeds_btn_label {
+  @include no-space;
+}
+
+/* collapse feeds button */
+.claro span[widgetid="collapse_feeds_btn"] {
+  display: inline-block !important;
+  
+  > span:before {
+    @include awesome-icon("\f104\f104");
+    color: $clr-fnt-main;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  
+  #collapse_feeds_btn { display: none; }
+}
+
+/* collapse feeds button (when hidden) */
+#header-wrap[style*="left: 0px;"] span[widgetid="collapse_feeds_btn"] > span:before {
+  @include awesome-icon("\f105\f105");
+    line-height: 16px;
+}
+
+/* disable hover effects and sizing */
+.claro .dijitToolbar .dijitComboButtonHover .dijitButtonNodeHover, .claro .dijitToolbar .dijitComboButtonHover .dijitDownArrowButtonHover,
+.claro .dijitToolbar .dijitButtonHover .dijitButtonNode, .claro .dijitToolbar .dijitDropDownButtonHover .dijitButtonNode, .claro .dijitToolbar .dijitToggleButtonHover .dijitButtonNode, .claro .dijitToolbar .dijitComboButtonHover .dijitButtonNode,
+.claro .dijitSelectLabel, .claro .dijitTextBox .dijitInputInner, .claro .dijitValidationTextBox .dijitValidationContainer,
+.claro .dijitSelect .dijitInputField, .claro .dijitTextBox .dijitInputField,
+.claro .dijitToolbar .dijitButton .dijitButtonNode, .claro .dijitToolbar .dijitDropDownButton .dijitButtonNode, .claro .dijitToolbar .dijitComboButton .dijitButtonNode, .claro .dijitToolbar .dijitToggleButton .dijitButtonNode, .claro .dijitToolbar .dijitComboBox .dijitButtonNode,
+.dijitToolbar .dijitButtonContents {
+  -webkit-transition: none;
+  transition: none;
+  background: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  margin: 0;
+}
+
+
+/************
+  * BUTTONS *
+  ************/
+
+.claro .dijitButton,
+.claro .dijitValidationTextBox,
+.claro .dijitComboButton,
+.claro .dijitDropDownButton {
+  background: $clr-bg-active-second;
+  border: 1px solid $clr-brdr-light;
+  padding: 0;
+  margin: 0 $content-padding 0 0;
+  
+  @include trnstn-all-fast;
+  
+  &:hover {
+    background: $clr-bg-active;
+  }
+  
+  > span.dijitButtonNode,
+  td.dijitButtonNode {
+    background-image: none;
+    background-color: transparent;
+    border: 0px solid transparent;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  > span.dijitButtonNode > span.dijitButtonContents,
+  td.dijitButtonContents,
+  td.dijitButtonNode div.dijitButtonContents,
+  > span.dijitButtonText {
+    -webkit-transition: none;
+    background: transparent;
+    border: none;
+    padding: 4px 2px 4px 8px;
+    height: 16px;
+    
+    &.dijitButtonContentsHover {
+      -webkit-transition: none;
+      background: transparent;
+    }
+    
+    .dijitButtonText {
+      padding: 0;
+      color: $clr-fnt-main;
+      font-weight: bold;
+      
+      .dijitSelectLabel {
+      padding: 0;
+      }
+    }
+  }
+  
+  &:not(.dijitDropDownButton) > span.dijitButtonNode > span.dijitButtonContents,
+  > .dijitButtonNode:before {
+    padding: 4px 8px;
+  }
+  
+  &.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents {
+    height: auto;
+    padding: 0;
+    
+    > .dijitButtonText {
+      padding: 4px 2px 4px 8px;
+      height: 16px;
+    }
+  }
+
+  
+  span.dijitButtonText {
+    color: $clr-fnt-main;
+    font-weight: bold;
+  }
+  
+  .dijitButtonNode.dijitArrowButton,
+  span.dijitArrowButtonInner {
+    -webkit-transition: none;
+    background: transparent;
+    border: none;
+    padding: 4px 8px 4px 2px;
+    
+    input.dijitArrowButtonInner,
+    div.dijitArrowButtonInner,
+    &.dijitArrowButtonInner {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUyIiBoZWlnaHQ9IjE3OTIiIHZpZXdCb3g9IjAgMCAxMTUyIDE3OTIiIHN0eWxlPSJtYXJnaW4tbGVmdDogM3B4OyBtYXJnaW4tdG9wOiAxcHg7Ij48cGF0aCBkPSJNIDEwNzUsNzM2cTAsMTMgLTEwLDIzbC00NjYsNDY2cS0xMCwxMCAtMjMsMTB0LTIzLTEwbC00NjYtNDY2cS0xMC0xMCAtMTAtMjN0IDEwLTIzbCA1MC01MHEgMTAtMTAgMjMtMTB0IDIzLDEwbCAzOTMsMzkzbCAzOTMtMzkzcSAxMC0xMCAyMy0xMHQgMjMsMTBsIDUwLDUwcSAxMCwxMCAxMCwyM3oiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMDc1IDAuMDA3NSkiPjwvcGF0aD48L3N2Zz4K");
+      background-position: 0 0;
+      height: 14px;
+      width: 14px;
+    }
+    
+    &.dijitArrowButtonInner {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUyIiBoZWlnaHQ9IjE3OTIiIHZpZXdCb3g9IjAgMCAxMTUyIDE3OTIiIHN0eWxlPSJtYXJnaW4tbGVmdDogM3B4OyBtYXJnaW4tdG9wOiAxcHg7Ij48cGF0aCBkPSJNIDEwNzUsNzM2cTAsMTMgLTEwLDIzbC00NjYsNDY2cS0xMCwxMCAtMjMsMTB0LTIzLTEwbC00NjYtNDY2cS0xMC0xMCAtMTAtMjN0IDEwLTIzbCA1MC01MHEgMTAtMTAgMjMtMTB0IDIzLDEwbCAzOTMsMzkzbCAzOTMtMzkzcSAxMC0xMCAyMy0xMHQgMjMsMTBsIDUwLDUwcSAxMCwxMCAxMCwyM3oiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMDc1IDAuMDA3NSkiPjwvcGF0aD48L3N2Zz4K");
+      background-position: 2px 4px;
+    }
+  }
+}
+
+
+
+/**************
+  * COMBO BOX *
+  **************/
+
+.claro .dijitSelect,
+.claro .dijitComboBox {
+  
+  &.dijitComboBox .dijitInputField,
+  .dijitButtonContents {
+    border: 0 solid transparent;
+  }
+  
+  &:not(.dijitComboBox) .dijitButtonContents,
+  &.dijitComboBox .dijitInputInner {
+    padding: 4px 2px 4px 8px !important;
+  }
+  
+  .dijitArrowButtonContainer {
+    border: 0 solid transparent;
+    background-image: none;
+    background: transparent;
+    padding: 4px 8px 4px 2px;
+  }
+  
+  input.dijitArrowButtonInner {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUyIiBoZWlnaHQ9IjE3OTIiIHZpZXdCb3g9IjAgMCAxMTUyIDE3OTIiIHN0eWxlPSJtYXJnaW4tbGVmdDogM3B4OyBtYXJnaW4tdG9wOiAxcHg7Ij48cGF0aCBkPSJNIDEwNzUsNzM2cTAsMTMgLTEwLDIzbC00NjYsNDY2cS0xMCwxMCAtMjMsMTB0LTIzLTEwbC00NjYtNDY2cS0xMC0xMCAtMTAtMjN0IDEwLTIzbCA1MC01MHEgMTAtMTAgMjMtMTB0IDIzLDEwbCAzOTMsMzkzbCAzOTMtMzkzcSAxMC0xMCAyMy0xMHQgMjMsMTBsIDUwLDUwcSAxMCwxMCAxMCwyM3oiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMDc1IDAuMDA3NSkiPjwvcGF0aD48L3N2Zz4K");
+    background-position: 0 0;
+    height: 16px !important;
+    width: 16px;
+  }
+  
+  
+  &:not(.dijitComboBox).dijitHasDropDownOpen { padding: 0; }
+  
+  &.dijitSelectFocused .dijitArrowButton,
+  &:not(.dijitComboBox).dijitSelectFocused .dijitArrowButton {
+    padding: 4px 8px 4px 2px;
+    
+  }
+  
+  &.dijitSelectFocused .dijitArrowButton .dijitArrowButtonInner,
+  &.dijitSelectHover .dijitArrowButton .dijitArrowButtonInner,
+  .dijitDownArrowButtonHover .dijitArrowButtonInner,
+  .dijitHasDropDownOpen .dijitArrowButtonInner {
+    background-position: 0 0;
+  }
+}
+
+
+
+/********************
+  * DROP DOWN MENUS *
+  ********************/
+
+/* hover effects */
+.claro .dijitSelectMenu .dijitMenuItemHover td, .claro .dijitSelectMenu .dijitMenuItemSelected td, .claro .dijitMenuItemHover, .claro .dijitMenuItemSelected {
+  @include trnstn-all-fast;
+  background-color: $clr-bg-active-second;
+  background-image: none;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.claro .dijitPopup.dijitMenuPopup,
+.claro .dijitPopup.dijitComboBoxMenuPopup {
+  @include drop-shadow(rgba(0, 0, 0, 0.15), 0px, 4px, 4px, 0px);
+}
+
+/* menu */
+.claro .dijitMenu {
+  border: 1px solid $clr-brdr-light;
+  
+  .dijitMenuItem {
+    padding: 0;
+    margin: 0;
+    
+    .dijitMenuItemIconCell { margin: 0; padding: 0; }
+    .dijitMenuItemLabel {
+      margin: 0;
+      padding: $content-padding / 2 $content-padding;
+    }
+    .dijitMenuArrowCell { margin: 0; padding: 0; }
+  }
+}
+
+.claro .dijitComboBoxMenu .dijitMenuItem {
+  background-color: $clr-bg-active;
+  padding: $content-padding / 4 $content-padding;
+  @include trnstn-all-fast;
+  background-image: none;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.claro .dijitComboBoxMenu .dijitMenuItemHover {
+  background-color: $clr-bg-active-second;
+}
+
+.claro .dijitComboBoxMenu .dijitMenuItemSelected {
+  background-color: $clr-bg-active;
+  color: $clr-red;
+}
+
+
+
+/***********
+  * INPUTS *
+  ***********/
+
+.claro .dijitSelect,
+.claro .dijitTextBox {
+  border: 1px solid $clr-brdr-light;
+  
+  &:not(.dijitComboBox) { padding: 4px 8px; }
+  
+  &.dijitSelectHover,
+  &.dijitTextBoxHover {
+    background: $clr-bg-active-second;
+  }
+}

@@ -1,0 +1,14 @@
+/**
+  *  File:         _animations.scss
+  *********************************
+  *
+  *  Description:   animations used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-28
+**/
+
+@include keyframes(rotation) {
+  from { @include rotate(  0deg); }
+  to   { @include rotate(360deg); }
+}

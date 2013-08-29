@@ -1,0 +1,40 @@
+/**
+  *  File:         _dialog.scss
+  *******************************
+  *
+  *  Description:   dialogs used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+
+/* wrapper (whole background) */
+.claro .dijitDialogUnderlayWrapper {
+  
+  .dijitDialogUnderlay {
+
+    background: #fff;
+    opacity: 0.75;
+  }
+}
+
+/* dialog itself */
+.claro .dijitDialog {
+  @include brdr-card;
+  
+  /* title */
+  .dijitDialogTitleBar {
+    @include brdr-none;
+    background: $clr-bg-active-second;
+    background-image: none;
+  }
+  
+  /* content */
+  .dijitDialogPaneContent {
+    @include brdr-none;
+    
+    div:last-child {
+      margin-top: $content-padding * 2;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# sublime files #
+#################
+*.sublime-project
+*.sublime-workspace
+
+# cached files #
+################
+*/.sass-cache
+
+# other files #
+###############
+.Trash-1000
+

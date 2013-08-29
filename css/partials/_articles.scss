@@ -1,0 +1,256 @@
+/**
+  *  File:         _articles.scss
+  *******************************
+  *
+  *  Description:   feed article display used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+
+/******************************
+  * MAIN CARDS - ARTICLE CARD *
+  ******************************/
+
+.claro #headlines-frame {
+  position: absolute !important;
+  top: 48px !important;
+  bottom: $card-gap-size;
+  left: $card-gap-size !important;
+  right: $card-gap-size;
+  
+  width: auto !important;
+  height: auto !important;
+  
+  @include no-space;
+  @include brdr-card;
+}
+
+/*******************
+  * SINGLE ARTICLE *
+  *******************/
+
+.claro #headlines-frame .hl,
+.claro #headlines-frame .cdm {
+    /* article separator */
+    > hr { display: none; }
+    
+    @include brdr-light;
+    border-width: 0 1px 1px 0;
+}
+
+/* single article - scroll fix via pseudo element */
+.claro #headlines-frame .hl:before,
+.claro #headlines-frame .cdm:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: inherit;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* single article header */
+.claro #headlines-frame .hl,
+.claro #headlines-frame .cdm .cdmHeader,
+.claro #floatingTitle {
+  display: table;
+  background: $clr-bg-active-second;
+
+  /* header - all child items */
+  > *,
+  > .hlUpdated > * {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 4px;
+    white-space: nowrap;
+  }
+
+  /* header - action icons */
+  > div:first-child {
+    > * { margin: 0 2px; vertical-align: middle; }
+    > img { display: inline; cursor: pointer; }
+    > div { display: inline-block; }
+  }
+  
+  /* header - article title */
+  .titleWrap,
+  .hlTitle {
+    max-width: 0;
+    width: 100%;
+    overflow: hidden;
+    
+    > a,
+    > .hlContent > a {
+      @include normalize-link;
+      color: $clr-fnt-main;
+    }
+    
+    > span.author { color: $clr-fnt-main-second; }
+    
+    .collapseBtn img { vertical-align: middle; }
+  }
+
+  /* header - article feed item */
+  .hlFeed a,
+  a.hlFeed {
+    @include normalize-link;
+    @include brdr-light;
+    background: $clr-bg-active !important;
+    color: $clr-fnt-main-second;
+    font-size: 10px;
+    padding: 2px 8px;
+    
+    &:hover {
+      @include brdr-red;
+      color: $clr-red;
+    }
+  }
+
+  /* header - article update time */
+  .updated,
+  .hlUpdated {
+    float: right;
+    color: $clr-fnt-main-second;
+  }
+
+  /* header - score */
+  .scoreWrap {
+    img.hlScorePic {
+      display: block;
+    }
+  }
+
+  /* header - feed icon */
+  .tinyFeedIcon {
+    display: none;
+  }
+}
+
+/* unread header */
+.claro #headlines-frame .hl.Unread,
+.claro #headlines-frame .cdm.Unread .cdmHeader {
+  background: $clr-bg-active;
+
+  .titleWrap > a {
+    color: $clr-fnt-main;
+    font-weight: bold;
+  }
+}
+
+/* active header */
+.claro #headlines-frame .hl.active .hlContent > a,
+.claro #headlines-frame .cdm.active .cdmHeader .titleWrap > a {
+  font-weight: bold;
+  color: $clr-red;
+}
+
+/* floating title - special settings */
+.claro #floatingTitle {
+  position: absolute;
+  top: 30px;
+  
+  margin: 18px 25px 0 $card-gap-size;
+  
+  @include brdr-light;
+  
+  background-color: #eee;
+  
+  @include drop-shadow(rgba(0, 0, 0, 0.15), 0px, 4px, 4px, -2px);
+
+  z-index: 5 !important;
+
+  a.title {
+    color: #dd4b39;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+/* article content */
+.claro .cdm.active .cdmContent .cdmContentInner,
+.claro .cdm.expanded .cdmContent .cdmContentInner {
+  display: block;
+  padding: 0 $content-padding 0 $content-padding-to-header;
+  
+  max-width: $max-content-width;
+  
+  img { max-width: $max-content-width; }
+
+  overflow: auto;
+
+  /* main feed image */
+  div[xmlns="http://www.w3.org/1999/xhtml"]:first-child a img,
+  p:first-of-type img,
+  > span:first-child > span:first-child > img:first-child {
+    float: left;
+    margin: 0 32px 16px 0 !important;
+    max-height: 128px;
+    max-width: 128px;
+    width: auto;
+    height: auto;
+  }
+  
+  /* images (except of main) and vides*/
+  p > img,
+  p > a:not([href*="feedburner"]) > img,
+  div > img,
+  div > a:not([href*="feedburner"]) > img,
+  p iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  p > img {
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  /* tables */
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+  
+  /* first and last child not a p-element need padding */
+  > span > span > *:not(p):first-child { padding-top: $content-padding; }
+  > span > span > *:not(p):last-child { padding-bottom: $content-padding; }
+}
+
+/* article footer */
+.claro .cdm.active .cdmContent .cdmFooter,
+.claro .cdm.expanded .cdmContent .cdmFooter {
+  padding: $content-padding / 2 $content-padding;
+  background-color: $clr-bg-active-second;
+  
+  > * { vertical-align: middle; }
+}
+
+/* article content in non combined display mode */
+.claro #content-insert {
+  left: $card-gap-size !important;
+  right: $card-gap-size !important;
+  margin-bottom: 9px !important;
+  
+  width: auto !important;
+  
+  @include brdr-card;
+  border-left-width: 1px !important;
+}
+
+/* h-resizer in non combined display mode */
+.claro #content-insert_splitter {
+  background: $clr-bg-active;
+
+  left: $card-gap-size !important;
+  right: $card-gap-size !important;
+  
+  width: auto !important;
+  @include brdr-light;
+  border-bottom-width: 0;
+}

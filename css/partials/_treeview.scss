@@ -1,0 +1,168 @@
+/**
+  *  File:         _treeview.scss
+  *******************************
+  *
+  *  Description:   treeviews used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+
+/* feeds tree on main page (wrapper) */
+.claro div#feeds-holder {
+  @include no-space;
+  
+  width: $card-nav-width !important; 
+  background: transparent !important;
+  
+  /* navigation card (outer / when hidden) */
+  &[style*="display: none"] { width: 0 !important; }
+}
+
+/* feeds tree on main page (inner) */
+.claro div#feeds-holder div#feedTree {
+  position: absolute !important;
+  top: $card-gap-size;
+  bottom: $card-gap-size;
+  left: $card-gap-size;
+  right: 0;
+  
+  @include no-space;
+  padding: $content-padding 0;
+
+  @include brdr-card;
+
+  width: auto !important;
+  height: auto !important;
+  
+  background: $clr-bg-active;
+}
+
+/* tree row */
+.claro .dijitTreeRow {
+  padding: 4px $content-padding * 2;
+  
+  //     wrapper-width     gap-size         border      padding
+  width: $card-nav-width - $card-gap-size - (2 * 1px) - (2 * $content-padding * 2) !important;
+  
+  border-width: 0;
+  
+  @include trnstn-all-fast;
+  
+  > .feedParam { display: none; }
+  
+  /* tree row (hover) */
+  &.dijitTreeRowHover {
+    background: $clr-highlight;
+    border-width: 0;
+    
+    /* system icon (hover) */
+    .dijitTreeIcon.feedIcon:not([src^="feed-icons"]),
+    .dijitFolderClosed,
+    .dijitFolderOpened,
+    .dijitTreeExpandoClosed,
+    .dijitTreeExpandoOpened {
+      opacity: 0.8;
+      
+      @include trnstn-all-fast;
+    }
+  }
+  
+  /* tree row (selected) */
+  &.dijitTreeNodeSelected,
+  &.dijitTreeRowSelected {
+    background: transparent;
+    color: $clr-red;
+    
+    /* re-set hover color */
+    &.dijitTreeRowHover {
+      background: $clr-highlight;
+    }
+  }
+  
+  /* tree row - loader */
+  img[src="images/indicator_white.gif"] {
+    display: none;
+    
+    + span {
+      display: inline-block;
+      overflow: hidden;
+
+      width: 16px;
+      height: 16px;
+      
+      color: transparent;
+      
+      &:before {
+        @include awesome-icon("\f021");
+        font-size: 14px;
+        color: $clr-fnt-main-second;
+        
+        -webkit-animation: rotation 1s linear infinite;
+        animation: rotation 1s linear infinite;
+      }
+    }
+  }
+  
+  /* tree row - loader 2 */
+  img[src="images/indicator_white.gif"],
+  img[src="images/indicator_tiny.gif"] {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMjU2LjAwLDAuMDAgQyAxMTYuNjI2LDAuMDAgMy4yNzEsMTExLjM4MSAwLjA3NiwyNDkuOTg3IEMgMy4wMzYsMTI5LjA1NSA5NC45OTIsMzIuMDAgMjA4LjAwLDMyLjAwIEMgMzIyLjg3NSwzMi4wMCA0MTYuMDAsMTMyLjI4OCA0MTYuMDAsMjU2LjAwIEMgNDE2LjAwLDI4Mi41MSA0MzcuNDksMzA0LjAwIDQ2NC4wMCwzMDQuMDAgQyA0OTAuNTEsMzA0LjAwIDUxMi4wMCwyODIuNTEgNTEyLjAwLDI1Ni4wMCBDIDUxMi4wMCwxMTQuNjE1IDM5Ny4zODUsMC4wMCAyNTYuMDAsMC4wMCBaTSAyNTYuMDAsNTEyLjAwIEMgMzk1LjM3NCw1MTIuMDAgNTA4LjcyOSw0MDAuNjE5IDUxMS45MjQsMjYyLjAxMyBDIDUwOC45NjQsMzgyLjk0NSA0MTcuMDA4LDQ4MC4wMCAzMDQuMDAsNDgwLjAwIEMgMTg5LjEyNSw0ODAuMDAgOTYuMDAsMzc5LjcxMiA5Ni4wMCwyNTYuMDAgQyA5Ni4wMCwyMjkuNDkgNzQuNTEsMjA4LjAwIDQ4LjAwLDIwOC4wMCBDIDIxLjQ5LDIwOC4wMCAwLjAwLDIyOS40OSAwLjAwLDI1Ni4wMCBDIDAuMDAsMzk3LjM4NSAxMTQuNjE1LDUxMi4wMCAyNTYuMDAsNTEyLjAwIFoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMzEyNSAwLjAzMTI1KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+    @include iconize(dark);
+    
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+  }
+  
+  /* tree row - counter */
+  .counterNode {
+    display: inline-block;
+    float: right;
+    @include center-item;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 2px;
+    
+    width: 20px;
+
+    @include brdr-light;
+    
+    font-size: 10px;
+  }
+
+  /* tree row - counter (hover) */
+  &.dijitTreeRowHover .counterNode {
+    background: $clr-bg-active;
+  }
+
+  /* tree row - counter (selected) */
+  &.dijitTreeRowSelected .counterNode {
+    background: $clr-bg-active;
+    border: 1px solid $clr-red;
+  }
+  
+  .dijitTreeLabel { margin: 0 8px; }
+  
+  /* tree row with unread content */
+  .dijitTreeLabel.Unread { font-weight: bold; }
+  
+  /* tree row - system icon formating */
+  .dijitTreeIcon.feedIcon:not([src^="feed-icons"]),
+  .dijitFolderClosed,
+  .dijitFolderOpened,
+  .dijitTreeExpandoClosed,
+  .dijitTreeExpandoOpened {
+    padding: 16px 0 0 16px;
+    height: 0;
+    width: 0;
+    opacity: 0.4;
+    
+    @include trnstn-all-fast;
+  }
+  
+  /* tree row - feed icon format */
+  img[src^="feed-icons/"] {
+    width: 16px;
+    height: 16px;
+  }
+}

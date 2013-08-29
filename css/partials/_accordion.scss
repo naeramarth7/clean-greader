@@ -1,0 +1,40 @@
+/**
+  *  File:         _accordion.scss
+  *********************************
+  *
+  *  Description:   accordion used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+
+.claro .dijitAccordionContainer {
+  .dijitAccordionInnerContainer {
+    background-color: $clr-bg-active-second;
+    border: 1px solid $clr-brdr-light;
+    
+    .dijitAccordionTitle {
+      background-image: none;
+      font-weight: bold;
+    }
+    
+    &.dijitAccordionInnerContainerHover,
+    &.dijitAccordionInnerContainerSelected {
+      background: $clr-bg-active;
+    }
+    
+    @include trnstn-all-fast;
+  }
+  
+  .dijitAccordionTitle { color: $clr-fnt-main; }
+  .dijitAccordionTitleSelected { color: $clr-red; }
+  
+  .dijitAccordionChildWrapper {
+    border: 1px solid $clr-brdr-light;
+    
+    /* single preference items */
+    .prefPrefsList {
+      .prefName { width: 60%; }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+/**
+  *  File:         _mixins.scss
+  *****************************
+  *
+  *  Description:   mixins used in this theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-28
+**/
+
+@mixin stripes-lightgrey {
+  background-color: #d8d8d8;
+  background-image: -webkit-repeating-linear-gradient(-45deg, transparent, transparent 12px, rgba(255,255,255,.5) 12px, rgba(255,255,255,.5) 28px);
+  background-image:         repeating-linear-gradient(-45deg, transparent, transparent 12px, rgba(255,255,255,.5) 12px, rgba(255,255,255,.5) 28px);
+}
+
+@mixin center-item { margin-left: auto; margin-right: auto; text-align: center; }
+@mixin no-space($important: "") { margin: 0 #{$important}; padding: 0 #{$important}; border-width: 0 #{$important}; }
+
+@mixin brdr-none { border: 0px solid transparent; }
+@mixin brdr-trans { border: 1px solid transparent; }
+@mixin brdr-light { border: 1px solid $clr-brdr-light; }
+@mixin brdr-red { border: 1px solid $clr-red; }
+@mixin brdr-card {
+  border-color: $clr-brdr-light;
+  border-style: solid;
+  border-width: 1px 1px 2px;
+}
+
+@mixin brdr-dock-inactive { border: 0px solid transparent; border-bottom-width: 2px; }
+@mixin brdr-dock-active { border: 0px solid $clr-red; border-bottom-width: 2px; }
+
+@mixin trnstn-none {
+  -webkit-transition-duration: 0s;
+  transition-duration:         0s;
+  
+  -webkit-transition-delay: 0s;
+  transition-delay:         0s;
+}
+
+@mixin trnstn-all-fast {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition:         all 0.25s ease-in-out;
+  
+  -webkit-transition-delay: 0s;
+  transition-delay:         0s;
+}
+
+@mixin normalize-link {
+  text-decoration: none;
+}
+
+@mixin awesome-icon($icon) {
+  display: inline-block;
+  content: $icon;
+  font-family: 'FontAwesome' !important;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 14px;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin opac-icon-highlight { opacity: 1 - 0.2; }
+@mixin opac-icon-active { opacity: 1 - 0.467; }
+@mixin opac-icon-passive { opacity: 1 - 0.847; }
+
+@mixin iconize($style: "bright", $hover: true, $size: 16px) {
+  position: relative;
+  left: 1px; top: 1px;
+  height: 0;
+  padding-top: $size - 2;
+  padding-left: $size - 2;
+  background-size: $size - 2 $size - 2;
+  background-repeat: no-repeat;
+  
+  @if $style == "bright" {
+    @include opac-icon-passive;
+    @if $hover { &:hover { @include opac-icon-active; } }
+  }
+  
+  @if $style == "dark" {
+    @include opac-icon-active;
+    @if $hover { &:hover { @include opac-icon-highlight; } }
+  }
+}
+
+@mixin replace-tree-icon($icon) {
+  display: none;
+  
+  + span:before {
+    text-align: center;
+    width: 16px;
+    font-size: 14px;
+    @include awesome-icon($icon);
+    padding-right: 8px;
+    color: $clr-fnt-main-second;
+    @include trnstn-all-fast;
+  }
+
+  + span:hover:before {
+    color: $clr-fnt-main;
+    @include trnstn-all-fast;
+  }
+}
+
+/* keyframes mixin */
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content; }
+  @-moz-keyframes    #{$name} { @content; }
+  @-ms-keyframes     #{$name} { @content; }
+  @keyframes         #{$name} { @content; } 
+}
+
+/* rotate mixin */
+@mixin rotate($deg){  
+  -webkit-transform: rotate($deg);
+  -moz-transform:    rotate($deg);
+  -ms-transform:     rotate($deg);
+  -o-transform:      rotate($deg);
+  transform:         rotate($deg);
+}
+
+@mixin drop-shadow($color, $var1, $var2, $var3, $var4) {
+  -moz-box-shadow:     $color $var1 $var2 $var3 $var4;
+  -webkit-box-shadow:  $color $var1 $var2 $var3 $var4;
+  box-shadow:          $color $var1 $var2 $var3 $var4;
+}

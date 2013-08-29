@@ -1,0 +1,2219 @@
+/**
+  *  File:         main.scss
+  **************************
+  *
+  *  Description:   main scss file for the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-09
+**/
+/*******************
+  * MODULE IMPORTS *
+  *******************/
+/**
+  *  File:         _all.scss
+  ***************************
+  *
+  *  Description:   all modules used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-28
+**/
+/**
+  *  File:         _colors.scss
+  *****************************
+  *
+  *  Description:   colors used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+/**
+  *  File:         _dimensions.scss
+  *********************************
+  *
+  *  Description:   dimensions used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+/* variable for content padding --> align to header text */
+/**
+  *  File:         _fonts.scss
+  ****************************
+  *
+  *  Description:   fonts used in the clean-glreader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-28
+**/
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../font/FontAwesome.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+/**
+  *  File:         _mixins.scss
+  *****************************
+  *
+  *  Description:   mixins used in this theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-28
+**/
+/* keyframes mixin */
+/* rotate mixin */
+/**
+  *  File:         _animations.scss
+  *********************************
+  *
+  *  Description:   animations used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-28
+**/
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-ms-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+/************
+  * GENERAL *
+  ************/
+/* no outline */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000321}}
+:focus {
+  outline: none; }
+
+/* font */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000324}}
+* {
+  font-size: 12px;
+  font-family: arial, sans-serif !important; }
+
+/* links */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000330}}
+a:link, a:visited, a:focus, a:hover {
+  color: #2193ea;
+  text-decoration: none; }
+
+/* background */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000336}}
+body {
+  background: #e5e5e5; }
+
+/* scrollbars */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000339}}
+::-webkit-scrollbar {
+  width: 12px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000340}}
+::-webkit-scrollbar-track {
+  background-color: #EEE;
+  margin: 1px 0 2px 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000341}}
+::-webkit-scrollbar-thumb {
+  background-color: #fff; }
+
+/* remove claro transitions */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000344}}
+.claro .dijitSelect, .claro .dijitSelect .dijitButtonContents, .claro .dijitTextBox, .claro .dijitTextBox .dijitButtonNode {
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000348}}
+.claro .dijitToolbar {
+  background: white;
+  padding: 8px; }
+
+/*********
+  * MAIN *
+  *********/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000358}}
+body#ttrssPrefs {
+  overflow: hidden; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000362}}
+#main {
+  max-width: 1140px;
+  margin: 0 auto; }
+
+/***********
+  * HEADER *
+  ***********/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000372}}
+body#ttrssPrefs #header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  border: 1px solid #d8d8d8;
+  padding: 4px 8px;
+  background: whitesmoke; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000380}}
+  body#ttrssPrefs #header:hover {
+    background: white; }
+
+/***********
+  * FOOTER *
+  ***********/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000388}}
+#footer {
+  position: fixed;
+  z-index: 1;
+  height: 16px;
+  border: 1px solid #d8d8d8; }
+
+/* card resizer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000396}}
+div[widgetid="feeds-holder_splitter"] {
+  display: none !important; }
+
+/*** MAIN CARDS -CONTENT CARD ***/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\0000399}}
+div#header-wrap {
+  display: inline-block;
+  float: left;
+  margin: 0 ;
+  padding: 0 ;
+  border-width: 0 ; }
+
+/* dock splitter */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/main\.scss}line{font-family:\00003107}}
+div.dijitSplitterCover {
+  display: none !important; }
+
+/*********************
+  * PARTIALS IMPORTS *
+  *********************/
+/**
+  *  File:         _icons.scss
+  *****************************
+  *
+  *  Description:   icons used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-28
+**/
+/* no more icon sets - using webfonts / svg images */
+/*******************
+  * FEED LIST TREE *
+  *******************/
+/* disable system and folder icons */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000318}}
+.claro .dijitTreeIcon.feedIcon:not([src^="feed-icons"]),
+.claro .dijitFolderClosed,
+.claro .dijitFolderOpened {
+  display: none; }
+
+/* icon: tree opened + closed */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000325}}
+.claro .dijitTreeExpandoClosed,
+.claro .dijitTreeRowHover .dijitTreeExpandoClosed,
+.claro .dijitTreeExpandoOpened,
+.claro .dijitTreeRowHover .dijitTreeExpandoOpened {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMTAyNCw3MDRxMCwyNiAtMTksNDVsLTQ0OCw0NDhxLTE5LDE5IC00NSwxOXQtNDUtMTlsLTQ0OC00NDhxLTE5LTE5IC0xOS00NXQgMTktNDV0IDQ1LTE5bDg5NiwwIHEgMjYsMCA0NSwxOXQgMTksNDV6IiB0cmFuc2Zvcm09InNjYWxlKDAuMDA4OTI4NTcxNDI4NTcxNDI4IDAuMDA4OTI4NTcxNDI4NTcxNDI4KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+  background-position: 0 0; }
+
+/* icon: tree closed */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000334}}
+.claro .dijitTreeExpandoClosed,
+.claro .dijitTreeRowHover .dijitTreeExpandoClosed {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 40% 40%;
+  transform-origin: 40% 40%; }
+
+/* icon: all articles */
+/* 1.8 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000343}}
+.claro .dijitTreeIcon.feedIcon[src$="images/tag.png"],
+.claro .dijitTreeIcon.feedIcon[src$="images/folder.png"] {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000393}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/tag.png"] + span:before,
+  .claro .dijitTreeIcon.feedIcon[src$="images/folder.png"] + span:before {
+    text-align: center;
+    width: 16px;
+    font-size: 14px;
+    display: inline-block;
+    content: "\f00b";
+    font-family: 'FontAwesome' !important;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 14px;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    padding-right: 8px;
+    color: #777777;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\00003103}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/tag.png"] + span:hover:before,
+  .claro .dijitTreeIcon.feedIcon[src$="images/folder.png"] + span:hover:before {
+    color: #333333;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+
+/* icon: fresh articles */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000349}}
+.claro .dijitTreeIcon.feedIcon[src$="images/fresh.png"] {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000393}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/fresh.png"] + span:before {
+    text-align: center;
+    width: 16px;
+    font-size: 14px;
+    display: inline-block;
+    content: "\f06d";
+    font-family: 'FontAwesome' !important;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 14px;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    padding-right: 8px;
+    color: #777777;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\00003103}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/fresh.png"] + span:hover:before {
+    color: #333333;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+
+/* icon: starred articles */
+/* 1.8 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000354}}
+.claro .dijitTreeIcon.feedIcon[src$="images/mark_set.svg"],
+.claro .dijitTreeIcon.feedIcon[src$="images/star.png"] {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000393}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/mark_set.svg"] + span:before,
+  .claro .dijitTreeIcon.feedIcon[src$="images/star.png"] + span:before {
+    text-align: center;
+    width: 16px;
+    font-size: 14px;
+    display: inline-block;
+    content: "\f02e";
+    font-family: 'FontAwesome' !important;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 14px;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    padding-right: 8px;
+    color: #777777;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\00003103}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/mark_set.svg"] + span:hover:before,
+  .claro .dijitTreeIcon.feedIcon[src$="images/star.png"] + span:hover:before {
+    color: #333333;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+
+/* icon : published articles */
+/* 1.8 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000360}}
+.claro .dijitTreeIcon.feedIcon[src$="images/pub_set.svg"],
+.claro .dijitTreeIcon.feedIcon[src$="images/feed.png"] {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000393}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/pub_set.svg"] + span:before,
+  .claro .dijitTreeIcon.feedIcon[src$="images/feed.png"] + span:before {
+    text-align: center;
+    width: 16px;
+    font-size: 14px;
+    display: inline-block;
+    content: "\f09e";
+    font-family: 'FontAwesome' !important;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 14px;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    padding-right: 8px;
+    color: #777777;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\00003103}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/pub_set.svg"] + span:hover:before,
+  .claro .dijitTreeIcon.feedIcon[src$="images/feed.png"] + span:hover:before {
+    color: #333333;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+
+/* icon: archived articles */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000366}}
+.claro .dijitTreeIcon.feedIcon[src$="images/archive.png"] {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000393}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/archive.png"] + span:before {
+    text-align: center;
+    width: 16px;
+    font-size: 14px;
+    display: inline-block;
+    content: "\f01c";
+    font-family: 'FontAwesome' !important;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 14px;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    padding-right: 8px;
+    color: #777777;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\00003103}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/archive.png"] + span:hover:before {
+    color: #333333;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+
+/* icon: recently read articles */
+/* 1.8 */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000371}}
+.claro .dijitTreeIcon.feedIcon[src$="images/recently_read.png"],
+.claro .dijitTreeIcon.feedIcon[src$="images/time.png"] {
+  display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000393}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/recently_read.png"] + span:before,
+  .claro .dijitTreeIcon.feedIcon[src$="images/time.png"] + span:before {
+    text-align: center;
+    width: 16px;
+    font-size: 14px;
+    display: inline-block;
+    content: "\f017";
+    font-family: 'FontAwesome' !important;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 14px;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    padding-right: 8px;
+    color: #777777;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\00003103}}
+  .claro .dijitTreeIcon.feedIcon[src$="images/recently_read.png"] + span:hover:before,
+  .claro .dijitTreeIcon.feedIcon[src$="images/time.png"] + span:hover:before {
+    color: #333333;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+
+/*************************
+  * ARTICLE HEADER ICONS *
+  *************************/
+/* checkbox */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000383}}
+.claro .dijitCheckBox,
+.claro .dijitCheckBoxIcon {
+  background-image: none;
+  font-size: 14px;
+  position: relative;
+  left: 1px;
+  top: 1px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000394}}
+  .claro .dijitCheckBox input,
+  .claro .dijitCheckBoxIcon input {
+    cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\0000396}}
+  .claro .dijitCheckBox:before,
+  .claro .dijitCheckBoxIcon:before {
+    position: absolute;
+    left: 0;
+    color: #d8d8d8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003101}}
+  .claro .dijitCheckBox:before,
+  .claro .dijitCheckBoxIcon:before {
+    display: inline-block;
+    content: "\f096";
+    font-family: 'FontAwesome' !important;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 14px;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003102}}
+  .claro .dijitCheckBox.dijitCheckBoxHover:before,
+  .claro .dijitCheckBoxIcon.dijitCheckBoxHover:before {
+    color: #777777; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003103}}
+  .claro .dijitCheckBox.dijitCheckBoxChecked:before,
+  .claro .dijitCheckBoxIcon.dijitCheckBoxChecked:before {
+    display: inline-block;
+    content: "\f046";
+    font-family: 'FontAwesome' !important;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 14px;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #777777; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003104}}
+  .claro .dijitCheckBox.dijitCheckBoxDisabled input,
+  .claro .dijitCheckBoxIcon.dijitCheckBoxDisabled input {
+    cursor: default; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003105}}
+  .claro .dijitCheckBox.dijitCheckBoxDisabled:before,
+  .claro .dijitCheckBoxIcon.dijitCheckBoxDisabled:before {
+    color: #d8d8d8; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003108}}
+div.cdmHeader img,
+div#floatingTitle img {
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.153; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000381}}
+  div.cdmHeader img:hover,
+  div#floatingTitle img:hover {
+    opacity: 0.533; }
+
+/* not starred */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003114}}
+div.cdmHeader img[src*="images/mark_unset."],
+div#floatingTitle img[src*="images/mark_unset."] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMTE1MiwyNTZsLTEwMjQsMCBsMCwxMjQyIGwgNDIzLTQwNmwgODktODVsIDg5LDg1bCA0MjMsNDA2bDAsLTEyNDIgek0gMTE2NCwxMjhxIDIzLDAgNDQsOXEgMzMsMTMgNTIuNSw0MXQgMTkuNSw2MmwwLDEyODkgcTAsMzQgLTE5LjUsNjJ0LTUyLjUsNDFxLTE5LDggLTQ0LDhxLTQ4LDAgLTgzLTMybC00NDEtNDI0bC00NDEsNDI0cS0zNiwzMyAtODMsMzNxLTIzLDAgLTQ0LTlxLTMzLTEzIC01Mi41LTQxdC0xOS41LTYybDAsLTEyODkgIHEwLTM0IDE5LjUtNjJ0IDUyLjUtNDFxIDIxLTkgNDQtOWwxMDQ4LDAgeiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAwODkyODU3MTQyODU3MTQyOCAwLjAwODkyODU3MTQyODU3MTQyOCkiIGZpbGw9IiMwMDAiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPg=="); }
+
+/* starred */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003120}}
+div.cdmHeader img[src*="images/mark_set."],
+div#floatingTitle img[src*="images/mark_set."] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMTE2NCwxMjhxIDIzLDAgNDQsOXEgMzMsMTMgNTIuNSw0MXQgMTkuNSw2MmwwLDEyODkgcTAsMzQgLTE5LjUsNjJ0LTUyLjUsNDFxLTE5LDggLTQ0LDhxLTQ4LDAgLTgzLTMybC00NDEtNDI0bC00NDEsNDI0cS0zNiwzMyAtODMsMzNxLTIzLDAgLTQ0LTlxLTMzLTEzIC01Mi41LTQxdC0xOS41LTYybDAsLTEyODkgcTAtMzQgMTkuNS02MnQgNTIuNS00MXEgMjEtOSA0NC05bDEwNDgsMCB6IiB0cmFuc2Zvcm09InNjYWxlKDAuMDA4OTI4NTcxNDI4NTcxNDI4IDAuMDA4OTI4NTcxNDI4NTcxNDI4KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+  opacity: 0.533; }
+
+/* not published */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003127}}
+div.cdmHeader img[src*="images/pub_unset."],
+div#floatingTitle img[src*="images/pub_unset."] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMzg0LDEzNDRxMCw4MCAtNTYsMTM2dC0xMzYsNTZ0LTEzNi01NnQtNTYtMTM2dCA1Ni0xMzZ0IDEzNi01NnQgMTM2LDU2dCA1NiwxMzZ6TSA4OTYsMTQ2N3EgMiwyOCAtMTcsNDhxLTE4LDIxIC00NywyMWwtMTM1LDAgcS0yNSwwIC00My0xNi41dC0yMC00MS41cS0yMi0yMjkgLTE4NC41LTM5MS41dC0zOTEuNS0xODQuNXEtMjUtMiAtNDEuNS0yMHQtMTYuNS00M2wwLC0xMzUgcTAtMjkgMjEtNDdxIDE3LTE3IDQzLTE3bDUsMCBxIDE2MCwxMyAzMDYsODAuNSB0IDI1OSwxODEuNXEgMTE0LDExMyAxODEuNSwyNTl0IDgwLjUsMzA2ek0gMTQwOCwxNDY5cSAyLDI3IC0xOCw0N3EtMTgsMjAgLTQ2LDIwbC0xNDMsMCBxLTI2LDAgLTQ0LjUtMTcuNXQtMTkuNS00Mi41cS0xMi0yMTUgLTEwMS00MDguNXQtMjMxLjUtMzM2dC0zMzYtMjMxLjV0LTQwOC41LTEwMnEtMjUtMSAtNDIuNS0xOS41dC0xNy41LTQzLjVsMCwtMTQzIHEwLTI4IDIwLTQ2cSAxOC0xOCA0NC0xOGwzLDAgcSAyNjIsMTMgNTAxLjUsMTIwdCA0MjUuNSwyOTQgcSAxODcsMTg2IDI5NCw0MjUuNXQgMTIwLDUwMS41eiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAwODkyODU3MTQyODU3MTQyOCAwLjAwODkyODU3MTQyODU3MTQyOCkiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPg=="); }
+
+/* published */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003133}}
+div.cdmHeader img[src*="images/pub_set."],
+div#floatingTitle img[src*="images/pub_set."] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMzg0LDEzNDRxMCw4MCAtNTYsMTM2dC0xMzYsNTZ0LTEzNi01NnQtNTYtMTM2dCA1Ni0xMzZ0IDEzNi01NnQgMTM2LDU2dCA1NiwxMzZ6TSA4OTYsMTQ2N3EgMiwyOCAtMTcsNDhxLTE4LDIxIC00NywyMWwtMTM1LDAgcS0yNSwwIC00My0xNi41dC0yMC00MS41cS0yMi0yMjkgLTE4NC41LTM5MS41dC0zOTEuNS0xODQuNXEtMjUtMiAtNDEuNS0yMHQtMTYuNS00M2wwLC0xMzUgcTAtMjkgMjEtNDdxIDE3LTE3IDQzLTE3bDUsMCBxIDE2MCwxMyAzMDYsODAuNSB0IDI1OSwxODEuNXEgMTE0LDExMyAxODEuNSwyNTl0IDgwLjUsMzA2ek0gMTQwOCwxNDY5cSAyLDI3IC0xOCw0N3EtMTgsMjAgLTQ2LDIwbC0xNDMsMCBxLTI2LDAgLTQ0LjUtMTcuNXQtMTkuNS00Mi41cS0xMi0yMTUgLTEwMS00MDguNXQtMjMxLjUtMzM2dC0zMzYtMjMxLjV0LTQwOC41LTEwMnEtMjUtMSAtNDIuNS0xOS41dC0xNy41LTQzLjVsMCwtMTQzIHEwLTI4IDIwLTQ2cSAxOC0xOCA0NC0xOGwzLDAgcSAyNjIsMTMgNTAxLjUsMTIwdCA0MjUuNSwyOTQgcSAxODcsMTg2IDI5NCw0MjUuNXQgMTIwLDUwMS41eiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAwODkyODU3MTQyODU3MTQyOCAwLjAwODkyODU3MTQyODU3MTQyOCkiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPg==");
+  opacity: 0.533; }
+
+/* back to top */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003140}}
+div#floatingTitle img[src$="images/page_white_go.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMTAxOCw2MDNxLTE4LDM3IC01OCwzN2wtMTkyLDAgbDAsODY0IHEwLDE0IC05LDIzdC0yMyw5bC03MDQsMCBxLTIxLDAgLTI5LTE4cS04LTIwIDQtMzVsIDE2MC0xOTJxIDktMTEgMjUtMTFsMzIwLDAgbDAsLTY0MCBsLTE5MiwwIHEtNDAsMCAtNTgtMzdxLTE3LTM3IDktNjhsIDMyMC0zODRxIDE4LTIyIDQ5LTIydCA0OSwyMmwgMzIwLDM4NHEgMjcsMzIgOSw2OHoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMDg5Mjg1NzE0Mjg1NzE0MjggMC4wMDg5Mjg1NzE0Mjg1NzE0MjgpIj48L3BhdGg+CiAgPC9nPgo8L3N2Zz4=");
+  opacity: 0.533; }
+
+/* feed title - collapse icon */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003146}}
+span.collapseBtn img {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gOTI4LDM4NHEgOTMsMCAxNTguNSw2NS41dCA2NS41LDE1OC41bDAsNzA0IHEwLDkyIC02NS41LDE1OHQtMTU4LjUsNjZsLTcwNCwwIHEtOTMsMCAtMTU4LjUtNjZ0LTY1LjUtMTU4bDAsLTcwNCBxMC05MyA2NS41LTE1OC41dCAxNTguNS02NS41bDcwNCwwIHpNIDEwMjQsMTMxMmwwLC03MDQgcTAtNDAgLTI4LTY4dC02OC0yOGwtNzA0LDAgcS00MCwwIC02OCwyOHQtMjgsNjhsMCw3MDQgcTAsNDAgMjgsNjh0IDY4LDI4bDcwNCwwIHEgNDAsMCA2OC0yOHQgMjgtNjh6IE0gODY0LDg5NnEgMTQsMCAyMyw5dCA5LDIzbDAsNjQgcTAsMTQgLTksMjN0LTIzLDlsLTU3NiwwIHEtMTQsMCAtMjMtOXQtOS0yM2wwLC02NCBxMC0xNCA5LTIzdCAyMy05bDU3NiwwIHoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMDg5Mjg1NzE0Mjg1NzE0MjggMC4wMDg5Mjg1NzE0Mjg1NzE0MjgpIj48L3BhdGg+CiAgPC9nPgo8L3N2Zz4=");
+  margin-top: -4px;
+  margin-left: 4px; }
+
+/* score: neutral */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003153}}
+img[src$="images/score_neutral.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMjU2LjAwLDAuMDBDIDExNC42MTUsMC4wMCwwLjAwLDExNC42MTUsMC4wMCwyNTYuMDBzIDExNC42MTUsMjU2LjAwLCAyNTYuMDAsMjU2LjAwcyAyNTYuMDAtMTE0LjYxNSwgMjU2LjAwLTI1Ni4wMFMgMzk3LjM4NSwwLjAwLCAyNTYuMDAsMC4wMHogTSAyNTYuMDAsNDQ4LjAwCgljLTEwNi4wMzksMC4wMC0xOTIuMDAtODUuOTYxLTE5Mi4wMC0xOTIuMDBjMC4wMC0xMDYuMDM5LCA4NS45NjEtMTkyLjAwLCAxOTIuMDAtMTkyLjAwYyAxMDYuMDM5LDAuMDAsIDE5Mi4wMCw4NS45NjEsIDE5Mi4wMCwxOTIuMDBDIDQ0OC4wMCwzNjIuMDM5LCAzNjIuMDM5LDQ0OC4wMCwgMjU2LjAwLDQ0OC4wMHoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMzEyNSAwLjAzMTI1KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.153; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000381}}
+  img[src$="images/score_neutral.png"]:hover {
+    opacity: 0.533; }
+
+/* score half high */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003159}}
+img[src$="images/score_half_high.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMjU2LjAwLDAuMDBDIDExNC42MTUsMC4wMCwwLjAwLDExNC42MTUsMC4wMCwyNTYuMDBzIDExNC42MTUsMjU2LjAwLCAyNTYuMDAsMjU2LjAwcyAyNTYuMDAtMTE0LjYxNSwgMjU2LjAwLTI1Ni4wMFMgMzk3LjM4NSwwLjAwLCAyNTYuMDAsMC4wMHogTSAyNTYuMDAsNDY0LjAwCgkJYy0xMTQuODc1LDAuMDAtMjA4LjAwLTkzLjEyNS0yMDguMDAtMjA4LjAwUyAxNDEuMTI1LDQ4LjAwLCAyNTYuMDAsNDguMDBzIDIwOC4wMCw5My4xMjUsIDIwOC4wMCwyMDguMDBTIDM3MC44NzUsNDY0LjAwLCAyNTYuMDAsNDY0LjAwek0gMTkyLjAwLDEyOC4wMGMtMTcuNjczLDAuMDAtMzIuMDAsMTQuMzI3LTMyLjAwLDMyLjAwcyAxNC4zMjcsMzIuMDAsIDMyLjAwLDMyLjAwbCA4Mi43NDQsMC4wMCBMIDEzNy4zNzMsMzI5LjM3MmMtMTIuNDk3LDEyLjQ5Ny0xMi40OTcsMzIuNzU5LDAuMDAsNDUuMjU2CglDIDE0My42MjEsMzgwLjg3NiwgMTUxLjgxMSwzODQuMDAsIDE2MC4wMCwzODQuMDBzIDE2LjM3OS0zLjEyNCwgMjIuNjI3LTkuMzcyTCAzMjAuMDAsMjM3LjI1NUwgMzIwLjAwLDMyMC4wMCBjMC4wMCwxNy42NzMsIDE0LjMyNywzMi4wMCwgMzIuMDAsMzIuMDBzIDMyLjAwLTE0LjMyNywgMzIuMDAtMzIuMDBMIDM4NC4wMCwxMjguMDAgTCAxOTIuMDAsMTI4LjAwIAoJeiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAzMTI1IDAuMDMxMjUpIj48L3BhdGg+CiAgPC9nPgo8L3N2Zz4=");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000386}}
+  img[src$="images/score_half_high.png"]:hover {
+    opacity: 0.8; }
+
+/* score high */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003165}}
+img[src$="images/score_high.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gNTEyLjAwLDI1Ni4wMEMgNTEyLjAwLDM5Ny4zODUsIDM5Ny4zODUsNTEyLjAwLCAyNTYuMDAsNTEyLjAwcyAtMjU2LjAwLTExNC42MTUsIC0yNTYuMDAtMjU2LjAwcyAxMTQuNjE1LTI1Ni4wMCwgMjU2LjAwLTI1Ni4wMFMgNTEyLjAwLDExNC42MTUsIDUxMi4wMCwyNTYuMDB6IE0gNDguMDAsMjU2LjAwCgkJYyAwLjAwLDExNC44NzUgOTMuMTI1LDIwOC4wMCAyMDguMDAsMjA4LjAwUyA0NjQuMDAsMzcwLjg3NSwgNDY0LjAwLDI1Ni4wMHMgLTkzLjEyNS0yMDguMDAsIC0yMDguMDAtMjA4LjAwUyA0OC4wMCwxNDEuMTI1LCA0OC4wMCwyNTYuMDB6TSAyNzguNjI3LDEwNS4zNzJsIDEyOC4wMCwxMjguMDAxYyAxMi40OTcsMTIuNDk2IDEyLjQ5NywzMi43NTcgMC4wMCw0NS4yNTRjIC0xMi40OTcsMTIuNDk3IC0zMi43NTgsMTIuNDk3LC00NS4yNTUsMC4wMEwgMjg4LjAwLDIwNS4yNTUKCUwgMjg4LjAwLDM4NC4wMCBjIDAuMDAsMTcuNjczIC0xNC4zMjcsMzIuMDAgLTMyLjAwLDMyLjAwYy0xNy42NzMsMC4wMCwgLTMyLjAwLTE0LjMyNywgLTMyLjAwLTMyLjAwbDAuMDAtMTc4Ljc0NSBsIC03My4zNzIsNzMuMzczYyAtMTIuNDk3LDEyLjQ5NyAtMzIuNzU5LDEyLjQ5NywtNDUuMjU2LDAuMDAKCUMgOTkuMTI0LDI3Mi4zNzksIDk2LjAwLDI2NC4xODksIDk2LjAwLDI1Ni4wMHMgMy4xMjQtMTYuMzc5LCA5LjM3Mi0yMi42MjdsIDEyOC4wMC0xMjguMDAxQyAyNDUuODY5LDkyLjg3NiwgMjY2LjEzMSw5Mi44NzYsIDI3OC42MjcsMTA1LjM3MnoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMzEyNSAwLjAzMTI1KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000386}}
+  img[src$="images/score_high.png"]:hover {
+    opacity: 0.8; }
+
+/* score half low */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003171}}
+img[src$="images/score_half_low.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMjU2LjAwLDUxMi4wMEMgMTE0LjYxNSw1MTIuMDAsIDAuMDAsMzk3LjM4NSwgMC4wMCwyNTYuMDBzIDExNC42MTUtMjU2LjAwLCAyNTYuMDAtMjU2LjAwcyAyNTYuMDAsMTE0LjYxNSwgMjU2LjAwLDI1Ni4wMFMgMzk3LjM4NSw1MTIuMDAsIDI1Ni4wMCw1MTIuMDB6IE0gMjU2LjAwLDQ4LjAwCgkJYyAtMTE0Ljg3NSwwLjAwIC0yMDguMDAsOTMuMTI1IC0yMDguMDAsMjA4LjAwUyAxNDEuMTI1LDQ2NC4wMCwgMjU2LjAwLDQ2NC4wMHMgMjA4LjAwLTkzLjEyNSwgMjA4LjAwLTIwOC4wMFMgMzcwLjg3NSw0OC4wMCwgMjU2LjAwLDQ4LjAwek0gMTkyLjAwLDM4NC4wMGMgLTE3LjY3MywwLjAwIC0zMi4wMC0xNC4zMjcgLTMyLjAwLTMyLjAwcyAxNC4zMjctMzIuMDAsIDMyLjAwLTMyLjAwbCA4Mi43NDQsMC4wMCBMIDEzNy4zNzMsMTgyLjYyOGMgLTEyLjQ5Ny0xMi40OTcgLTEyLjQ5Ny0zMi43NTksMC4wMC00NS4yNTYKCUMgMTQzLjYyMSwxMzEuMTI0LCAxNTEuODExLDEyOC4wMCwgMTYwLjAwLDEyOC4wMHMgMTYuMzc5LDMuMTI0LCAyMi42MjcsOS4zNzJMIDMyMC4wMCwyNzQuNzQ1TCAzMjAuMDAsMTkyLjAwIGMwLjAwLTE3LjY3MywgMTQuMzI3LTMyLjAwLCAzMi4wMC0zMi4wMHMgMzIuMDAsMTQuMzI3LCAzMi4wMCwzMi4wMEwgMzg0LjAwLDM4NC4wMCBMIDE5Mi4wMCwzODQuMDAgCgl6IiB0cmFuc2Zvcm09InNjYWxlKDAuMDMxMjUgMC4wMzEyNSkiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPg==");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000386}}
+  img[src$="images/score_half_low.png"]:hover {
+    opacity: 0.8; }
+
+/* score low */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003177}}
+img[src$="images/score_low.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gNTEyLjAwLDI1Ni4wMEMgNTEyLjAwLDExNC42MTUsIDM5Ny4zODUsMC4wMCwgMjU2LjAwLDAuMDBzIC0yNTYuMDAsMTE0LjYxNSwgLTI1Ni4wMCwyNTYuMDBzIDExNC42MTUsMjU2LjAwLCAyNTYuMDAsMjU2LjAwUyA1MTIuMDAsMzk3LjM4NSwgNTEyLjAwLDI1Ni4wMHogTSA0OC4wMCwyNTYuMDAKCQljIDAuMDAtMTE0Ljg3NSA5My4xMjUtMjA4LjAwIDIwOC4wMC0yMDguMDBTIDQ2NC4wMCwxNDEuMTI1LCA0NjQuMDAsMjU2LjAwcyAtOTMuMTI1LDIwOC4wMCwgLTIwOC4wMCwyMDguMDBTIDQ4LjAwLDM3MC44NzUsIDQ4LjAwLDI1Ni4wMHpNIDI3OC42MjcsNDA2LjYyOGwgMTI4LjAwLTEyOC4wMDFjIDEyLjQ5Ny0xMi40OTYgMTIuNDk3LTMyLjc1NyAwLjAwLTQ1LjI1NGMgLTEyLjQ5Ny0xMi40OTcgLTMyLjc1OC0xMi40OTcsLTQ1LjI1NSwwLjAwTCAyODguMDAsMzA2Ljc0NQoJTCAyODguMDAsMTI4LjAwIGMgMC4wMC0xNy42NzMgLTE0LjMyNy0zMi4wMCAtMzIuMDAtMzIuMDBjLTE3LjY3MywwLjAwLCAtMzIuMDAsMTQuMzI3LCAtMzIuMDAsMzIuMDBsMC4wMCwxNzguNzQ1IGwgLTczLjM3Mi03My4zNzNjIC0xMi40OTctMTIuNDk3IC0zMi43NTktMTIuNDk3LC00NS4yNTYsMC4wMAoJQyA5OS4xMjQsMjM5LjYyMSwgOTYuMDAsMjQ3LjgxMSwgOTYuMDAsMjU2LjAwcyAzLjEyNCwxNi4zNzksIDkuMzcyLDIyLjYyN2wgMTI4LjAwLDEyOC4wMDFDIDI0NS44NjksNDE5LjEyNCwgMjY2LjEzMSw0MTkuMTI0LCAyNzguNjI3LDQwNi42Mjh6IiB0cmFuc2Zvcm09InNjYWxlKDAuMDMxMjUgMC4wMzEyNSkiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPg==");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000386}}
+  img[src$="images/score_low.png"]:hover {
+    opacity: 0.8; }
+
+/*************************
+  * ARTICLE FOOTER ICONS *
+  *************************/
+/* tags */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003189}}
+.cdmFooter img[src="images/tag.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gNDQ4LDQ0OHEwLTUzIC0zNy41LTkwLjV0LTkwLjUtMzcuNXQtOTAuNSwzNy41dC0zNy41LDkwLjV0IDM3LjUsOTAuNXQgOTAuNSwzNy41dCA5MC41LTM3LjV0IDM3LjUtOTAuNXpNIDE1MTUsMTAyNHEwLDUzIC0zNyw5MGwtNDkxLDQ5MnEtMzksMzcgLTkxLDM3cS01MywwIC05MC0zN2wtNzE1LTcxNnEtMzgtMzcgLTY0LjUtMTAxdC0yNi41LTExN2wwLC00MTYgcTAtNTIgMzgtOTB0IDkwLTM4bDQxNiwwIHEgNTMsMCAxMTcsMjYuNXQgMTAyLDY0LjUgbCA3MTUsNzE0cSAzNywzOSAzNyw5MXpNIDE4OTksMTAyNHEwLDUzIC0zNyw5MGwtNDkxLDQ5MnEtMzksMzcgLTkxLDM3cS0zNiwwIC01OS0xNHQtNTMtNDVsIDQ3MC00NzBxIDM3LTM3IDM3LTkwcTAtNTIgLTM3LTkxbC03MTUtNzE0cS0zOC0zOCAtMTAyLTY0LjV0LTExNy0yNi41bDIyNCwwIHEgNTMsMCAxMTcsMjYuNXQgMTAyLDY0LjVsIDcxNSw3MTRxIDM3LDM5IDM3LDkxeiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAwODkyODU3MTQyODU3MTQyOCAwLjAwODkyODU3MTQyODU3MTQyOCkiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPg==");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.153;
+  opacity: 0.533; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000381}}
+  .cdmFooter img[src="images/tag.png"]:hover {
+    opacity: 0.533; }
+
+/* note */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003196}}
+.cdmFooter img[src="plugins/note/note.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gNDQ2LjA1OSw5NC4wNTlsLTYwLjExNy02MC4xMThDIDM2Ny4yNzMsMTUuMjczLCAzMzAuNDAsMC4wMCwgMzA0LjAwLDAuMDBMIDgwLjAwLDAuMDAgQyA1My42MCwwLjAwLCAzMi4wMCwyMS42MCwgMzIuMDAsNDguMDBsMC4wMCw0MTYuMDAgYzAuMDAsMjYuNDAsIDIxLjYwLDQ4LjAwLCA0OC4wMCw0OC4wMGwgMzUyLjAwLDAuMDAgCgljIDI2LjQwLDAuMDAsIDQ4LjAwLTIxLjYwLCA0OC4wMC00OC4wMEwgNDgwLjAwLDE3Ni4wMCBDIDQ4MC4wMCwxNDkuNjAsIDQ2NC43MjcsMTEyLjcyNywgNDQ2LjA1OSw5NC4wNTl6IE0gMzIwLjAwLDY3Ljc4MWMgMS4wOTgsMC40MDIsIDIuMjI2LDAuODQsIDMuMzc5LDEuMzE4CgljIDkuMDMsMy43NDEsIDE1LjI5OSw4LjA4OCwgMTcuMzA4LDEwLjA5N2wgNjAuMTE4LDYwLjExOWMgMi4wMDksMi4wMDksIDYuMzU2LDguMjc3LCAxMC4wOTcsMTcuMzA3YyAwLjQ3OCwxLjE1MywgMC45MTYsMi4yODEsIDEuMzE4LDMuMzc4CglMIDMyMC4wMCwxNjAuMDAgTCAzMjAuMDAsNjcuNzgxIHogTSA0MTYuMDAsNDQ4LjAwTCA5Ni4wMCw0NDguMDAgTCA5Ni4wMCw2NC4wMCBsIDE5Mi4wMCwwLjAwIGwwLjAwLDEyOC4wMCBsIDEyOC4wMCwwLjAwIEwgNDE2LjAwLDQ0OC4wMCB6TSAxMjguMDAsMjU2LjAwTCAzODQuMDAsMjU2LjAwTCAzODQuMDAsMjg4LjAwTCAxMjguMDAsMjg4LjAwek0gMTI4LjAwLDMyMC4wMEwgMzg0LjAwLDMyMC4wMEwgMzg0LjAwLDM1Mi4wMEwgMTI4LjAwLDM1Mi4wMHpNIDEyOC4wMCwzODQuMDBMIDM4NC4wMCwzODQuMDBMIDM4NC4wMCw0MTYuMDBMIDEyOC4wMCw0MTYuMDB6IiB0cmFuc2Zvcm09InNjYWxlKDAuMDMxMjUgMC4wMzEyNSkiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPg==");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000386}}
+  .cdmFooter img[src="plugins/note/note.png"]:hover {
+    opacity: 0.8; }
+
+/* google plus */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003202}}
+.cdmFooter img[src="plugins/googleplus/googleplus.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMC40MDMsNDM0LjgzMmMtMC4xMjItMS4yNjYtMC4yMjYtMi41MzUtMC4yOTItMy44MTVDIDAuMTc2LDQzMi4yOTcsIDAuMjgxLDQzMy41NjYsIDAuNDAzLDQzNC44MzJ6TSAxMTcuOTU0LDI4Mi41NzRjIDQ2LjAwNSwxLjM2OSwgNzYuODY3LTQ2LjM0OSwgNjguOTMxLTEwNi41OTljLTcuOTQ3LTYwLjI0LTUxLjY5OC0xMDguNTg0LTk3LjcwNC0xMDkuOTYxCgkJYy00Ni4wMTMtMS4zNjUtNzYuODcsNDQuNzQxLTY4LjkyNiwxMDUuMDBDIDI4LjE5NiwyMzEuMjQ4LCA3MS45MzEsMjgxLjIwMSwgMTE3Ljk1NCwyODIuNTc0ek0gNTEyLjAwLDEyOC4wMEwgNTEyLjAwLDg1LjM0NSBDIDUxMi4wMCwzOC40MDUsIDQ3My42MDksMC4wMCwgNDI2LjY3MSwwLjAwTCA4NS4zNDMsMC4wMCBDIDM5LjIwNSwwLjAwLCAxLjMzNywzNy4xMTYsIDAuMDYxLDgyLjk2MwoJCWMgMjkuMTgxLTI1LjY5MywgNjkuNjYyLTQ3LjE1OCwgMTExLjQzNy00Ny4xNThjIDQ0LjY1MiwwLjAwLCAxNzguNjIyLDAuMDAsIDE3OC42MjIsMC4wMGwtMzkuOTc0LDMzLjgwOWwtNTYuNjM0LDAuMDAgCgkJYyAzNy41NjUsMTQuNDAyLCA1Ny41NzgsNTguMDYyLCA1Ny41NzgsMTAyLjg2MWMwLjAwLDM3LjYyNC0yMC45MDUsNjkuOTc3LTUwLjQ0NCw5Mi45ODRjLTI4LjgyMiwyMi40NTEtMzQuMjg2LDMxLjg1NC0zNC4yODYsNTAuOTM5CgkJYzAuMDAsMTYuMjg5LCAzMC44NzMsNDQuMDAsIDQ3LjAxNiw1NS4zOTRjIDQ3LjE5MSwzMy4yNjksIDYyLjQ1OCw2NC4xNTYsIDYyLjQ1OCwxMTUuNzI4YzAuMDAsOC4yMTQtMS4wMjEsMTYuNDE1LTMuMDMzLDI0LjQ4bCAxNTMuODcxLDAuMDAgCgkJQyA0NzMuNjA5LDUxMi4wMCwgNTEyLjAwLDQ3My42MjUsIDUxMi4wMCw0MjYuNjU1TCA1MTIuMDAsMTYwLjAwMSBsLTk2LjAwLDAuMDAgTCA0MTYuMDAsMjU2LjAwIGwtMzIuMDAsMC4wMCBsMC4wMC05Ni4wMCBsLTk1Ljk5OSwwLjAwIGwwLjAwLTMyLjAwIEwgMzg0LjAwLDEyOC4wMCBMIDM4NC4wMCwzMi4wMCBsIDMyLjAwLDAuMDAgbDAuMDAsOTYuMDAgTCA1MTIuMDAsMTI4LjAwIHpNIDkyLjk0MywzODIuOTY4YyAxMC44MDcsMC4wMCwgMjAuNzExLTAuMjk1LCAzMC45NjgtMC4yOTVjLTEzLjU3My0xMy4xNjctMjQuMzEzLTI5LjMwLTI0LjMxMy00OS4xOQoJCWMwLjAwLTExLjgwNCwgMy43ODItMjMuMTY4LCA5LjA2Ny0zMy4yNmMtNS4zOTEsMC4zODUtMTAuODk1LDAuNDk3LTE2LjU2MywwLjQ5N2MtMzcuMTc4LDAuMDAtNjguNzUzLTEyLjAzOC05Mi4xMDItMzEuOTI3bDAuMDAsMzMuNjIxIAoJCWwgMC4wMDMsMTAwLjg2NUMgMjYuNzIzLDM5MC41OTIsIDU4LjQ0NywzODIuOTY4LCA5Mi45NDMsMzgyLjk2OHpNIDEuNzEsNDQzLjYyOWMtMC41NTYtMi43MjktMC45ODMtNS41MDMtMS4yNzEtOC4zMTdDIDAuNzI2LDQzOC4xMjYsIDEuMTU0LDQ0MC45MCwgMS43MSw0NDMuNjI5ek0gMjI3LjcyNSw0NzYuNDIzYy03LjUyOS0yOS40MDMtMzQuMjI3LTQzLjk4Mi03MS40NDQtNjkuNzg0Yy0xMy41MzYtNC4zNjYtMjguNDQ3LTYuOTM3LTQ0LjQ0Ny03LjEwNAoJCWMtNDQuODA5LTAuNDgyLTg2LjU1NCwxNy40NzEtMTEwLjEwOCw0NC4xODZDIDkuNjg2LDQ4Mi41NzQsIDQ0LjI0Myw1MTIuMDAsIDg1LjM0Myw1MTIuMDBsIDE0My4yMjIsMC4wMCBjIDAuOTA4LTUuNTY0LCAxLjM0OC0xMS4zMTYsIDEuMzQ4LTE3LjIxNgoJCUMgMjI5LjkxMyw0ODguNTE3LCAyMjkuMTQ2LDQ4Mi4zODgsIDIyNy43MjUsNDc2LjQyM3oiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMzEyNSAwLjAzMTI1KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000386}}
+  .cdmFooter img[src="plugins/googleplus/googleplus.png"]:hover {
+    opacity: 0.8; }
+
+/* mail */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003208}}
+.cdmFooter img[src="plugins/mailto/mail.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gNDI2LjY3MSwwLjAwTCA4NS4zNDMsMC4wMCBDIDM4LjQwNiwwLjAwLDAuMDAsMzguNDA1LDAuMDAsODUuMzQ1bDAuMDAsMzQxLjMxMSBDMC4wMCw0NzMuNjI1LCAzOC40MDYsNTEyLjAwLCA4NS4zNDMsNTEyLjAwbCAzNDEuMzI4LDAuMDAgCglDIDQ3My42MDksNTEyLjAwLCA1MTIuMDAsNDczLjYyNSwgNTEyLjAwLDQyNi42NTVMIDUxMi4wMCw4NS4zNDUgQyA1MTIuMDAsMzguNDA1LCA0NzMuNjA5LDAuMDAsIDQyNi42NzEsMC4wMHogTSA0MjYuNjcxLDY0LjAwYyAzLjk5NCwwLjAwLCA3Ljc3MywxLjE2NywgMTEuMDEsMy4xNzEKCUwgMjU2LjAwLDIxNy4zNzNMIDc0LjMyMyw2Ny4xNzNDIDc3LjU2Miw2NS4xNjgsIDgxLjM0NSw2NC4wMCwgODUuMzQzLDY0LjAwTCA0MjYuNjcxLDY0LjAwIHogTSA4NS4zNDMsNDQ4LjAwYy0wLjk2MiwwLjAwLTEuOTEtMC4wNzMtMi44NDItMC4yMDQKCWwgMTEyLjgxMy0xNTYuNDgzbC0xNC42MjgtMTQuNjI3TCA2NC4wMCwzOTMuMzcxTCA2NC4wMCw4Ny44MDIgTCAyNTYuMDAsMzIwLjAwTCA0NDguMDAsODcuODAzbDAuMDAsMzA1LjU2OCBMIDMzMS4zMTQsMjc2LjY4NmwtMTQuNjI3LDE0LjYyN2wgMTEyLjgxNCwxNTYuNDg0CgljLTAuOTI5LDAuMTMtMS44NzMsMC4yMDMtMi44MzEsMC4yMDNMIDg1LjM0Myw0NDguMDAgeiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAzMTI1IDAuMDMxMjUpIj48L3BhdGg+CiAgPC9nPgo8L3N2Zz4=");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000386}}
+  .cdmFooter img[src="plugins/mailto/mail.png"]:hover {
+    opacity: 0.8; }
+
+/* twitter */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003214}}
+.cdmFooter img[src="plugins/tweet/tweet.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gNDI2LjY3MSwwLjAwTCA4NS4zNDMsMC4wMCBDIDM4LjQwNiwwLjAwLDAuMDAsMzguNDA1LDAuMDAsODUuMzQ1bDAuMDAsMzQxLjMxMSBDMC4wMCw0NzMuNjI1LCAzOC40MDYsNTEyLjAwLCA4NS4zNDMsNTEyLjAwbCAzNDEuMzI4LDAuMDAgCglDIDQ3My42MDksNTEyLjAwLCA1MTIuMDAsNDczLjYyNSwgNTEyLjAwLDQyNi42NTVMIDUxMi4wMCw4NS4zNDUgQyA1MTIuMDAsMzguNDA1LCA0NzMuNjA5LDAuMDAsIDQyNi42NzEsMC4wMHogTSA0MTkuMDI2LDE3MC45MTcKCWMgMC4xNjQsMy42NzEsIDAuMjQ1LDcuMzY0LCAwLjI0NSwxMS4wNzRjMC4wMCwxMTMuMTA3LTg0LjYwOCwyNDMuNTM0LTIzOS4zMjksMjQzLjUzNGMtNDcuNTAyLDAuMDAtOTEuNzE3LTE0LjE3NC0xMjguOTQzLTM4LjQ1OQoJYyA2LjU4LDAuNzk0LCAxMy4yNzYsMS4xOTcsIDIwLjA2NSwxLjE5N2MgMzkuNDExLDAuMDAsIDc1LjY3OS0xMy42ODUsIDEwNC40NjctMzYuNjQxYy0zNi44MDgtMC42OS02Ny44NzItMjUuNDM4LTc4LjU3Ny01OS40NDEKCWMgNS4xMzcsMS4wMCwgMTAuNDA2LDEuNTM3LCAxNS44MjYsMS41MzdjIDcuNjcyLDAuMDAsIDE1LjEwMy0xLjA0OCwgMjIuMTYtMy4wMDRjLTM4LjQ4LTcuODY2LTY3LjQ3NS00Mi40NTgtNjcuNDc1LTgzLjkyOAoJYzAuMDAtMC4zNjEsMC4wMC0wLjcxOSwgMC4wMDgtMS4wNzZjIDExLjM0LDYuNDEsIDI0LjMxMiwxMC4yNiwgMzguMTAsMTAuNzA1Yy0yMi41NzEtMTUuMzQ5LTM3LjQyMS00MS41NDYtMzcuNDIxLTcxLjI0NAoJYzAuMDAtMTUuNjg1LCA0LjE0Ny0zMC4zODksIDExLjM4OS00My4wMjljIDQxLjQ4Nyw1MS43ODUsIDEwMy40NjgsODUuODYsIDE3My4zNzcsODkuNDMxYy0xLjQzNS02LjI2Ni0yLjE3OS0xMi43OTgtMi4xNzktMTkuNTA3CgljMC4wMC00Ny4yNjksIDM3LjY2My04NS41OSwgODQuMTE1LTg1LjU5YyAyNC4xOTUsMC4wMCwgNDYuMDU5LDEwLjM5MywgNjEuNDAxLDI3LjAyOWMgMTkuMTYtMy44MzgsIDM3LjE2Mi0xMC45NiwgNTMuNDE2LTIwLjc3MQoJYy02LjI4MSwxOS45ODgtMTkuNjE3LDM2Ljc2MS0zNi45ODMsNDcuMzU1YyAxNy4wMTMtMi4wNjksIDMzLjIyNi02LjY3LCA0OC4zMS0xMy40NzdDIDQ0OS43MjUsMTQzLjc3NCwgNDM1LjQ2MywxNTguODUsIDQxOS4wMjYsMTcwLjkxNwoJeiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAzMTI1IDAuMDMxMjUpIj48L3BhdGg+CiAgPC9nPgo8L3N2Zz4=");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000386}}
+  .cdmFooter img[src="plugins/tweet/tweet.png"]:hover {
+    opacity: 0.8; }
+
+/* **************
+  * OTHER ICONS *
+  ****************/
+/* notice */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003228}}
+div.notice span:first-child:before {
+  display: inline-block;
+  content: "\f05a";
+  font-family: 'FontAwesome' !important;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 14px;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 8px;
+  color: #2193ea; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003234}}
+div.notice span:first-child img {
+  display: none; }
+
+/* warning */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003241}}
+div.warning span:first-child:before {
+  display: inline-block;
+  content: "\f06a";
+  font-family: 'FontAwesome' !important;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 14px;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 8px;
+  color: #dd4b39; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003247}}
+div.warning span:first-child img {
+  display: none; }
+
+/* plugin (disabled) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003252}}
+img[src="images/plugin_disabled.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMTgxLjg2MSwzNjEuMDI2bCAyMC42NDktMjguOTA4bC0yMi42MjctMjIuNjI4bC0yOC45MDksMjAuNjQ4Yy01LjM2MS0yLjk5Ny0xMS4xMDItNS4zODctMTcuMTMzLTcuMDk2TCAxMjguMDAsMjg4LjAwTCA5Ni4wMCwyODguMDAgCgkJbC01Ljg0LDM1LjA0M2MtNi4wMzEsMS43MDktMTEuNzcyLDQuMDk5LTE3LjEzMyw3LjA5NkwgNDQuMTE4LDMwOS40OUwgMjEuNDksMzMyLjExOGwgMjAuNjQ5LDI4LjkwOAoJCWMtMi45OTcsNS4zNi01LjM4NywxMS4xMDMtNy4wOTYsMTcuMTMzTDAuMDAsMzg0LjAwbDAuMDAsMzIuMDAgbCAzNS4wNDMsNS44NDFjIDEuNzA5LDYuMDMsIDQuMDk5LDExLjc3MiwgNy4wOTYsMTcuMTMzTCAyMS40OSw0NjcuODgybCAyMi42MjcsMjIuNjI4CgkJbCAyOC45MDktMjAuNjQ4YyA1LjM2MSwyLjk5NywgMTEuMTAyLDUuMzg3LCAxNy4xMzMsNy4wOTZMIDk2LjAwLDUxMi4wMGwgMzIuMDAsMC4wMCBsIDUuODQtMzUuMDQzYyA2LjAzMS0xLjcwOSwgMTEuNzcyLTQuMDk5LCAxNy4xMzMtNy4wOTZsIDI4LjkwOSwyMC42NDgKCQlsIDIyLjYyNy0yMi42MjhsLTIwLjY0OS0yOC45MDhjIDIuOTk3LTUuMzYsIDUuMzg3LTExLjEwMywgNy4wOTYtMTcuMTMzTCAyMjQuMDAsNDE2LjAwbDAuMDAtMzIuMDAgbC0zNS4wNDMtNS44NDEKCQlDIDE4Ny4yNDgsMzcyLjEyOSwgMTg0Ljg1OCwzNjYuMzg3LCAxODEuODYxLDM2MS4wMjZ6IE0gMTEyLjAwLDQzMi4wMGMtMTcuNjc0LDAuMDAtMzIuMDAtMTQuMzI3LTMyLjAwLTMyLjAwcyAxNC4zMjYtMzIuMDAsIDMyLjAwLTMyLjAwcyAzMi4wMCwxNC4zMjcsIDMyLjAwLDMyLjAwCgkJUyAxMjkuNjc0LDQzMi4wMCwgMTEyLjAwLDQzMi4wMHpNIDUxMi4wMCwxOTIuMDBsMC4wMC0zMi4wMCBsLTMzLjY5MS02LjEyNWMtMC42MjEtNC4wMjMtMS40MTYtNy45ODktMi4zNjItMTEuODk1bCAyOC43NzktMTguNTVMIDQ5Mi40OCw5My44NjZsLTMzLjQ3Miw3LjIzNAoJCWMtMi4xMDctMy40NTUtNC4zNjMtNi44MS02Ljc0Ni0xMC4wNjVsIDE5LjUwMy0yOC4xNzFsLTIyLjYyOC0yMi42MjdsLTI4LjE3MSwxOS41MDNjLTMuMjU2LTIuMzgzLTYuNjEtNC42MzgtMTAuMDY1LTYuNzQ3CgkJbCA3LjIzNC0zMy40NzJMIDM4OC41NzEsNy4yNzRsLTE4LjU1LDI4Ljc3OWMtMy45MDYtMC45NDYtNy44NzItMS43NDEtMTEuODk1LTIuMzYyTCAzNTIuMDAsMC4wMGwtMzIuMDAsMC4wMCBsLTYuMTI2LDMzLjY5MQoJCWMtNC4wMjMsMC42MjEtNy45ODgsMS40MTYtMTEuODk1LDIuMzYyTCAyODMuNDMsNy4yNzRMIDI1My44NjYsMTkuNTJsIDcuMjM0LDMzLjQ3MmMtMy40NTUsMi4xMDgtNi44MSw0LjM2NC0xMC4wNjUsNi43NDcKCQlsLTI4LjE3MS0xOS41MDNsLTIyLjYyNywyMi42MjdsIDE5LjUwMywyOC4xNzFjLTIuMzgzLDMuMjU1LTQuNjM5LDYuNjEtNi43NDcsMTAuMDY1bC0zMy40NzItNy4yMzRsLTEyLjI0NiwyOS41NjRsIDI4Ljc3OSwxOC41NQoJCWMtMC45NDYsMy45MDYtMS43NDEsNy44NzEtMi4zNjIsMTEuODk1TCAxNjAuMDAsMTYwLjAwbDAuMDAsMzIuMDAgbCAzMy42OTEsNi4xMjVjIDAuNjIxLDQuMDIzLCAxLjQxNiw3Ljk4OSwgMi4zNjIsMTEuODk1bC0yOC43NzksMTguNTUKCQlsIDEyLjI0NiwyOS41NjRsIDMzLjQ3Mi03LjIzNGMgMi4xMDgsMy40NTUsIDQuMzY0LDYuODA5LCA2Ljc0NywxMC4wNjVsLTE5LjUwMywyOC4xNzFsIDIyLjYyNywyMi42MjhsIDI4LjE3MS0xOS41MDMKCQljIDMuMjU1LDIuMzgzLCA2LjYxLDQuNjM4LCAxMC4wNjUsNi43NDZsLTcuMjM0LDMzLjQ3MmwgMjkuNTY0LDEyLjI0NmwgMTguNTUxLTI4Ljc3OWMgMy45MDUsMC45NDYsIDcuODcxLDEuNzQxLCAxMS44OTQsMi4zNjJMIDMyMC4wMCwzNTIuMDBsIDMyLjAwLDAuMDAgCgkJbCA2LjEyNi0zMy42OTFjIDQuMDIyLTAuNjIxLCA3Ljk4OC0xLjQxNiwgMTEuODk1LTIuMzYybCAxOC41NSwyOC43NzlsIDI5LjU2NC0xMi4yNDZsLTcuMjM0LTMzLjQ3MgoJCWMgMy40NTUtMi4xMDgsIDYuODEtNC4zNjMsIDEwLjA2NS02Ljc0NmwgMjguMTcxLDE5LjUwM2wgMjIuNjI4LTIyLjYyOGwtMTkuNTAzLTI4LjE3MWMgMi4zODMtMy4yNTYsIDQuNjM4LTYuNjEsIDYuNzQ2LTEwLjA2NQoJCWwgMzMuNDcyLDcuMjM0bCAxMi4yNDYtMjkuNTY1bC0yOC43NzktMTguNTVjIDAuOTQ2LTMuOTA2LCAxLjc0MS03Ljg3MSwgMi4zNjItMTEuODk1TCA1MTIuMDAsMTkyLjAweiBNIDMzNi4wMCwyNDUuNjAKCQljLTM4LjQzOSwwLjAwLTY5LjYwLTMxLjE2MS02OS42MC02OS42MGMwLjAwLTM4LjQzOSwgMzEuMTYtNjkuNjAsIDY5LjYwLTY5LjYwcyA2OS42MCwzMS4xNjEsIDY5LjYwLDY5LjYwQyA0MDUuNjAsMjE0LjQzOSwgMzc0LjQ0LDI0NS42MCwgMzM2LjAwLDI0NS42MHoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMzEyNSAwLjAzMTI1KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.153; }
+
+/* plugin (enabled) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003258}}
+img[src="images/plugin.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMTgxLjg2MSwzNjEuMDI2bCAyMC42NDktMjguOTA4bC0yMi42MjctMjIuNjI4bC0yOC45MDksMjAuNjQ4Yy01LjM2MS0yLjk5Ny0xMS4xMDItNS4zODctMTcuMTMzLTcuMDk2TCAxMjguMDAsMjg4LjAwTCA5Ni4wMCwyODguMDAgCgkJbC01Ljg0LDM1LjA0M2MtNi4wMzEsMS43MDktMTEuNzcyLDQuMDk5LTE3LjEzMyw3LjA5NkwgNDQuMTE4LDMwOS40OUwgMjEuNDksMzMyLjExOGwgMjAuNjQ5LDI4LjkwOAoJCWMtMi45OTcsNS4zNi01LjM4NywxMS4xMDMtNy4wOTYsMTcuMTMzTDAuMDAsMzg0LjAwbDAuMDAsMzIuMDAgbCAzNS4wNDMsNS44NDFjIDEuNzA5LDYuMDMsIDQuMDk5LDExLjc3MiwgNy4wOTYsMTcuMTMzTCAyMS40OSw0NjcuODgybCAyMi42MjcsMjIuNjI4CgkJbCAyOC45MDktMjAuNjQ4YyA1LjM2MSwyLjk5NywgMTEuMTAyLDUuMzg3LCAxNy4xMzMsNy4wOTZMIDk2LjAwLDUxMi4wMGwgMzIuMDAsMC4wMCBsIDUuODQtMzUuMDQzYyA2LjAzMS0xLjcwOSwgMTEuNzcyLTQuMDk5LCAxNy4xMzMtNy4wOTZsIDI4LjkwOSwyMC42NDgKCQlsIDIyLjYyNy0yMi42MjhsLTIwLjY0OS0yOC45MDhjIDIuOTk3LTUuMzYsIDUuMzg3LTExLjEwMywgNy4wOTYtMTcuMTMzTCAyMjQuMDAsNDE2LjAwbDAuMDAtMzIuMDAgbC0zNS4wNDMtNS44NDEKCQlDIDE4Ny4yNDgsMzcyLjEyOSwgMTg0Ljg1OCwzNjYuMzg3LCAxODEuODYxLDM2MS4wMjZ6IE0gMTEyLjAwLDQzMi4wMGMtMTcuNjc0LDAuMDAtMzIuMDAtMTQuMzI3LTMyLjAwLTMyLjAwcyAxNC4zMjYtMzIuMDAsIDMyLjAwLTMyLjAwcyAzMi4wMCwxNC4zMjcsIDMyLjAwLDMyLjAwCgkJUyAxMjkuNjc0LDQzMi4wMCwgMTEyLjAwLDQzMi4wMHpNIDUxMi4wMCwxOTIuMDBsMC4wMC0zMi4wMCBsLTMzLjY5MS02LjEyNWMtMC42MjEtNC4wMjMtMS40MTYtNy45ODktMi4zNjItMTEuODk1bCAyOC43NzktMTguNTVMIDQ5Mi40OCw5My44NjZsLTMzLjQ3Miw3LjIzNAoJCWMtMi4xMDctMy40NTUtNC4zNjMtNi44MS02Ljc0Ni0xMC4wNjVsIDE5LjUwMy0yOC4xNzFsLTIyLjYyOC0yMi42MjdsLTI4LjE3MSwxOS41MDNjLTMuMjU2LTIuMzgzLTYuNjEtNC42MzgtMTAuMDY1LTYuNzQ3CgkJbCA3LjIzNC0zMy40NzJMIDM4OC41NzEsNy4yNzRsLTE4LjU1LDI4Ljc3OWMtMy45MDYtMC45NDYtNy44NzItMS43NDEtMTEuODk1LTIuMzYyTCAzNTIuMDAsMC4wMGwtMzIuMDAsMC4wMCBsLTYuMTI2LDMzLjY5MQoJCWMtNC4wMjMsMC42MjEtNy45ODgsMS40MTYtMTEuODk1LDIuMzYyTCAyODMuNDMsNy4yNzRMIDI1My44NjYsMTkuNTJsIDcuMjM0LDMzLjQ3MmMtMy40NTUsMi4xMDgtNi44MSw0LjM2NC0xMC4wNjUsNi43NDcKCQlsLTI4LjE3MS0xOS41MDNsLTIyLjYyNywyMi42MjdsIDE5LjUwMywyOC4xNzFjLTIuMzgzLDMuMjU1LTQuNjM5LDYuNjEtNi43NDcsMTAuMDY1bC0zMy40NzItNy4yMzRsLTEyLjI0NiwyOS41NjRsIDI4Ljc3OSwxOC41NQoJCWMtMC45NDYsMy45MDYtMS43NDEsNy44NzEtMi4zNjIsMTEuODk1TCAxNjAuMDAsMTYwLjAwbDAuMDAsMzIuMDAgbCAzMy42OTEsNi4xMjVjIDAuNjIxLDQuMDIzLCAxLjQxNiw3Ljk4OSwgMi4zNjIsMTEuODk1bC0yOC43NzksMTguNTUKCQlsIDEyLjI0NiwyOS41NjRsIDMzLjQ3Mi03LjIzNGMgMi4xMDgsMy40NTUsIDQuMzY0LDYuODA5LCA2Ljc0NywxMC4wNjVsLTE5LjUwMywyOC4xNzFsIDIyLjYyNywyMi42MjhsIDI4LjE3MS0xOS41MDMKCQljIDMuMjU1LDIuMzgzLCA2LjYxLDQuNjM4LCAxMC4wNjUsNi43NDZsLTcuMjM0LDMzLjQ3MmwgMjkuNTY0LDEyLjI0NmwgMTguNTUxLTI4Ljc3OWMgMy45MDUsMC45NDYsIDcuODcxLDEuNzQxLCAxMS44OTQsMi4zNjJMIDMyMC4wMCwzNTIuMDBsIDMyLjAwLDAuMDAgCgkJbCA2LjEyNi0zMy42OTFjIDQuMDIyLTAuNjIxLCA3Ljk4OC0xLjQxNiwgMTEuODk1LTIuMzYybCAxOC41NSwyOC43NzlsIDI5LjU2NC0xMi4yNDZsLTcuMjM0LTMzLjQ3MgoJCWMgMy40NTUtMi4xMDgsIDYuODEtNC4zNjMsIDEwLjA2NS02Ljc0NmwgMjguMTcxLDE5LjUwM2wgMjIuNjI4LTIyLjYyOGwtMTkuNTAzLTI4LjE3MWMgMi4zODMtMy4yNTYsIDQuNjM4LTYuNjEsIDYuNzQ2LTEwLjA2NQoJCWwgMzMuNDcyLDcuMjM0bCAxMi4yNDYtMjkuNTY1bC0yOC43NzktMTguNTVjIDAuOTQ2LTMuOTA2LCAxLjc0MS03Ljg3MSwgMi4zNjItMTEuODk1TCA1MTIuMDAsMTkyLjAweiBNIDMzNi4wMCwyNDUuNjAKCQljLTM4LjQzOSwwLjAwLTY5LjYwLTMxLjE2MS02OS42MC02OS42MGMwLjAwLTM4LjQzOSwgMzEuMTYtNjkuNjAsIDY5LjYwLTY5LjYwcyA2OS42MCwzMS4xNjEsIDY5LjYwLDY5LjYwQyA0MDUuNjAsMjE0LjQzOSwgMzc0LjQ0LDI0NS42MCwgMzM2LjAwLDI0NS42MHoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMzEyNSAwLjAzMTI1KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+
+/* new version available */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003264}}
+.dijitButtonText img[src="images/new_version.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMTI4MCwxNDcycTAtMjYgLTE5LTQ1dC00NS0xOXQtNDUsMTl0LTE5LDQ1dCAxOSw0NXQgNDUsMTl0IDQ1LTE5dCAxOS00NXpNIDE1MzYsMTQ3MnEwLTI2IC0xOS00NXQtNDUtMTl0LTQ1LDE5dC0xOSw0NXQgMTksNDV0IDQ1LDE5dCA0NS0xOXQgMTktNDV6TSAxNjY0LDEyNDhsMCwzMjAgcTAsNDAgLTI4LDY4dC02OCwyOGwtMTQ3MiwwIHEtNDAsMCAtNjgtMjh0LTI4LTY4bDAsLTMyMCBxMC00MCAyOC02OHQgNjgtMjhsNDI3LDAgcSAyMSw1NiA3MC41LDkyIHQgMTEwLjUsMzZsMjU2LDAgcSA2MSwwIDExMC41LTM2dCA3MC41LTkybDQyNywwIHEgNDAsMCA2OCwyOHQgMjgsNjh6TSAxMzM5LDYwMHEtMTcsNDAgLTU5LDQwbC0yNTYsMCBsMCw0NDggcTAsMjYgLTE5LDQ1dC00NSwxOWwtMjU2LDAgcS0yNiwwIC00NS0xOXQtMTktNDVsMCwtNDQ4IGwtMjU2LDAgcS00MiwwIC01OS00MHEtMTctMzkgMTQtNjlsIDQ0OC00NDhxIDE4LTE5IDQ1LTE5dCA0NSwxOWwgNDQ4LDQ0OHEgMzEsMzAgMTQsNjl6IiB0cmFuc2Zvcm09InNjYWxlKDAuMDA4OTI4NTcxNDI4NTcxNDI4IDAuMDA4OTI4NTcxNDI4NTcxNDI4KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+
+/* update error */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_icons\.scss}line{font-family:\00003270}}
+.dijitButtonText img[src="images/error.png"] {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMTAyNCwxMzc1bDAsLTE5MCBxMC0xNCAtOS41LTIzLjV0LTIyLjUtOS41bC0xOTIsMCBxLTEzLDAgLTIyLjUsOS41dC05LjUsMjMuNWwwLDE5MCBxMCwxNCA5LjUsMjMuNXQgMjIuNSw5LjVsMTkyLDAgcSAxMywwIDIyLjUtOS41dCA5LjUtMjMuNXpNIDEwMjIsMTAwMWwgMTgtNDU5cTAtMTIgLTEwLTE5cS0xMy0xMSAtMjQtMTFsLTIyMCwwIHEtMTEsMCAtMjQsMTFxLTEwLDcgLTEwLDIxbCAxNyw0NTdxMCwxMCAxMCwxNi41dCAyNCw2LjVsMTg1LDAgIHEgMTQsMCAyMy41LTYuNXQgMTAuNS0xNi41ek0gMTAwOCw2N2wgNzY4LDE0MDhxIDM1LDYzIC0yLDEyNnEtMTcsMjkgLTQ2LjUsNDZ0LTYzLjUsMTdsLTE1MzYsMCBxLTM0LDAgLTYzLjUtMTd0LTQ2LjUtNDZxLTM3LTYzIC0yLTEyNmwgNzY4LTE0MDhxIDE3LTMxIDQ3LTQ5dCA2NS0xOHQgNjUsMTh0IDQ3LDQ5eiIgdHJhbnNmb3JtPSJzY2FsZSgwLjAwODkyODU3MTQyODU3MTQyOCAwLjAwODkyODU3MTQyODU3MTQyOCkiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPg==");
+  position: relative;
+  left: 1px;
+  top: 1px;
+  height: 0;
+  padding-top: 14px;
+  padding-left: 14px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  opacity: 0.533; }
+
+/**
+  *  File:         _loader.scss
+  *****************************
+  *
+  *  Description:   loader used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+/***********
+  * LOADER *
+  ***********/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_loader\.scss}line{font-family:\0000315}}
+.claro #overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 999; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_loader\.scss}line{font-family:\0000324}}
+.claro #overlay #overlay_inner {
+  margin-top: 10%;
+  font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_loader\.scss}line{font-family:\0000329}}
+  .claro #overlay #overlay_inner .insensitive {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+
+/* progress bar wrapper */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_loader\.scss}line{font-family:\0000333}}
+.claro #overlay #overlay_inner div[role="progressbar"] {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+/* progress bar - whole bar  */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_loader\.scss}line{font-family:\0000338}}
+.claro #overlay #overlay_inner .dijitProgressBar.dijitProgressBarEmpty {
+  padding: 2px;
+  border: 1px solid #d8d8d8;
+  /* progress bar - current value (wrapper)  */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_loader\.scss}line{font-family:\0000343}}
+  .claro #overlay #overlay_inner .dijitProgressBar.dijitProgressBarEmpty .dijitProgressBarFull {
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    border: 1px solid transparent;
+    /* progress bar - current value (inner) */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_loader\.scss}line{font-family:\0000348}}
+    .claro #overlay #overlay_inner .dijitProgressBar.dijitProgressBarEmpty .dijitProgressBarFull .dijitProgressBarTile {
+      background-color: #d8d8d8;
+      background-image: -webkit-repeating-linear-gradient(-45deg, transparent, transparent 12px, rgba(255, 255, 255, 0.5) 12px, rgba(255, 255, 255, 0.5) 28px);
+      background-image: repeating-linear-gradient(-45deg, transparent, transparent 12px, rgba(255, 255, 255, 0.5) 12px, rgba(255, 255, 255, 0.5) 28px); }
+
+/**
+  *  File:         _treeview.scss
+  *******************************
+  *
+  *  Description:   treeviews used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+/* feeds tree on main page (wrapper) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000312}}
+.claro div#feeds-holder {
+  margin: 0 ;
+  padding: 0 ;
+  border-width: 0 ;
+  width: 320px !important;
+  background: transparent !important;
+  /* navigation card (outer / when hidden) */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000319}}
+  .claro div#feeds-holder[style*="display: none"] {
+    width: 0 !important; }
+
+/* feeds tree on main page (inner) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000323}}
+.claro div#feeds-holder div#feedTree {
+  position: absolute !important;
+  top: 12px;
+  bottom: 12px;
+  left: 12px;
+  right: 0;
+  margin: 0 ;
+  padding: 0 ;
+  border-width: 0 ;
+  padding: 8px 0;
+  border-color: #d8d8d8;
+  border-style: solid;
+  border-width: 1px 1px 2px;
+  width: auto !important;
+  height: auto !important;
+  background: white; }
+
+/* tree row */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000342}}
+.claro .dijitTreeRow {
+  padding: 4px 16px;
+  width: 274px !important;
+  border-width: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  /* tree row (hover) */
+  /* tree row (selected) */
+  /* tree row - loader */
+  /* tree row - loader 2 */
+  /* tree row - counter */
+  /* tree row - counter (hover) */
+  /* tree row - counter (selected) */
+  /* tree row with unread content */
+  /* tree row - system icon formating */
+  /* tree row - feed icon format */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000352}}
+  .claro .dijitTreeRow > .feedParam {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000355}}
+  .claro .dijitTreeRow.dijitTreeRowHover {
+    background: whitesmoke;
+    border-width: 0;
+    /* system icon (hover) */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000360}}
+    .claro .dijitTreeRow.dijitTreeRowHover .dijitTreeIcon.feedIcon:not([src^="feed-icons"]),
+    .claro .dijitTreeRow.dijitTreeRowHover .dijitFolderClosed,
+    .claro .dijitTreeRow.dijitTreeRowHover .dijitFolderOpened,
+    .claro .dijitTreeRow.dijitTreeRowHover .dijitTreeExpandoClosed,
+    .claro .dijitTreeRow.dijitTreeRowHover .dijitTreeExpandoOpened {
+      opacity: 0.8;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000372}}
+  .claro .dijitTreeRow.dijitTreeNodeSelected, .claro .dijitTreeRow.dijitTreeRowSelected {
+    background: transparent;
+    color: #dd4b39;
+    /* re-set hover color */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000378}}
+    .claro .dijitTreeRow.dijitTreeNodeSelected.dijitTreeRowHover, .claro .dijitTreeRow.dijitTreeRowSelected.dijitTreeRowHover {
+      background: whitesmoke; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000384}}
+  .claro .dijitTreeRow img[src="images/indicator_white.gif"] {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000387}}
+    .claro .dijitTreeRow img[src="images/indicator_white.gif"] + span {
+      display: inline-block;
+      overflow: hidden;
+      width: 16px;
+      height: 16px;
+      color: transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\0000396}}
+      .claro .dijitTreeRow img[src="images/indicator_white.gif"] + span:before {
+        display: inline-block;
+        content: "\f021";
+        font-family: 'FontAwesome' !important;
+        font-weight: normal;
+        font-variant: normal;
+        font-size: 14px;
+        text-transform: none;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        color: #777777;
+        -webkit-animation: rotation 1s linear infinite;
+        animation: rotation 1s linear infinite; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\00003108}}
+  .claro .dijitTreeRow img[src="images/indicator_white.gif"],
+  .claro .dijitTreeRow img[src="images/indicator_tiny.gif"] {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMjU2LjAwLDAuMDAgQyAxMTYuNjI2LDAuMDAgMy4yNzEsMTExLjM4MSAwLjA3NiwyNDkuOTg3IEMgMy4wMzYsMTI5LjA1NSA5NC45OTIsMzIuMDAgMjA4LjAwLDMyLjAwIEMgMzIyLjg3NSwzMi4wMCA0MTYuMDAsMTMyLjI4OCA0MTYuMDAsMjU2LjAwIEMgNDE2LjAwLDI4Mi41MSA0MzcuNDksMzA0LjAwIDQ2NC4wMCwzMDQuMDAgQyA0OTAuNTEsMzA0LjAwIDUxMi4wMCwyODIuNTEgNTEyLjAwLDI1Ni4wMCBDIDUxMi4wMCwxMTQuNjE1IDM5Ny4zODUsMC4wMCAyNTYuMDAsMC4wMCBaTSAyNTYuMDAsNTEyLjAwIEMgMzk1LjM3NCw1MTIuMDAgNTA4LjcyOSw0MDAuNjE5IDUxMS45MjQsMjYyLjAxMyBDIDUwOC45NjQsMzgyLjk0NSA0MTcuMDA4LDQ4MC4wMCAzMDQuMDAsNDgwLjAwIEMgMTg5LjEyNSw0ODAuMDAgOTYuMDAsMzc5LjcxMiA5Ni4wMCwyNTYuMDAgQyA5Ni4wMCwyMjkuNDkgNzQuNTEsMjA4LjAwIDQ4LjAwLDIwOC4wMCBDIDIxLjQ5LDIwOC4wMCAwLjAwLDIyOS40OSAwLjAwLDI1Ni4wMCBDIDAuMDAsMzk3LjM4NSAxMTQuNjE1LDUxMi4wMCAyNTYuMDAsNTEyLjAwIFoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMzEyNSAwLjAzMTI1KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+    position: relative;
+    left: 1px;
+    top: 1px;
+    height: 0;
+    padding-top: 14px;
+    padding-left: 14px;
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    opacity: 0.533;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/modules\/_mixins\.scss}line{font-family:\0000386}}
+    .claro .dijitTreeRow img[src="images/indicator_white.gif"]:hover,
+    .claro .dijitTreeRow img[src="images/indicator_tiny.gif"]:hover {
+      opacity: 0.8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\00003118}}
+  .claro .dijitTreeRow .counterNode {
+    display: inline-block;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 2px;
+    width: 20px;
+    border: 1px solid #d8d8d8;
+    font-size: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\00003134}}
+  .claro .dijitTreeRow.dijitTreeRowHover .counterNode {
+    background: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\00003139}}
+  .claro .dijitTreeRow.dijitTreeRowSelected .counterNode {
+    background: white;
+    border: 1px solid #dd4b39; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\00003144}}
+  .claro .dijitTreeRow .dijitTreeLabel {
+    margin: 0 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\00003147}}
+  .claro .dijitTreeRow .dijitTreeLabel.Unread {
+    font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\00003150}}
+  .claro .dijitTreeRow .dijitTreeIcon.feedIcon:not([src^="feed-icons"]),
+  .claro .dijitTreeRow .dijitFolderClosed,
+  .claro .dijitTreeRow .dijitFolderOpened,
+  .claro .dijitTreeRow .dijitTreeExpandoClosed,
+  .claro .dijitTreeRow .dijitTreeExpandoOpened {
+    padding: 16px 0 0 16px;
+    height: 0;
+    width: 0;
+    opacity: 0.4;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_treeview\.scss}line{font-family:\00003164}}
+  .claro .dijitTreeRow img[src^="feed-icons/"] {
+    width: 16px;
+    height: 16px; }
+
+/**
+  *  File:         _toolbar.scss
+  ******************************
+  *
+  *  Description:   toolbars used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+/********************** 
+  * MAIN TOOLBAR CARD *
+************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\0000315}}
+.claro #toolbar {
+  position: absolute !important;
+  top: 12px !important;
+  left: 12px !important;
+  right: 12px;
+  margin: 0 ;
+  padding: 0 ;
+  border-width: 0 ;
+  border: 1px solid #d8d8d8;
+  border-bottom-width: 0;
+  width: auto !important;
+  height: auto !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\0000328}}
+  .claro #toolbar #main-toolbar {
+    background: white;
+    margin: 0 ;
+    padding: 0 ;
+    border-width: 0 ;
+    padding: 8px;
+    /* action button */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\0000333}}
+    .claro #toolbar #main-toolbar #main_toolbar_form {
+      background: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\0000338}}
+    .claro #toolbar #main-toolbar .actionChooser {
+      position: absolute;
+      right: 8px;
+      top: 8px; }
+
+/* toolbar splitter */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\0000347}}
+.claro #toolbar_splitter {
+  display: none !important; }
+
+/* toolbar card dock + feed card wrapper */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\0000350}}
+.claro #headlines-wrap-inner {
+  position: absolute !important;
+  top: 50px !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  width: auto !important;
+  height: auto !important; }
+
+/***************************
+  * MAIN TOOLBAR CARD DOCK *
+  ***************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\0000367}}
+.claro #headlines-toolbar {
+  display: block;
+  position: absolute !important;
+  left: 12px !important;
+  right: 12px;
+  margin: 0 ;
+  padding: 0 ;
+  border-width: 0 ;
+  border-color: #d8d8d8;
+  border-style: solid;
+  border-width: 1px 1px 2px;
+  border-top-width: 0px;
+  margin-top: 3px;
+  width: auto !important;
+  height: auto !important;
+  background: whitesmoke;
+  color: transparent; }
+
+/* TOLLBAR CARD DOCK - both selector types (simple + menu / wrapper) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\0000389}}
+.claro #headlines-toolbar a,
+.claro #headlines-toolbar .dijitSelect {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0 ;
+  padding: 0 ;
+  border-width: 0 ;
+  margin: 0 6px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #777777; }
+
+/* TOOLBAR CARD DOCK - selector (menu) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003104}}
+.claro #headlines-toolbar .dijitSelect {
+  background: transparent;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003109}}
+  .claro #headlines-toolbar .dijitSelect .dijitButtonContents {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-width: 0 !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003110}}
+  .claro #headlines-toolbar .dijitSelect .dijitButtonText {
+    margin: 0 ;
+    padding: 0 ;
+    border-width: 0 ; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003111}}
+  .claro #headlines-toolbar .dijitSelect .dijitSelectLabel {
+    margin: 0 ;
+    padding: 0 ;
+    border-width: 0 ; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003112}}
+  .claro #headlines-toolbar .dijitSelect .dijitArrowButtonContainer {
+    display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003115}}
+.claro #headlines-toolbar > a,
+.claro #headlines-toolbar .dijitSelect .dijitButtonContents .dijitButtonText .dijitSelectLabel,
+.claro #headlines-toolbar > span.r {
+  border: 0px solid transparent;
+  border-bottom-width: 2px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003121}}
+  .claro #headlines-toolbar > a:hover,
+  .claro #headlines-toolbar .dijitSelect .dijitButtonContents .dijitButtonText .dijitSelectLabel:hover,
+  .claro #headlines-toolbar > span.r:hover {
+    color: #333333;
+    border: 0px solid #dd4b39;
+    border-bottom-width: 2px;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003127}}
+  .claro #headlines-toolbar > a.r > a:hover,
+  .claro #headlines-toolbar .dijitSelect .dijitButtonContents .dijitButtonText .dijitSelectLabel.r > a:hover,
+  .claro #headlines-toolbar > span.r.r > a:hover {
+    color: #333333; }
+
+/* TOOLBAR CARD DOCK - selected items counter */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003135}}
+.claro #headlines-toolbar > span.r #selected_prompt {
+  display: none !important; }
+
+/* TOOLBAR CARD DOCK - both selector types (pseudo elements) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003145}}
+.claro #headlines-toolbar > a:before,
+.claro #headlines-toolbar .dijitSelect .dijitButtonContents .dijitButtonText .dijitSelectLabel:before,
+.claro #headlines-toolbar > span.r > a:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  padding-left: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003152}}
+.claro #headlines-toolbar > a:after,
+.claro #headlines-toolbar .dijitSelect .dijitButtonContents .dijitButtonText .dijitSelectLabel:after,
+.claro #headlines-toolbar > span.r > a:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  padding-right: 16px; }
+
+/* TOOLBAR CARD DOCK - both selector types (simple + menu / inner) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003161}}
+.claro #headlines-toolbar > a,
+.claro #headlines-toolbar .dijitSelect .dijitButtonContents .dijitButtonText .dijitSelectLabel,
+.claro #headlines-toolbar > span.r > a:after {
+  padding-top: 12px;
+  padding-bottom: 4px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003165}}
+  .claro #headlines-toolbar > a.r,
+  .claro #headlines-toolbar .dijitSelect .dijitButtonContents .dijitButtonText .dijitSelectLabel.r,
+  .claro #headlines-toolbar > span.r > a:after.r {
+    padding-top: 10px; }
+
+/* rss feed icon */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003173}}
+.claro #headlines-toolbar > span.r {
+  display: block;
+  float: right;
+  margin: 0 6px;
+  /* selected feed title in toolbar */
+  /* rss feed icon for current feed */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003179}}
+  .claro #headlines-toolbar > span.r > #feed_title {
+    display: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003182}}
+  .claro #headlines-toolbar > span.r > a {
+    text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003185}}
+    .claro #headlines-toolbar > span.r > a:after {
+      content: "RSS";
+      font-weight: bold;
+      bottom: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_toolbar\.scss}line{font-family:\00003191}}
+    .claro #headlines-toolbar > span.r > a > img {
+      display: none; }
+
+/**
+  *  File:         _articles.scss
+  *******************************
+  *
+  *  Description:   feed article display used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+/******************************
+  * MAIN CARDS - ARTICLE CARD *
+  ******************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000315}}
+.claro #headlines-frame {
+  position: absolute !important;
+  top: 48px !important;
+  bottom: 12px;
+  left: 12px !important;
+  right: 12px;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 ;
+  padding: 0 ;
+  border-width: 0 ;
+  border-color: #d8d8d8;
+  border-style: solid;
+  border-width: 1px 1px 2px; }
+
+/*******************
+  * SINGLE ARTICLE *
+  *******************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000333}}
+.claro #headlines-frame .hl,
+.claro #headlines-frame .cdm {
+  /* article separator */
+  border: 1px solid #d8d8d8;
+  border-width: 0 1px 1px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000336}}
+  .claro #headlines-frame .hl > hr,
+  .claro #headlines-frame .cdm > hr {
+    display: none; }
+
+/* single article - scroll fix via pseudo element */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000343}}
+.claro #headlines-frame .hl:before,
+.claro #headlines-frame .cdm:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: inherit;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background-color: transparent; }
+
+/* single article header */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000356}}
+.claro #headlines-frame .hl,
+.claro #headlines-frame .cdm .cdmHeader,
+.claro #floatingTitle {
+  display: table;
+  background: whitesmoke;
+  /* header - all child items */
+  /* header - action icons */
+  /* header - article title */
+  /* header - article feed item */
+  /* header - article update time */
+  /* header - score */
+  /* header - feed icon */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000363}}
+  .claro #headlines-frame .hl > *,
+  .claro #headlines-frame .hl > .hlUpdated > *,
+  .claro #headlines-frame .cdm .cdmHeader > *,
+  .claro #headlines-frame .cdm .cdmHeader > .hlUpdated > *,
+  .claro #floatingTitle > *,
+  .claro #floatingTitle > .hlUpdated > * {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 4px;
+    white-space: nowrap; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000373}}
+  .claro #headlines-frame .hl > div:first-child > *,
+  .claro #headlines-frame .cdm .cdmHeader > div:first-child > *,
+  .claro #floatingTitle > div:first-child > * {
+    margin: 0 2px;
+    vertical-align: middle; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000374}}
+  .claro #headlines-frame .hl > div:first-child > img,
+  .claro #headlines-frame .cdm .cdmHeader > div:first-child > img,
+  .claro #floatingTitle > div:first-child > img {
+    display: inline;
+    cursor: pointer; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000375}}
+  .claro #headlines-frame .hl > div:first-child > div,
+  .claro #headlines-frame .cdm .cdmHeader > div:first-child > div,
+  .claro #floatingTitle > div:first-child > div {
+    display: inline-block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000379}}
+  .claro #headlines-frame .hl .titleWrap,
+  .claro #headlines-frame .hl .hlTitle,
+  .claro #headlines-frame .cdm .cdmHeader .titleWrap,
+  .claro #headlines-frame .cdm .cdmHeader .hlTitle,
+  .claro #floatingTitle .titleWrap,
+  .claro #floatingTitle .hlTitle {
+    max-width: 0;
+    width: 100%;
+    overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000385}}
+    .claro #headlines-frame .hl .titleWrap > a,
+    .claro #headlines-frame .hl .titleWrap > .hlContent > a,
+    .claro #headlines-frame .hl .hlTitle > a,
+    .claro #headlines-frame .hl .hlTitle > .hlContent > a,
+    .claro #headlines-frame .cdm .cdmHeader .titleWrap > a,
+    .claro #headlines-frame .cdm .cdmHeader .titleWrap > .hlContent > a,
+    .claro #headlines-frame .cdm .cdmHeader .hlTitle > a,
+    .claro #headlines-frame .cdm .cdmHeader .hlTitle > .hlContent > a,
+    .claro #floatingTitle .titleWrap > a,
+    .claro #floatingTitle .titleWrap > .hlContent > a,
+    .claro #floatingTitle .hlTitle > a,
+    .claro #floatingTitle .hlTitle > .hlContent > a {
+      text-decoration: none;
+      color: #333333; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000391}}
+    .claro #headlines-frame .hl .titleWrap > span.author,
+    .claro #headlines-frame .hl .hlTitle > span.author,
+    .claro #headlines-frame .cdm .cdmHeader .titleWrap > span.author,
+    .claro #headlines-frame .cdm .cdmHeader .hlTitle > span.author,
+    .claro #floatingTitle .titleWrap > span.author,
+    .claro #floatingTitle .hlTitle > span.author {
+      color: #777777; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000393}}
+    .claro #headlines-frame .hl .titleWrap .collapseBtn img,
+    .claro #headlines-frame .hl .hlTitle .collapseBtn img,
+    .claro #headlines-frame .cdm .cdmHeader .titleWrap .collapseBtn img,
+    .claro #headlines-frame .cdm .cdmHeader .hlTitle .collapseBtn img,
+    .claro #floatingTitle .titleWrap .collapseBtn img,
+    .claro #floatingTitle .hlTitle .collapseBtn img {
+      vertical-align: middle; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000397}}
+  .claro #headlines-frame .hl .hlFeed a,
+  .claro #headlines-frame .hl a.hlFeed,
+  .claro #headlines-frame .cdm .cdmHeader .hlFeed a,
+  .claro #headlines-frame .cdm .cdmHeader a.hlFeed,
+  .claro #floatingTitle .hlFeed a,
+  .claro #floatingTitle a.hlFeed {
+    text-decoration: none;
+    border: 1px solid #d8d8d8;
+    background: white !important;
+    color: #777777;
+    font-size: 10px;
+    padding: 2px 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003106}}
+    .claro #headlines-frame .hl .hlFeed a:hover,
+    .claro #headlines-frame .hl a.hlFeed:hover,
+    .claro #headlines-frame .cdm .cdmHeader .hlFeed a:hover,
+    .claro #headlines-frame .cdm .cdmHeader a.hlFeed:hover,
+    .claro #floatingTitle .hlFeed a:hover,
+    .claro #floatingTitle a.hlFeed:hover {
+      border: 1px solid #dd4b39;
+      color: #dd4b39; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003113}}
+  .claro #headlines-frame .hl .updated,
+  .claro #headlines-frame .hl .hlUpdated,
+  .claro #headlines-frame .cdm .cdmHeader .updated,
+  .claro #headlines-frame .cdm .cdmHeader .hlUpdated,
+  .claro #floatingTitle .updated,
+  .claro #floatingTitle .hlUpdated {
+    float: right;
+    color: #777777; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003121}}
+  .claro #headlines-frame .hl .scoreWrap img.hlScorePic,
+  .claro #headlines-frame .cdm .cdmHeader .scoreWrap img.hlScorePic,
+  .claro #floatingTitle .scoreWrap img.hlScorePic {
+    display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003127}}
+  .claro #headlines-frame .hl .tinyFeedIcon,
+  .claro #headlines-frame .cdm .cdmHeader .tinyFeedIcon,
+  .claro #floatingTitle .tinyFeedIcon {
+    display: none; }
+
+/* unread header */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003133}}
+.claro #headlines-frame .hl.Unread,
+.claro #headlines-frame .cdm.Unread .cdmHeader {
+  background: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003137}}
+  .claro #headlines-frame .hl.Unread .titleWrap > a,
+  .claro #headlines-frame .cdm.Unread .cdmHeader .titleWrap > a {
+    color: #333333;
+    font-weight: bold; }
+
+/* active header */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003144}}
+.claro #headlines-frame .hl.active .hlContent > a,
+.claro #headlines-frame .cdm.active .cdmHeader .titleWrap > a {
+  font-weight: bold;
+  color: #dd4b39; }
+
+/* floating title - special settings */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003151}}
+.claro #floatingTitle {
+  position: absolute;
+  top: 30px;
+  margin: 18px 25px 0 12px;
+  border: 1px solid #d8d8d8;
+  background-color: #eee;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px -2px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px -2px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px -2px;
+  z-index: 5 !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003165}}
+  .claro #floatingTitle a.title {
+    color: #dd4b39;
+    font-size: 12px;
+    font-weight: bold; }
+
+/* article content */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003173}}
+.claro .cdm.active .cdmContent .cdmContentInner,
+.claro .cdm.expanded .cdmContent .cdmContentInner {
+  display: block;
+  padding: 0 8px 0 71px;
+  max-width: 700px;
+  overflow: auto;
+  /* main feed image */
+  /* images (except of main) and vides*/
+  /* tables */
+  /* first and last child not a p-element need padding */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003180}}
+  .claro .cdm.active .cdmContent .cdmContentInner img,
+  .claro .cdm.expanded .cdmContent .cdmContentInner img {
+    max-width: 700px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003185}}
+  .claro .cdm.active .cdmContent .cdmContentInner div[xmlns="http://www.w3.org/1999/xhtml"]:first-child a img,
+  .claro .cdm.active .cdmContent .cdmContentInner p:first-of-type img,
+  .claro .cdm.active .cdmContent .cdmContentInner > span:first-child > span:first-child > img:first-child,
+  .claro .cdm.expanded .cdmContent .cdmContentInner div[xmlns="http://www.w3.org/1999/xhtml"]:first-child a img,
+  .claro .cdm.expanded .cdmContent .cdmContentInner p:first-of-type img,
+  .claro .cdm.expanded .cdmContent .cdmContentInner > span:first-child > span:first-child > img:first-child {
+    float: left;
+    margin: 0 32px 16px 0 !important;
+    max-height: 128px;
+    max-width: 128px;
+    width: auto;
+    height: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003197}}
+  .claro .cdm.active .cdmContent .cdmContentInner p > img,
+  .claro .cdm.active .cdmContent .cdmContentInner p > a:not([href*="feedburner"]) > img,
+  .claro .cdm.active .cdmContent .cdmContentInner div > img,
+  .claro .cdm.active .cdmContent .cdmContentInner div > a:not([href*="feedburner"]) > img,
+  .claro .cdm.active .cdmContent .cdmContentInner p iframe,
+  .claro .cdm.expanded .cdmContent .cdmContentInner p > img,
+  .claro .cdm.expanded .cdmContent .cdmContentInner p > a:not([href*="feedburner"]) > img,
+  .claro .cdm.expanded .cdmContent .cdmContentInner div > img,
+  .claro .cdm.expanded .cdmContent .cdmContentInner div > a:not([href*="feedburner"]) > img,
+  .claro .cdm.expanded .cdmContent .cdmContentInner p iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003208}}
+  .claro .cdm.active .cdmContent .cdmContentInner p > img,
+  .claro .cdm.expanded .cdmContent .cdmContentInner p > img {
+    display: inline-block;
+    margin-right: 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003214}}
+  .claro .cdm.active .cdmContent .cdmContentInner table,
+  .claro .cdm.expanded .cdmContent .cdmContentInner table {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003221}}
+  .claro .cdm.active .cdmContent .cdmContentInner > span > span > *:not(p):first-child,
+  .claro .cdm.expanded .cdmContent .cdmContentInner > span > span > *:not(p):first-child {
+    padding-top: 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003222}}
+  .claro .cdm.active .cdmContent .cdmContentInner > span > span > *:not(p):last-child,
+  .claro .cdm.expanded .cdmContent .cdmContentInner > span > span > *:not(p):last-child {
+    padding-bottom: 8px; }
+
+/* article footer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003226}}
+.claro .cdm.active .cdmContent .cdmFooter,
+.claro .cdm.expanded .cdmContent .cdmFooter {
+  padding: 4px 8px;
+  background-color: whitesmoke; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003231}}
+  .claro .cdm.active .cdmContent .cdmFooter > *,
+  .claro .cdm.expanded .cdmContent .cdmFooter > * {
+    vertical-align: middle; }
+
+/* article content in non combined display mode */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003235}}
+.claro #content-insert {
+  left: 12px !important;
+  right: 12px !important;
+  margin-bottom: 9px !important;
+  width: auto !important;
+  border-color: #d8d8d8;
+  border-style: solid;
+  border-width: 1px 1px 2px;
+  border-left-width: 1px !important; }
+
+/* h-resizer in non combined display mode */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003247}}
+.claro #content-insert_splitter {
+  background: white;
+  left: 12px !important;
+  right: 12px !important;
+  width: auto !important;
+  border: 1px solid #d8d8d8;
+  border-bottom-width: 0; }
+
+/**
+  *  File:         _button.scss
+  *****************************
+  *
+  *  Description:   buttons and everything depending on them used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+/* resets */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000312}}
+.claro #collapse_feeds_btn,
+.claro #collapse_feeds_btn_label {
+  margin: 0 ;
+  padding: 0 ;
+  border-width: 0 ; }
+
+/* collapse feeds button */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000318}}
+.claro span[widgetid="collapse_feeds_btn"] {
+  display: inline-block !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000321}}
+  .claro span[widgetid="collapse_feeds_btn"] > span:before {
+    display: inline-block;
+    content: "\f104\f104";
+    font-family: 'FontAwesome' !important;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 14px;
+    text-transform: none;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #333333;
+    font-size: 14px;
+    line-height: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000328}}
+  .claro span[widgetid="collapse_feeds_btn"] #collapse_feeds_btn {
+    display: none; }
+
+/* collapse feeds button (when hidden) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000332}}
+#header-wrap[style*="left: 0px;"] span[widgetid="collapse_feeds_btn"] > span:before {
+  display: inline-block;
+  content: "\f105\f105";
+  font-family: 'FontAwesome' !important;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 14px;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  line-height: 16px; }
+
+/* disable hover effects and sizing */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000338}}
+.claro .dijitToolbar .dijitComboButtonHover .dijitButtonNodeHover, .claro .dijitToolbar .dijitComboButtonHover .dijitDownArrowButtonHover,
+.claro .dijitToolbar .dijitButtonHover .dijitButtonNode, .claro .dijitToolbar .dijitDropDownButtonHover .dijitButtonNode, .claro .dijitToolbar .dijitToggleButtonHover .dijitButtonNode, .claro .dijitToolbar .dijitComboButtonHover .dijitButtonNode,
+.claro .dijitSelectLabel, .claro .dijitTextBox .dijitInputInner, .claro .dijitValidationTextBox .dijitValidationContainer,
+.claro .dijitSelect .dijitInputField, .claro .dijitTextBox .dijitInputField,
+.claro .dijitToolbar .dijitButton .dijitButtonNode, .claro .dijitToolbar .dijitDropDownButton .dijitButtonNode, .claro .dijitToolbar .dijitComboButton .dijitButtonNode, .claro .dijitToolbar .dijitToggleButton .dijitButtonNode, .claro .dijitToolbar .dijitComboBox .dijitButtonNode,
+.dijitToolbar .dijitButtonContents {
+  -webkit-transition: none;
+  transition: none;
+  background: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  margin: 0; }
+
+/************
+  * BUTTONS *
+  ************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000357}}
+.claro .dijitButton,
+.claro .dijitValidationTextBox,
+.claro .dijitComboButton,
+.claro .dijitDropDownButton {
+  background: whitesmoke;
+  border: 1px solid #d8d8d8;
+  padding: 0;
+  margin: 0 8px 0 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000368}}
+  .claro .dijitButton:hover,
+  .claro .dijitValidationTextBox:hover,
+  .claro .dijitComboButton:hover,
+  .claro .dijitDropDownButton:hover {
+    background: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000372}}
+  .claro .dijitButton > span.dijitButtonNode,
+  .claro .dijitButton td.dijitButtonNode,
+  .claro .dijitValidationTextBox > span.dijitButtonNode,
+  .claro .dijitValidationTextBox td.dijitButtonNode,
+  .claro .dijitComboButton > span.dijitButtonNode,
+  .claro .dijitComboButton td.dijitButtonNode,
+  .claro .dijitDropDownButton > span.dijitButtonNode,
+  .claro .dijitDropDownButton td.dijitButtonNode {
+    background-image: none;
+    background-color: transparent;
+    border: 0px solid transparent;
+    padding: 0;
+    box-shadow: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000381}}
+  .claro .dijitButton > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitButton td.dijitButtonContents,
+  .claro .dijitButton td.dijitButtonNode div.dijitButtonContents,
+  .claro .dijitButton > span.dijitButtonText,
+  .claro .dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitValidationTextBox td.dijitButtonContents,
+  .claro .dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents,
+  .claro .dijitValidationTextBox > span.dijitButtonText,
+  .claro .dijitComboButton > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitComboButton td.dijitButtonContents,
+  .claro .dijitComboButton td.dijitButtonNode div.dijitButtonContents,
+  .claro .dijitComboButton > span.dijitButtonText,
+  .claro .dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitDropDownButton td.dijitButtonContents,
+  .claro .dijitDropDownButton td.dijitButtonNode div.dijitButtonContents,
+  .claro .dijitDropDownButton > span.dijitButtonText {
+    -webkit-transition: none;
+    background: transparent;
+    border: none;
+    padding: 4px 2px 4px 8px;
+    height: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000391}}
+    .claro .dijitButton > span.dijitButtonNode > span.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitButton td.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitButton td.dijitButtonNode div.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitButton > span.dijitButtonText.dijitButtonContentsHover,
+    .claro .dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitValidationTextBox td.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitValidationTextBox > span.dijitButtonText.dijitButtonContentsHover,
+    .claro .dijitComboButton > span.dijitButtonNode > span.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitComboButton td.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitComboButton td.dijitButtonNode div.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitComboButton > span.dijitButtonText.dijitButtonContentsHover,
+    .claro .dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitDropDownButton td.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitDropDownButton td.dijitButtonNode div.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitDropDownButton > span.dijitButtonText.dijitButtonContentsHover {
+      -webkit-transition: none;
+      background: transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000396}}
+    .claro .dijitButton > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText,
+    .claro .dijitButton td.dijitButtonContents .dijitButtonText,
+    .claro .dijitButton td.dijitButtonNode div.dijitButtonContents .dijitButtonText,
+    .claro .dijitButton > span.dijitButtonText .dijitButtonText,
+    .claro .dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText,
+    .claro .dijitValidationTextBox td.dijitButtonContents .dijitButtonText,
+    .claro .dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents .dijitButtonText,
+    .claro .dijitValidationTextBox > span.dijitButtonText .dijitButtonText,
+    .claro .dijitComboButton > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText,
+    .claro .dijitComboButton td.dijitButtonContents .dijitButtonText,
+    .claro .dijitComboButton td.dijitButtonNode div.dijitButtonContents .dijitButtonText,
+    .claro .dijitComboButton > span.dijitButtonText .dijitButtonText,
+    .claro .dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText,
+    .claro .dijitDropDownButton td.dijitButtonContents .dijitButtonText,
+    .claro .dijitDropDownButton td.dijitButtonNode div.dijitButtonContents .dijitButtonText,
+    .claro .dijitDropDownButton > span.dijitButtonText .dijitButtonText {
+      padding: 0;
+      color: #333333;
+      font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003101}}
+      .claro .dijitButton > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitButton td.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitButton td.dijitButtonNode div.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitButton > span.dijitButtonText .dijitButtonText .dijitSelectLabel,
+      .claro .dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitValidationTextBox td.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitValidationTextBox > span.dijitButtonText .dijitButtonText .dijitSelectLabel,
+      .claro .dijitComboButton > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitComboButton td.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitComboButton td.dijitButtonNode div.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitComboButton > span.dijitButtonText .dijitButtonText .dijitSelectLabel,
+      .claro .dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitDropDownButton td.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitDropDownButton td.dijitButtonNode div.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitDropDownButton > span.dijitButtonText .dijitButtonText .dijitSelectLabel {
+        padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003107}}
+  .claro .dijitButton:not(.dijitDropDownButton) > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitButton > .dijitButtonNode:before,
+  .claro .dijitValidationTextBox:not(.dijitDropDownButton) > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitValidationTextBox > .dijitButtonNode:before,
+  .claro .dijitComboButton:not(.dijitDropDownButton) > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitComboButton > .dijitButtonNode:before,
+  .claro .dijitDropDownButton:not(.dijitDropDownButton) > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitDropDownButton > .dijitButtonNode:before {
+    padding: 4px 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003112}}
+  .claro .dijitButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitValidationTextBox.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitComboButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitDropDownButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents {
+    height: auto;
+    padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003116}}
+    .claro .dijitButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > .dijitButtonText,
+    .claro .dijitValidationTextBox.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > .dijitButtonText,
+    .claro .dijitComboButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > .dijitButtonText,
+    .claro .dijitDropDownButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > .dijitButtonText {
+      padding: 4px 2px 4px 8px;
+      height: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003123}}
+  .claro .dijitButton span.dijitButtonText,
+  .claro .dijitValidationTextBox span.dijitButtonText,
+  .claro .dijitComboButton span.dijitButtonText,
+  .claro .dijitDropDownButton span.dijitButtonText {
+    color: #333333;
+    font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003128}}
+  .claro .dijitButton .dijitButtonNode.dijitArrowButton,
+  .claro .dijitButton span.dijitArrowButtonInner,
+  .claro .dijitValidationTextBox .dijitButtonNode.dijitArrowButton,
+  .claro .dijitValidationTextBox span.dijitArrowButtonInner,
+  .claro .dijitComboButton .dijitButtonNode.dijitArrowButton,
+  .claro .dijitComboButton span.dijitArrowButtonInner,
+  .claro .dijitDropDownButton .dijitButtonNode.dijitArrowButton,
+  .claro .dijitDropDownButton span.dijitArrowButtonInner {
+    -webkit-transition: none;
+    background: transparent;
+    border: none;
+    padding: 4px 8px 4px 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003135}}
+    .claro .dijitButton .dijitButtonNode.dijitArrowButton input.dijitArrowButtonInner,
+    .claro .dijitButton .dijitButtonNode.dijitArrowButton div.dijitArrowButtonInner, .claro .dijitButton .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
+    .claro .dijitButton span.dijitArrowButtonInner input.dijitArrowButtonInner,
+    .claro .dijitButton span.dijitArrowButtonInner div.dijitArrowButtonInner,
+    .claro .dijitButton span.dijitArrowButtonInner.dijitArrowButtonInner,
+    .claro .dijitValidationTextBox .dijitButtonNode.dijitArrowButton input.dijitArrowButtonInner,
+    .claro .dijitValidationTextBox .dijitButtonNode.dijitArrowButton div.dijitArrowButtonInner,
+    .claro .dijitValidationTextBox .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
+    .claro .dijitValidationTextBox span.dijitArrowButtonInner input.dijitArrowButtonInner,
+    .claro .dijitValidationTextBox span.dijitArrowButtonInner div.dijitArrowButtonInner,
+    .claro .dijitValidationTextBox span.dijitArrowButtonInner.dijitArrowButtonInner,
+    .claro .dijitComboButton .dijitButtonNode.dijitArrowButton input.dijitArrowButtonInner,
+    .claro .dijitComboButton .dijitButtonNode.dijitArrowButton div.dijitArrowButtonInner,
+    .claro .dijitComboButton .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
+    .claro .dijitComboButton span.dijitArrowButtonInner input.dijitArrowButtonInner,
+    .claro .dijitComboButton span.dijitArrowButtonInner div.dijitArrowButtonInner,
+    .claro .dijitComboButton span.dijitArrowButtonInner.dijitArrowButtonInner,
+    .claro .dijitDropDownButton .dijitButtonNode.dijitArrowButton input.dijitArrowButtonInner,
+    .claro .dijitDropDownButton .dijitButtonNode.dijitArrowButton div.dijitArrowButtonInner,
+    .claro .dijitDropDownButton .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
+    .claro .dijitDropDownButton span.dijitArrowButtonInner input.dijitArrowButtonInner,
+    .claro .dijitDropDownButton span.dijitArrowButtonInner div.dijitArrowButtonInner,
+    .claro .dijitDropDownButton span.dijitArrowButtonInner.dijitArrowButtonInner {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUyIiBoZWlnaHQ9IjE3OTIiIHZpZXdCb3g9IjAgMCAxMTUyIDE3OTIiIHN0eWxlPSJtYXJnaW4tbGVmdDogM3B4OyBtYXJnaW4tdG9wOiAxcHg7Ij48cGF0aCBkPSJNIDEwNzUsNzM2cTAsMTMgLTEwLDIzbC00NjYsNDY2cS0xMCwxMCAtMjMsMTB0LTIzLTEwbC00NjYtNDY2cS0xMC0xMCAtMTAtMjN0IDEwLTIzbCA1MC01MHEgMTAtMTAgMjMtMTB0IDIzLDEwbCAzOTMsMzkzbCAzOTMtMzkzcSAxMC0xMCAyMy0xMHQgMjMsMTBsIDUwLDUwcSAxMCwxMCAxMCwyM3oiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMDc1IDAuMDA3NSkiPjwvcGF0aD48L3N2Zz4K");
+      background-position: 0 0;
+      height: 14px;
+      width: 14px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003144}}
+    .claro .dijitButton .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
+    .claro .dijitButton span.dijitArrowButtonInner.dijitArrowButtonInner,
+    .claro .dijitValidationTextBox .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
+    .claro .dijitValidationTextBox span.dijitArrowButtonInner.dijitArrowButtonInner,
+    .claro .dijitComboButton .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
+    .claro .dijitComboButton span.dijitArrowButtonInner.dijitArrowButtonInner,
+    .claro .dijitDropDownButton .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
+    .claro .dijitDropDownButton span.dijitArrowButtonInner.dijitArrowButtonInner {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUyIiBoZWlnaHQ9IjE3OTIiIHZpZXdCb3g9IjAgMCAxMTUyIDE3OTIiIHN0eWxlPSJtYXJnaW4tbGVmdDogM3B4OyBtYXJnaW4tdG9wOiAxcHg7Ij48cGF0aCBkPSJNIDEwNzUsNzM2cTAsMTMgLTEwLDIzbC00NjYsNDY2cS0xMCwxMCAtMjMsMTB0LTIzLTEwbC00NjYtNDY2cS0xMC0xMCAtMTAtMjN0IDEwLTIzbCA1MC01MHEgMTAtMTAgMjMtMTB0IDIzLDEwbCAzOTMsMzkzbCAzOTMtMzkzcSAxMC0xMCAyMy0xMHQgMjMsMTBsIDUwLDUwcSAxMCwxMCAxMCwyM3oiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMDc1IDAuMDA3NSkiPjwvcGF0aD48L3N2Zz4K");
+      background-position: 2px 4px; }
+
+/**************
+  * COMBO BOX *
+  **************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003160}}
+.claro .dijitSelect.dijitComboBox .dijitInputField,
+.claro .dijitSelect .dijitButtonContents,
+.claro .dijitComboBox.dijitComboBox .dijitInputField,
+.claro .dijitComboBox .dijitButtonContents {
+  border: 0 solid transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003165}}
+.claro .dijitSelect:not(.dijitComboBox) .dijitButtonContents, .claro .dijitSelect.dijitComboBox .dijitInputInner,
+.claro .dijitComboBox:not(.dijitComboBox) .dijitButtonContents,
+.claro .dijitComboBox.dijitComboBox .dijitInputInner {
+  padding: 4px 2px 4px 8px !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003170}}
+.claro .dijitSelect .dijitArrowButtonContainer,
+.claro .dijitComboBox .dijitArrowButtonContainer {
+  border: 0 solid transparent;
+  background-image: none;
+  background: transparent;
+  padding: 4px 8px 4px 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003177}}
+.claro .dijitSelect input.dijitArrowButtonInner,
+.claro .dijitComboBox input.dijitArrowButtonInner {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUyIiBoZWlnaHQ9IjE3OTIiIHZpZXdCb3g9IjAgMCAxMTUyIDE3OTIiIHN0eWxlPSJtYXJnaW4tbGVmdDogM3B4OyBtYXJnaW4tdG9wOiAxcHg7Ij48cGF0aCBkPSJNIDEwNzUsNzM2cTAsMTMgLTEwLDIzbC00NjYsNDY2cS0xMCwxMCAtMjMsMTB0LTIzLTEwbC00NjYtNDY2cS0xMC0xMCAtMTAtMjN0IDEwLTIzbCA1MC01MHEgMTAtMTAgMjMtMTB0IDIzLDEwbCAzOTMsMzkzbCAzOTMtMzkzcSAxMC0xMCAyMy0xMHQgMjMsMTBsIDUwLDUwcSAxMCwxMCAxMCwyM3oiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMDc1IDAuMDA3NSkiPjwvcGF0aD48L3N2Zz4K");
+  background-position: 0 0;
+  height: 16px !important;
+  width: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003185}}
+.claro .dijitSelect:not(.dijitComboBox).dijitHasDropDownOpen,
+.claro .dijitComboBox:not(.dijitComboBox).dijitHasDropDownOpen {
+  padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003187}}
+.claro .dijitSelect.dijitSelectFocused .dijitArrowButton, .claro .dijitSelect:not(.dijitComboBox).dijitSelectFocused .dijitArrowButton,
+.claro .dijitComboBox.dijitSelectFocused .dijitArrowButton,
+.claro .dijitComboBox:not(.dijitComboBox).dijitSelectFocused .dijitArrowButton {
+  padding: 4px 8px 4px 2px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003193}}
+.claro .dijitSelect.dijitSelectFocused .dijitArrowButton .dijitArrowButtonInner, .claro .dijitSelect.dijitSelectHover .dijitArrowButton .dijitArrowButtonInner,
+.claro .dijitSelect .dijitDownArrowButtonHover .dijitArrowButtonInner,
+.claro .dijitSelect .dijitHasDropDownOpen .dijitArrowButtonInner,
+.claro .dijitComboBox.dijitSelectFocused .dijitArrowButton .dijitArrowButtonInner,
+.claro .dijitComboBox.dijitSelectHover .dijitArrowButton .dijitArrowButtonInner,
+.claro .dijitComboBox .dijitDownArrowButtonHover .dijitArrowButtonInner,
+.claro .dijitComboBox .dijitHasDropDownOpen .dijitArrowButtonInner {
+  background-position: 0 0; }
+
+/********************
+  * DROP DOWN MENUS *
+  ********************/
+/* hover effects */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003208}}
+.claro .dijitSelectMenu .dijitMenuItemHover td, .claro .dijitSelectMenu .dijitMenuItemSelected td, .claro .dijitMenuItemHover, .claro .dijitMenuItemSelected {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  background-color: whitesmoke;
+  background-image: none;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003216}}
+.claro .dijitPopup.dijitMenuPopup,
+.claro .dijitPopup.dijitComboBoxMenuPopup {
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px 0px; }
+
+/* menu */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003222}}
+.claro .dijitMenu {
+  border: 1px solid #d8d8d8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003225}}
+  .claro .dijitMenu .dijitMenuItem {
+    padding: 0;
+    margin: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003229}}
+    .claro .dijitMenu .dijitMenuItem .dijitMenuItemIconCell {
+      margin: 0;
+      padding: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003230}}
+    .claro .dijitMenu .dijitMenuItem .dijitMenuItemLabel {
+      margin: 0;
+      padding: 4px 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003234}}
+    .claro .dijitMenu .dijitMenuItem .dijitMenuArrowCell {
+      margin: 0;
+      padding: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003238}}
+.claro .dijitComboBoxMenu .dijitMenuItem {
+  background-color: white;
+  padding: 2px 8px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  background-image: none;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003247}}
+.claro .dijitComboBoxMenu .dijitMenuItemHover {
+  background-color: whitesmoke; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003251}}
+.claro .dijitComboBoxMenu .dijitMenuItemSelected {
+  background-color: white;
+  color: #dd4b39; }
+
+/***********
+  * INPUTS *
+  ***********/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003262}}
+.claro .dijitSelect,
+.claro .dijitTextBox {
+  border: 1px solid #d8d8d8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003266}}
+  .claro .dijitSelect:not(.dijitComboBox),
+  .claro .dijitTextBox:not(.dijitComboBox) {
+    padding: 4px 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003268}}
+  .claro .dijitSelect.dijitSelectHover, .claro .dijitSelect.dijitTextBoxHover,
+  .claro .dijitTextBox.dijitSelectHover,
+  .claro .dijitTextBox.dijitTextBoxHover {
+    background: whitesmoke; }
+
+/**
+  *  File:         _tablist.scss
+  *******************************
+  *
+  *  Description:   tablists used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_tablist\.scss}line{font-family:\0000313}}
+.claro .dijitTabListWrapper .dijitTabContainerTop-tabs {
+  border: 0 none transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_tablist\.scss}line{font-family:\0000316}}
+  .claro .dijitTabListWrapper .dijitTabContainerTop-tabs .dijitTab {
+    background-image: none;
+    border-color: #d8d8d8;
+    border-width: 1px;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_tablist\.scss}line{font-family:\0000325}}
+  .claro .dijitTabListWrapper .dijitTabContainerTop-tabs .dijitTab {
+    background: whitesmoke; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_tablist\.scss}line{font-family:\0000326}}
+  .claro .dijitTabListWrapper .dijitTabContainerTop-tabs .dijitTabChecked {
+    background: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_tablist\.scss}line{font-family:\0000327}}
+  .claro .dijitTabListWrapper .dijitTabContainerTop-tabs .dijitTabHover:not(.dijitTabChecked) {
+    border-top: 2px solid #dd4b39; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_tablist\.scss}line{font-family:\0000331}}
+.claro .dijitTabPaneWrapper {
+  border-width: 1px;
+  border-color: #d8d8d8; }
+
+/**
+  *  File:         _accordion.scss
+  *********************************
+  *
+  *  Description:   accordion used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_accordion\.scss}line{font-family:\0000312}}
+.claro .dijitAccordionContainer .dijitAccordionInnerContainer {
+  background-color: whitesmoke;
+  border: 1px solid #d8d8d8;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_accordion\.scss}line{font-family:\0000316}}
+  .claro .dijitAccordionContainer .dijitAccordionInnerContainer .dijitAccordionTitle {
+    background-image: none;
+    font-weight: bold; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_accordion\.scss}line{font-family:\0000321}}
+  .claro .dijitAccordionContainer .dijitAccordionInnerContainer.dijitAccordionInnerContainerHover, .claro .dijitAccordionContainer .dijitAccordionInnerContainer.dijitAccordionInnerContainerSelected {
+    background: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_accordion\.scss}line{font-family:\0000329}}
+.claro .dijitAccordionContainer .dijitAccordionTitle {
+  color: #333333; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_accordion\.scss}line{font-family:\0000330}}
+.claro .dijitAccordionContainer .dijitAccordionTitleSelected {
+  color: #dd4b39; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_accordion\.scss}line{font-family:\0000332}}
+.claro .dijitAccordionContainer .dijitAccordionChildWrapper {
+  border: 1px solid #d8d8d8;
+  /* single preference items */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_accordion\.scss}line{font-family:\0000337}}
+  .claro .dijitAccordionContainer .dijitAccordionChildWrapper .prefPrefsList .prefName {
+    width: 60%; }
+
+/**
+  *  File:         _notification.scss
+  ***********************************
+  *
+  *  Description:   notifications used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_notification\.scss}line{font-family:\0000311}}
+.claro .notify.progress {
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  margin-left: -160px;
+  width: 320px;
+  background: white;
+  border-color: #d8d8d8;
+  border-style: solid;
+  border-width: 1px 1px 2px;
+  text-align: center;
+  z-index: 10;
+  /* loader */
+  /* message */
+  /* closer */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_notification\.scss}line{font-family:\0000326}}
+  .claro .notify.progress img[src="images/indicator_white.gif"] {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gMjU2LjAwLDAuMDAgQyAxMTYuNjI2LDAuMDAgMy4yNzEsMTExLjM4MSAwLjA3NiwyNDkuOTg3IEMgMy4wMzYsMTI5LjA1NSA5NC45OTIsMzIuMDAgMjA4LjAwLDMyLjAwIEMgMzIyLjg3NSwzMi4wMCA0MTYuMDAsMTMyLjI4OCA0MTYuMDAsMjU2LjAwIEMgNDE2LjAwLDI4Mi41MSA0MzcuNDksMzA0LjAwIDQ2NC4wMCwzMDQuMDAgQyA0OTAuNTEsMzA0LjAwIDUxMi4wMCwyODIuNTEgNTEyLjAwLDI1Ni4wMCBDIDUxMi4wMCwxMTQuNjE1IDM5Ny4zODUsMC4wMCAyNTYuMDAsMC4wMCBaTSAyNTYuMDAsNTEyLjAwIEMgMzk1LjM3NCw1MTIuMDAgNTA4LjcyOSw0MDAuNjE5IDUxMS45MjQsMjYyLjAxMyBDIDUwOC45NjQsMzgyLjk0NSA0MTcuMDA4LDQ4MC4wMCAzMDQuMDAsNDgwLjAwIEMgMTg5LjEyNSw0ODAuMDAgOTYuMDAsMzc5LjcxMiA5Ni4wMCwyNTYuMDAgQyA5Ni4wMCwyMjkuNDkgNzQuNTEsMjA4LjAwIDQ4LjAwLDIwOC4wMCBDIDIxLjQ5LDIwOC4wMCAwLjAwLDIyOS40OSAwLjAwLDI1Ni4wMCBDIDAuMDAsMzk3LjM4NSAxMTQuNjE1LDUxMi4wMCAyNTYuMDAsNTEyLjAwIFoiIHRyYW5zZm9ybT0ic2NhbGUoMC4wMzEyNSAwLjAzMTI1KSI+PC9wYXRoPgogIDwvZz4KPC9zdmc+");
+    position: relative;
+    left: 1px;
+    top: 1px;
+    height: 0;
+    padding-top: 14px;
+    padding-left: 14px;
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    opacity: 0.533;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_notification\.scss}line{font-family:\0000335}}
+  .claro .notify.progress .msg {
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #dd4b39; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_notification\.scss}line{font-family:\0000344}}
+  .claro .notify.progress img.close {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0gNTA3LjMzMSw0MTEuMzNjLTAuMDAyLTAuMDAyLTAuMDA0LTAuMDA0LTAuMDA2LTAuMDA1TCAzNTIuMDAzLDI1Ni4wMGwgMTU1LjMyMi0xNTUuMzI1YyAwLjAwMi0wLjAwMiwgMC4wMDQtMC4wMDMsIDAuMDA2LTAuMDA1CgkJYyAxLjY3Mi0xLjY3MywgMi44ODEtMy42MjcsIDMuNjU2LTUuNzA4YyAyLjEyMy01LjY4OCwgMC45MTItMTIuMzQxLTMuNjYyLTE2LjkxNUwgNDMzLjk1Miw0LjY3NGMtNC41NzQtNC41NzMtMTEuMjI1LTUuNzgzLTE2LjkxNC0zLjY2CgkJYy0yLjA4LDAuNzc1LTQuMDM1LDEuOTg0LTUuNzA5LDMuNjU1YzAuMDAsMC4wMDItMC4wMDIsMC4wMDMtMC4wMDQsMC4wMDVMIDI1Ni4wMDEsMTYwLjAwTCAxMDAuNjc3LDQuNjc1CgkJYy0wLjAwMi0wLjAwMi0wLjAwMy0wLjAwMy0wLjAwNS0wLjAwNWMtMS42NzMtMS42NzEtMy42MjctMi44OC01LjcwNy0zLjY1NWMtNS42OS0yLjEyNC0xMi4zNDEtMC45MTMtMTYuOTE1LDMuNjZMIDQuNjc2LDc4LjA0OQoJCWMtNC41NzQsNC41NzQtNS43ODQsMTEuMjI2LTMuNjYxLDE2LjkxNGMgMC43NzYsMi4wOCwgMS45ODUsNC4wMzYsIDMuNjU2LDUuNzA4YyAwLjAwMiwwLjAwMSwgMC4wMDMsMC4wMDMsIDAuMDA1LDAuMDA1TCAxNjAuMDAxLDI1Ni4wMAoJCUwgNC42NzYsNDExLjMyNmMtMC4wMDEsMC4wMDItMC4wMDMsMC4wMDMtMC4wMDQsMC4wMDVjLTEuNjcxLDEuNjczLTIuODgsMy42MjctMy42NTcsNS43MDdjLTIuMTI0LDUuNjg4LTAuOTEzLDEyLjM0MSwgMy42NjEsMTYuOTE1CgkJbCA3My4zNzQsNzMuMzczYyA0LjU3NSw0LjU3NCwgMTEuMjI2LDUuNzg0LCAxNi45MTUsMy42NjFjIDIuMDgtMC43NzYsIDQuMDM1LTEuOTg1LCA1LjcwOC0zLjY1NmMgMC4wMDEtMC4wMDIsIDAuMDAzLTAuMDAzLCAwLjAwNS0wLjAwNQoJCWwgMTU1LjMyNC0xNTUuMzI1bCAxNTUuMzI0LDE1NS4zMjVjIDAuMDAyLDAuMDAxLCAwLjAwNCwwLjAwMywgMC4wMDYsMC4wMDRjIDEuNjc0LDEuNjcyLCAzLjYyNywyLjg4MSwgNS43MDcsMy42NTcKCQljIDUuNjg5LDIuMTIzLCAxMi4zNDIsMC45MTMsIDE2LjkxNC0zLjY2MWwgNzMuMzczLTczLjM3NGMgNC41NzQtNC41NzQsIDUuNzg1LTExLjIyNywgMy42NjItMTYuOTE1CgkJQyA1MTAuMjEyLDQxNC45NTcsIDUwOS4wMDMsNDEzLjAwMywgNTA3LjMzMSw0MTEuMzN6IiB0cmFuc2Zvcm09InNjYWxlKDAuMDMxMjUgMC4wMzEyNSkiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPg==");
+    position: relative;
+    left: 1px;
+    top: 1px;
+    height: 0;
+    padding-top: 14px;
+    padding-left: 14px;
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    opacity: 0.533; }
+
+/**
+  *  File:         _dialog.scss
+  *******************************
+  *
+  *  Description:   dialogs used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+/* wrapper (whole background) */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000314}}
+.claro .dijitDialogUnderlayWrapper .dijitDialogUnderlay {
+  background: #fff;
+  opacity: 0.75; }
+
+/* dialog itself */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000322}}
+.claro .dijitDialog {
+  border-color: #d8d8d8;
+  border-style: solid;
+  border-width: 1px 1px 2px;
+  /* title */
+  /* content */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000326}}
+  .claro .dijitDialog .dijitDialogTitleBar {
+    border: 0px solid transparent;
+    background: whitesmoke;
+    background-image: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000333}}
+  .claro .dijitDialog .dijitDialogPaneContent {
+    border: 0px solid transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000336}}
+    .claro .dijitDialog .dijitDialogPaneContent div:last-child {
+      margin-top: 16px; }
+
+/*# sourceMappingURL=main.css.map */

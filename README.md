@@ -1,9 +1,9 @@
 # clean-greader
 
-clean-greader is a tiny tiny rss (1.9) theme based on the latest Google Reader and inspired by other Google Services.
+clean-greader is a tiny tiny rss (1.8+) theme based on the latest Google Reader and inspired by other Google Services.
 
-## Screenshot
-![](https://raw.github.com/naeramarth7/clean-greader/master/clean-greader-img/preview.png)
+## Screenshots
+![](https://raw.github.com/naeramarth7/clean-greader/master/img/preview.png)
 
 ## Installation
 ### Using Git
@@ -12,8 +12,6 @@ Assuming, that your tt-rss instance is located at /usr/share/tt-rss:
 cd /usr/share/tt-rss/themes
 git clone https://github.com/naeramarth7/clean-greader
 ln -s ./clean-greader/clean-greader.css ./clean-greader.css
-ln -s ./clean-greader/clean-greader-css ./clean-greader-css
-ln -s ./clean-greader/clean-greader-img ./clean-greader-img
 ```
 
 ### Manual

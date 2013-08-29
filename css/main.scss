@@ -1,0 +1,123 @@
+/**
+  *  File:         main.scss
+  **************************
+  *
+  *  Description:   main scss file for the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-09
+**/
+
+/*******************
+  * MODULE IMPORTS *
+  *******************/
+@import "modules/all";
+
+/************
+  * GENERAL *
+  ************/
+
+/* no outline */
+:focus { outline: none; }
+
+/* font */
+* {
+  font-size: 12px;
+  font-family: arial, sans-serif !important;
+}
+
+/* links */
+a:link, a:visited, a:focus, a:hover {
+  color: $clr-blue;
+  text-decoration: none;
+}
+
+/* background */
+body { background: $clr-bg-passive; }
+
+/* scrollbars */
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background-color: #EEE; margin: 1px 0 2px 0; }
+::-webkit-scrollbar-thumb { background-color: #fff; }
+
+/* remove claro transitions */
+.claro .dijitSelect, .claro .dijitSelect .dijitButtonContents, .claro .dijitTextBox, .claro .dijitTextBox .dijitButtonNode {
+  @include trnstn-none;
+}
+
+.claro .dijitToolbar {
+  background: $clr-bg-active;
+  padding: $content-padding;
+}
+
+
+
+/*********
+  * MAIN *
+  *********/
+body#ttrssPrefs {
+  overflow: hidden;
+}
+
+#main {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+
+
+/***********
+  * HEADER *
+  ***********/
+body#ttrssPrefs #header {
+  position: fixed;
+  top: 0; right: 0;
+  z-index: 1;
+  border: 1px solid $clr-brdr-light;
+  padding: $content-padding / 2 $content-padding;
+  background: $clr-bg-active-second;
+  
+  &:hover { background: $clr-bg-active; }
+}
+
+
+
+/***********
+  * FOOTER *
+  ***********/
+#footer {
+  position: fixed;
+  z-index: 1;
+  height: 16px;
+  border: 1px solid $clr-brdr-light;
+}
+
+/* card resizer */
+div[widgetid="feeds-holder_splitter"] { display: none !important; }
+
+/*** MAIN CARDS -CONTENT CARD ***/
+div#header-wrap {
+  display: inline-block;
+  float: left;
+  
+  @include no-space;
+}
+
+/* dock splitter */
+div.dijitSplitterCover { display: none !important; }
+
+
+
+/*********************
+  * PARTIALS IMPORTS *
+  *********************/
+@import "partials/icons";
+@import "partials/loader";
+@import "partials/treeview";
+@import "partials/toolbar";
+@import "partials/articles";
+@import "partials/button";
+@import "partials/tablist";
+@import "partials/accordion";
+@import "partials/notification";
+@import "partials/dialog";

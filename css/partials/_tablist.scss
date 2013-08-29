@@ -1,0 +1,35 @@
+/**
+  *  File:         _tablist.scss
+  *******************************
+  *
+  *  Description:   tablists used in the clean-greader theme
+  *  
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2013-08-29
+**/
+
+.claro {
+  .dijitTabListWrapper {
+    .dijitTabContainerTop-tabs {
+      border: 0 none transparent;
+
+      .dijitTab {
+        background-image: none;
+        border-color: $clr-brdr-light;
+        border-width: 1px;
+        border-radius: 0;
+        box-shadow: none;
+        font-weight: bold;
+      }
+    
+      .dijitTab { background: $clr-bg-active-second; }
+      .dijitTabChecked { background: $clr-bg-active; }
+      .dijitTabHover:not(.dijitTabChecked) { border-top: 2px solid $clr-red; }
+    }
+  }
+
+  .dijitTabPaneWrapper {
+    border-width: 1px;
+    border-color: $clr-brdr-light;
+  }
+}
