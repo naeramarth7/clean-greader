@@ -31,6 +31,19 @@ git pull
 ### Manual
 Same as Installation - just overwrite the files.
 
+## Maintenance
+As of the "build from scratch" update, the theme is completely written using [SASS/SCSS](http://sass-lang.com/). 
+maA tutorial on [Devloping With Sass and Chrome DevTools](http://net.tutsplus.com/tutorials/html-css-techniques/developing-with-sass-and-chrome-devtools/) can be found on net.tutsplus.com.
+
+By running the `css/watch.main.scss.sh`* script in the background any change to any contained `.scss` file will automatically be translated into  the `main.css`.
+
+---
+
+*sass needs to be installed on your the server.
+```
+gem install sass --pre
+```
+
 ## Support
 The clean-greader theme is build on Google Chrome (29 beta) using Linux Mint 15 and tested on Google Chrome (29 beta) as well as Mozilla Firefox (23).
 These are the only official support browsers, so there will be no guarantee for the usability on other browsers except of those.
