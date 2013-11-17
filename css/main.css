@@ -58,7 +58,7 @@
   *****************************
   *
   *  Description:   mixins used in this theme
-  *  
+  *
   *  Author:        Sven Flickinger (naeramarth7)
   *  File Created:  2013-08-28
 **/
@@ -1658,7 +1658,7 @@ img[src="images/plugin.png"] {
   *****************************
   *
   *  Description:   buttons and everything depending on them used in the clean-greader theme
-  *  
+  *
   *  Author:        Sven Flickinger (naeramarth7)
   *  File Created:  2013-08-29
 **/
@@ -1712,7 +1712,7 @@ img[src="images/plugin.png"] {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000338}}
 .claro .dijitToolbar .dijitComboButtonHover .dijitButtonNodeHover, .claro .dijitToolbar .dijitComboButtonHover .dijitDownArrowButtonHover,
 .claro .dijitToolbar .dijitButtonHover .dijitButtonNode, .claro .dijitToolbar .dijitDropDownButtonHover .dijitButtonNode, .claro .dijitToolbar .dijitToggleButtonHover .dijitButtonNode, .claro .dijitToolbar .dijitComboButtonHover .dijitButtonNode,
-.claro .dijitSelectLabel, .claro .dijitTextBox .dijitInputInner, .claro .dijitValidationTextBox .dijitValidationContainer,
+.claro .dijitSelectLabel, .claro .dijitTextBox .dijitInputInner, .claro .dijitSelect.dijitValidationTextBox .dijitValidationContainer,
 .claro .dijitSelect .dijitInputField, .claro .dijitTextBox .dijitInputField,
 .claro .dijitToolbar .dijitButton .dijitButtonNode, .claro .dijitToolbar .dijitDropDownButton .dijitButtonNode, .claro .dijitToolbar .dijitComboButton .dijitButtonNode, .claro .dijitToolbar .dijitToggleButton .dijitButtonNode, .claro .dijitToolbar .dijitComboBox .dijitButtonNode,
 .dijitToolbar .dijitButtonContents {
@@ -1728,7 +1728,7 @@ img[src="images/plugin.png"] {
   ************/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000357}}
 .claro .dijitButton,
-.claro .dijitValidationTextBox,
+.claro .dijitSelect.dijitValidationTextBox,
 .claro .dijitComboButton,
 .claro .dijitDropDownButton {
   background: whitesmoke;
@@ -1741,15 +1741,15 @@ img[src="images/plugin.png"] {
   transition-delay: 0s; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000368}}
   .claro .dijitButton:hover,
-  .claro .dijitValidationTextBox:hover,
+  .claro .dijitSelect.dijitValidationTextBox:hover,
   .claro .dijitComboButton:hover,
   .claro .dijitDropDownButton:hover {
     background: white; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\0000372}}
   .claro .dijitButton > span.dijitButtonNode,
   .claro .dijitButton td.dijitButtonNode,
-  .claro .dijitValidationTextBox > span.dijitButtonNode,
-  .claro .dijitValidationTextBox td.dijitButtonNode,
+  .claro .dijitSelect.dijitValidationTextBox > span.dijitButtonNode,
+  .claro .dijitSelect.dijitValidationTextBox td.dijitButtonNode,
   .claro .dijitComboButton > span.dijitButtonNode,
   .claro .dijitComboButton td.dijitButtonNode,
   .claro .dijitDropDownButton > span.dijitButtonNode,
@@ -1764,10 +1764,10 @@ img[src="images/plugin.png"] {
   .claro .dijitButton td.dijitButtonContents,
   .claro .dijitButton td.dijitButtonNode div.dijitButtonContents,
   .claro .dijitButton > span.dijitButtonText,
-  .claro .dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents,
-  .claro .dijitValidationTextBox td.dijitButtonContents,
-  .claro .dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents,
-  .claro .dijitValidationTextBox > span.dijitButtonText,
+  .claro .dijitSelect.dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitSelect.dijitValidationTextBox td.dijitButtonContents,
+  .claro .dijitSelect.dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents,
+  .claro .dijitSelect.dijitValidationTextBox > span.dijitButtonText,
   .claro .dijitComboButton > span.dijitButtonNode > span.dijitButtonContents,
   .claro .dijitComboButton td.dijitButtonContents,
   .claro .dijitComboButton td.dijitButtonNode div.dijitButtonContents,
@@ -1786,10 +1786,10 @@ img[src="images/plugin.png"] {
     .claro .dijitButton td.dijitButtonContents.dijitButtonContentsHover,
     .claro .dijitButton td.dijitButtonNode div.dijitButtonContents.dijitButtonContentsHover,
     .claro .dijitButton > span.dijitButtonText.dijitButtonContentsHover,
-    .claro .dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents.dijitButtonContentsHover,
-    .claro .dijitValidationTextBox td.dijitButtonContents.dijitButtonContentsHover,
-    .claro .dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents.dijitButtonContentsHover,
-    .claro .dijitValidationTextBox > span.dijitButtonText.dijitButtonContentsHover,
+    .claro .dijitSelect.dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitSelect.dijitValidationTextBox td.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitSelect.dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents.dijitButtonContentsHover,
+    .claro .dijitSelect.dijitValidationTextBox > span.dijitButtonText.dijitButtonContentsHover,
     .claro .dijitComboButton > span.dijitButtonNode > span.dijitButtonContents.dijitButtonContentsHover,
     .claro .dijitComboButton td.dijitButtonContents.dijitButtonContentsHover,
     .claro .dijitComboButton td.dijitButtonNode div.dijitButtonContents.dijitButtonContentsHover,
@@ -1805,10 +1805,10 @@ img[src="images/plugin.png"] {
     .claro .dijitButton td.dijitButtonContents .dijitButtonText,
     .claro .dijitButton td.dijitButtonNode div.dijitButtonContents .dijitButtonText,
     .claro .dijitButton > span.dijitButtonText .dijitButtonText,
-    .claro .dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText,
-    .claro .dijitValidationTextBox td.dijitButtonContents .dijitButtonText,
-    .claro .dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents .dijitButtonText,
-    .claro .dijitValidationTextBox > span.dijitButtonText .dijitButtonText,
+    .claro .dijitSelect.dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText,
+    .claro .dijitSelect.dijitValidationTextBox td.dijitButtonContents .dijitButtonText,
+    .claro .dijitSelect.dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents .dijitButtonText,
+    .claro .dijitSelect.dijitValidationTextBox > span.dijitButtonText .dijitButtonText,
     .claro .dijitComboButton > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText,
     .claro .dijitComboButton td.dijitButtonContents .dijitButtonText,
     .claro .dijitComboButton td.dijitButtonNode div.dijitButtonContents .dijitButtonText,
@@ -1825,10 +1825,10 @@ img[src="images/plugin.png"] {
       .claro .dijitButton td.dijitButtonContents .dijitButtonText .dijitSelectLabel,
       .claro .dijitButton td.dijitButtonNode div.dijitButtonContents .dijitButtonText .dijitSelectLabel,
       .claro .dijitButton > span.dijitButtonText .dijitButtonText .dijitSelectLabel,
-      .claro .dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText .dijitSelectLabel,
-      .claro .dijitValidationTextBox td.dijitButtonContents .dijitButtonText .dijitSelectLabel,
-      .claro .dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents .dijitButtonText .dijitSelectLabel,
-      .claro .dijitValidationTextBox > span.dijitButtonText .dijitButtonText .dijitSelectLabel,
+      .claro .dijitSelect.dijitValidationTextBox > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitSelect.dijitValidationTextBox td.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitSelect.dijitValidationTextBox td.dijitButtonNode div.dijitButtonContents .dijitButtonText .dijitSelectLabel,
+      .claro .dijitSelect.dijitValidationTextBox > span.dijitButtonText .dijitButtonText .dijitSelectLabel,
       .claro .dijitComboButton > span.dijitButtonNode > span.dijitButtonContents .dijitButtonText .dijitSelectLabel,
       .claro .dijitComboButton td.dijitButtonContents .dijitButtonText .dijitSelectLabel,
       .claro .dijitComboButton td.dijitButtonNode div.dijitButtonContents .dijitButtonText .dijitSelectLabel,
@@ -1841,8 +1841,8 @@ img[src="images/plugin.png"] {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003107}}
   .claro .dijitButton:not(.dijitDropDownButton) > span.dijitButtonNode > span.dijitButtonContents,
   .claro .dijitButton > .dijitButtonNode:before,
-  .claro .dijitValidationTextBox:not(.dijitDropDownButton) > span.dijitButtonNode > span.dijitButtonContents,
-  .claro .dijitValidationTextBox > .dijitButtonNode:before,
+  .claro .dijitSelect.dijitValidationTextBox:not(.dijitDropDownButton) > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitSelect.dijitValidationTextBox > .dijitButtonNode:before,
   .claro .dijitComboButton:not(.dijitDropDownButton) > span.dijitButtonNode > span.dijitButtonContents,
   .claro .dijitComboButton > .dijitButtonNode:before,
   .claro .dijitDropDownButton:not(.dijitDropDownButton) > span.dijitButtonNode > span.dijitButtonContents,
@@ -1850,21 +1850,21 @@ img[src="images/plugin.png"] {
     padding: 4px 8px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003112}}
   .claro .dijitButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents,
-  .claro .dijitValidationTextBox.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents,
+  .claro .dijitSelect.dijitValidationTextBox.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents,
   .claro .dijitComboButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents,
   .claro .dijitDropDownButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents {
     height: auto;
     padding: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003116}}
     .claro .dijitButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > .dijitButtonText,
-    .claro .dijitValidationTextBox.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > .dijitButtonText,
+    .claro .dijitSelect.dijitValidationTextBox.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > .dijitButtonText,
     .claro .dijitComboButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > .dijitButtonText,
     .claro .dijitDropDownButton.dijitDropDownButton > span.dijitButtonNode > span.dijitButtonContents > .dijitButtonText {
       padding: 4px 2px 4px 8px;
       height: 16px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003123}}
   .claro .dijitButton span.dijitButtonText,
-  .claro .dijitValidationTextBox span.dijitButtonText,
+  .claro .dijitSelect.dijitValidationTextBox span.dijitButtonText,
   .claro .dijitComboButton span.dijitButtonText,
   .claro .dijitDropDownButton span.dijitButtonText {
     color: #333333;
@@ -1872,8 +1872,8 @@ img[src="images/plugin.png"] {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003128}}
   .claro .dijitButton .dijitButtonNode.dijitArrowButton,
   .claro .dijitButton span.dijitArrowButtonInner,
-  .claro .dijitValidationTextBox .dijitButtonNode.dijitArrowButton,
-  .claro .dijitValidationTextBox span.dijitArrowButtonInner,
+  .claro .dijitSelect.dijitValidationTextBox .dijitButtonNode.dijitArrowButton,
+  .claro .dijitSelect.dijitValidationTextBox span.dijitArrowButtonInner,
   .claro .dijitComboButton .dijitButtonNode.dijitArrowButton,
   .claro .dijitComboButton span.dijitArrowButtonInner,
   .claro .dijitDropDownButton .dijitButtonNode.dijitArrowButton,
@@ -1888,12 +1888,12 @@ img[src="images/plugin.png"] {
     .claro .dijitButton span.dijitArrowButtonInner input.dijitArrowButtonInner,
     .claro .dijitButton span.dijitArrowButtonInner div.dijitArrowButtonInner,
     .claro .dijitButton span.dijitArrowButtonInner.dijitArrowButtonInner,
-    .claro .dijitValidationTextBox .dijitButtonNode.dijitArrowButton input.dijitArrowButtonInner,
-    .claro .dijitValidationTextBox .dijitButtonNode.dijitArrowButton div.dijitArrowButtonInner,
-    .claro .dijitValidationTextBox .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
-    .claro .dijitValidationTextBox span.dijitArrowButtonInner input.dijitArrowButtonInner,
-    .claro .dijitValidationTextBox span.dijitArrowButtonInner div.dijitArrowButtonInner,
-    .claro .dijitValidationTextBox span.dijitArrowButtonInner.dijitArrowButtonInner,
+    .claro .dijitSelect.dijitValidationTextBox .dijitButtonNode.dijitArrowButton input.dijitArrowButtonInner,
+    .claro .dijitSelect.dijitValidationTextBox .dijitButtonNode.dijitArrowButton div.dijitArrowButtonInner,
+    .claro .dijitSelect.dijitValidationTextBox .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
+    .claro .dijitSelect.dijitValidationTextBox span.dijitArrowButtonInner input.dijitArrowButtonInner,
+    .claro .dijitSelect.dijitValidationTextBox span.dijitArrowButtonInner div.dijitArrowButtonInner,
+    .claro .dijitSelect.dijitValidationTextBox span.dijitArrowButtonInner.dijitArrowButtonInner,
     .claro .dijitComboButton .dijitButtonNode.dijitArrowButton input.dijitArrowButtonInner,
     .claro .dijitComboButton .dijitButtonNode.dijitArrowButton div.dijitArrowButtonInner,
     .claro .dijitComboButton .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
@@ -1913,8 +1913,8 @@ img[src="images/plugin.png"] {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_button\.scss}line{font-family:\00003144}}
     .claro .dijitButton .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
     .claro .dijitButton span.dijitArrowButtonInner.dijitArrowButtonInner,
-    .claro .dijitValidationTextBox .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
-    .claro .dijitValidationTextBox span.dijitArrowButtonInner.dijitArrowButtonInner,
+    .claro .dijitSelect.dijitValidationTextBox .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
+    .claro .dijitSelect.dijitValidationTextBox span.dijitArrowButtonInner.dijitArrowButtonInner,
     .claro .dijitComboButton .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
     .claro .dijitComboButton span.dijitArrowButtonInner.dijitArrowButtonInner,
     .claro .dijitDropDownButton .dijitButtonNode.dijitArrowButton.dijitArrowButtonInner,
@@ -2186,34 +2186,73 @@ img[src="images/plugin.png"] {
   *******************************
   *
   *  Description:   dialogs used in the clean-greader theme
-  *  
+  *
   *  Author:        Sven Flickinger (naeramarth7)
   *  File Created:  2013-08-29
 **/
+/* horizontal rules styling */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000312}}
+hr {
+  border: none;
+  color: #d8d8d8;
+  background-color: #d8d8d8;
+  height: 1px;
+  margin: 10px 0; }
+
 /* wrapper (whole background) */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000323}}
 .claro .dijitDialogUnderlayWrapper .dijitDialogUnderlay {
   background: #fff;
   opacity: 0.75; }
 
 /* dialog itself */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000331}}
 .claro .dijitDialog {
   border-color: #d8d8d8;
   border-style: solid;
   border-width: 1px 1px 2px;
   /* title */
   /* content */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000335}}
   .claro .dijitDialog .dijitDialogTitleBar {
     border: 0px solid transparent;
     background: whitesmoke;
     background-image: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000342}}
   .claro .dijitDialog .dijitDialogPaneContent {
     border: 0px solid transparent; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000336}}
-    .claro .dijitDialog .dijitDialogPaneContent div:last-child {
-      margin-top: 16px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000346}}
+  .claro .dijitDialog .dlgSec {
+    font-weight: bold;
+    padding: 8px;
+    background: whitesmoke;
+    border: 1px solid #d8d8d8;
+    border-bottom: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000354}}
+  .claro .dijitDialog .dlgSecCont {
+    padding: 8px;
+    border: 1px solid #d8d8d8;
+    border-top: none;
+    margin-bottom: 8px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000361}}
+  .claro .dijitDialog hr {
+    height: 0; }
+
+/* feed edit dialog */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000367}}
+#feedEditDlg {
+  /* decrease feed name input */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000369}}
+  #feedEditDlg .dijitDialogPaneContent div:nth-child(5) div:first-child {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100% !important;
+    font-size: 1em !important;
+    font-weight: bold; }
+
+/* feeds with errors */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000381}}
+.inactiveFeedHolder {
+  padding: 8px; }
 
 /*# sourceMappingURL=main.css.map */
