@@ -2250,8 +2250,18 @@ hr {
     font-size: 1em !important;
     font-weight: bold; }
 
+/* custom css dialog */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000382}}
+#cssEditDlg .dijitDialogPaneContent > table {
+  margin: 8px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000386}}
+#cssEditDlg .dijitDialogPaneContent > table,
+#cssEditDlg .dijitDialogPaneContent > table textarea {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 /* feeds with errors */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_dialog\.scss}line{font-family:\0000393}}
 .inactiveFeedHolder {
   padding: 8px; }
 

@@ -77,6 +77,18 @@ hr {
   }
 }
 
+/* custom css dialog */
+#cssEditDlg {
+  .dijitDialogPaneContent > table {
+    margin: $content-padding 0;
+  }
+
+  .dijitDialogPaneContent > table,
+  .dijitDialogPaneContent > table textarea {
+    @include box-sizing(border-box);
+  }
+}
+
 /* feeds with errors */
 .inactiveFeedHolder {
   padding: $content-padding;
