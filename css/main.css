@@ -1345,7 +1345,7 @@ img[src="images/plugin.png"] {
   *******************************
   *
   *  Description:   feed article display used in the clean-greader theme
-  *  
+  *
   *  Author:        Sven Flickinger (naeramarth7)
   *  File Created:  2013-08-29
 **/
@@ -1360,7 +1360,6 @@ img[src="images/plugin.png"] {
   left: 12px !important;
   right: 12px;
   width: auto !important;
-  height: auto !important;
   margin: 0 ;
   padding: 0 ;
   border-width: 0 ;
@@ -1368,22 +1367,27 @@ img[src="images/plugin.png"] {
   border-style: solid;
   border-width: 1px 1px 2px; }
 
+/* tweak combined mode */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000329}}
+.claro #headlines-frame.cdm {
+  height: auto !important; }
+
 /*******************
   * SINGLE ARTICLE *
   *******************/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000337}}
 .claro #headlines-frame .hl,
 .claro #headlines-frame .cdm {
   /* article separator */
   border: 1px solid #d8d8d8;
   border-width: 0 1px 1px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000340}}
   .claro #headlines-frame .hl > hr,
   .claro #headlines-frame .cdm > hr {
     display: none; }
 
 /* single article - scroll fix via pseudo element */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000347}}
 .claro #headlines-frame .hl:before,
 .claro #headlines-frame .cdm:before {
   content: "";
@@ -1396,7 +1400,7 @@ img[src="images/plugin.png"] {
   background-color: transparent; }
 
 /* single article header */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000360}}
 .claro #headlines-frame .hl,
 .claro #headlines-frame .cdm .cdmHeader,
 .claro #floatingTitle {
@@ -1409,7 +1413,7 @@ img[src="images/plugin.png"] {
   /* header - article update time */
   /* header - score */
   /* header - feed icon */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000367}}
   .claro #headlines-frame .hl > *,
   .claro #headlines-frame .hl > .hlUpdated > *,
   .claro #headlines-frame .cdm .cdmHeader > *,
@@ -1420,24 +1424,24 @@ img[src="images/plugin.png"] {
     vertical-align: middle;
     padding: 4px;
     white-space: nowrap; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000377}}
   .claro #headlines-frame .hl > div:first-child > *,
   .claro #headlines-frame .cdm .cdmHeader > div:first-child > *,
   .claro #floatingTitle > div:first-child > * {
     margin: 0 2px;
     vertical-align: middle; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000374}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000378}}
   .claro #headlines-frame .hl > div:first-child > img,
   .claro #headlines-frame .cdm .cdmHeader > div:first-child > img,
   .claro #floatingTitle > div:first-child > img {
     display: inline;
     cursor: pointer; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000379}}
   .claro #headlines-frame .hl > div:first-child > div,
   .claro #headlines-frame .cdm .cdmHeader > div:first-child > div,
   .claro #floatingTitle > div:first-child > div {
     display: inline-block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000383}}
   .claro #headlines-frame .hl .titleWrap,
   .claro #headlines-frame .hl .hlTitle,
   .claro #headlines-frame .cdm .cdmHeader .titleWrap,
@@ -1447,7 +1451,7 @@ img[src="images/plugin.png"] {
     max-width: 0;
     width: 100%;
     overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000389}}
     .claro #headlines-frame .hl .titleWrap > a,
     .claro #headlines-frame .hl .titleWrap > .hlContent > a,
     .claro #headlines-frame .hl .hlTitle > a,
@@ -1462,7 +1466,7 @@ img[src="images/plugin.png"] {
     .claro #floatingTitle .hlTitle > .hlContent > a {
       text-decoration: none;
       color: #333333; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000395}}
     .claro #headlines-frame .hl .titleWrap > span.author,
     .claro #headlines-frame .hl .hlTitle > span.author,
     .claro #headlines-frame .cdm .cdmHeader .titleWrap > span.author,
@@ -1470,7 +1474,7 @@ img[src="images/plugin.png"] {
     .claro #floatingTitle .titleWrap > span.author,
     .claro #floatingTitle .hlTitle > span.author {
       color: #777777; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000397}}
     .claro #headlines-frame .hl .titleWrap .collapseBtn img,
     .claro #headlines-frame .hl .hlTitle .collapseBtn img,
     .claro #headlines-frame .cdm .cdmHeader .titleWrap .collapseBtn img,
@@ -1478,7 +1482,7 @@ img[src="images/plugin.png"] {
     .claro #floatingTitle .titleWrap .collapseBtn img,
     .claro #floatingTitle .hlTitle .collapseBtn img {
       vertical-align: middle; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003101}}
   .claro #headlines-frame .hl .hlFeed a,
   .claro #headlines-frame .hl a.hlFeed,
   .claro #headlines-frame .cdm .cdmHeader .hlFeed a,
@@ -1491,7 +1495,7 @@ img[src="images/plugin.png"] {
     color: #777777;
     font-size: 10px;
     padding: 2px 8px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003110}}
     .claro #headlines-frame .hl .hlFeed a:hover,
     .claro #headlines-frame .hl a.hlFeed:hover,
     .claro #headlines-frame .cdm .cdmHeader .hlFeed a:hover,
@@ -1500,7 +1504,7 @@ img[src="images/plugin.png"] {
     .claro #floatingTitle a.hlFeed:hover {
       border: 1px solid #dd4b39;
       color: #dd4b39; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003117}}
   .claro #headlines-frame .hl .updated,
   .claro #headlines-frame .hl .hlUpdated,
   .claro #headlines-frame .cdm .cdmHeader .updated,
@@ -1509,37 +1513,37 @@ img[src="images/plugin.png"] {
   .claro #floatingTitle .hlUpdated {
     float: right;
     color: #777777; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003125}}
   .claro #headlines-frame .hl .scoreWrap img.hlScorePic,
   .claro #headlines-frame .cdm .cdmHeader .scoreWrap img.hlScorePic,
   .claro #floatingTitle .scoreWrap img.hlScorePic {
     display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003131}}
   .claro #headlines-frame .hl .tinyFeedIcon,
   .claro #headlines-frame .cdm .cdmHeader .tinyFeedIcon,
   .claro #floatingTitle .tinyFeedIcon {
     display: none; }
 
 /* unread header */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003137}}
 .claro #headlines-frame .hl.Unread,
 .claro #headlines-frame .cdm.Unread .cdmHeader {
   background: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003137}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003141}}
   .claro #headlines-frame .hl.Unread .titleWrap > a,
   .claro #headlines-frame .cdm.Unread .cdmHeader .titleWrap > a {
     color: #333333;
     font-weight: bold; }
 
 /* active header */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003144}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003148}}
 .claro #headlines-frame .hl.active .hlContent > a,
 .claro #headlines-frame .cdm.active .cdmHeader .titleWrap > a {
   font-weight: bold;
   color: #dd4b39; }
 
 /* floating title - special settings */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003155}}
 .claro #floatingTitle {
   position: absolute;
   top: 30px;
@@ -1550,14 +1554,14 @@ img[src="images/plugin.png"] {
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px -2px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px -2px;
   z-index: 5 !important; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003165}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003169}}
   .claro #floatingTitle a.title {
     color: #dd4b39;
     font-size: 12px;
     font-weight: bold; }
 
 /* article content */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003173}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003177}}
 .claro .cdm.active .cdmContent .cdmContentInner,
 .claro .cdm.expanded .cdmContent .cdmContentInner {
   display: block;
@@ -1568,11 +1572,11 @@ img[src="images/plugin.png"] {
   /* images (except of main) and vides*/
   /* tables */
   /* first and last child not a p-element need padding */ }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003184}}
   .claro .cdm.active .cdmContent .cdmContentInner img,
   .claro .cdm.expanded .cdmContent .cdmContentInner img {
     max-width: 700px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003185}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003189}}
   .claro .cdm.active .cdmContent .cdmContentInner div[xmlns="http://www.w3.org/1999/xhtml"]:first-child a img,
   .claro .cdm.active .cdmContent .cdmContentInner p:first-of-type img,
   .claro .cdm.active .cdmContent .cdmContentInner > span:first-child > span:first-child > img:first-child,
@@ -1585,7 +1589,7 @@ img[src="images/plugin.png"] {
     max-width: 128px;
     width: auto;
     height: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003197}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003201}}
   .claro .cdm.active .cdmContent .cdmContentInner p > img,
   .claro .cdm.active .cdmContent .cdmContentInner p > a:not([href*="feedburner"]) > img,
   .claro .cdm.active .cdmContent .cdmContentInner div > img,
@@ -1600,39 +1604,39 @@ img[src="images/plugin.png"] {
     margin-left: auto;
     margin-right: auto;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003208}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003212}}
   .claro .cdm.active .cdmContent .cdmContentInner p > img,
   .claro .cdm.expanded .cdmContent .cdmContentInner p > img {
     display: inline-block;
     margin-right: 8px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003214}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003218}}
   .claro .cdm.active .cdmContent .cdmContentInner table,
   .claro .cdm.expanded .cdmContent .cdmContentInner table {
     margin-left: auto;
     margin-right: auto;
     width: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003221}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003225}}
   .claro .cdm.active .cdmContent .cdmContentInner > span > span > *:not(p):first-child,
   .claro .cdm.expanded .cdmContent .cdmContentInner > span > span > *:not(p):first-child {
     padding-top: 8px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003222}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003226}}
   .claro .cdm.active .cdmContent .cdmContentInner > span > span > *:not(p):last-child,
   .claro .cdm.expanded .cdmContent .cdmContentInner > span > span > *:not(p):last-child {
     padding-bottom: 8px; }
 
 /* article footer */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003226}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003230}}
 .claro .cdm.active .cdmContent .cdmFooter,
 .claro .cdm.expanded .cdmContent .cdmFooter {
   padding: 4px 8px;
   background-color: whitesmoke; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003231}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003235}}
   .claro .cdm.active .cdmContent .cdmFooter > *,
   .claro .cdm.expanded .cdmContent .cdmFooter > * {
     vertical-align: middle; }
 
 /* article content in non combined display mode */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003239}}
 .claro #content-insert {
   left: 12px !important;
   right: 12px !important;
@@ -1644,7 +1648,7 @@ img[src="images/plugin.png"] {
   border-left-width: 1px !important; }
 
 /* h-resizer in non combined display mode */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003247}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/naeramarth7\/dev\/tt-rss\/clean-greader\/css\/partials\/_articles\.scss}line{font-family:\00003251}}
 .claro #content-insert_splitter {
   background: white;
   left: 12px !important;

@@ -3,7 +3,7 @@
   *******************************
   *
   *  Description:   feed article display used in the clean-greader theme
-  *  
+  *
   *  Author:        Sven Flickinger (naeramarth7)
   *  File Created:  2013-08-29
 **/
@@ -18,12 +18,16 @@
   bottom: $card-gap-size;
   left: $card-gap-size !important;
   right: $card-gap-size;
-  
+
   width: auto !important;
-  height: auto !important;
-  
+
   @include no-space;
   @include brdr-card;
+}
+
+/* tweak combined mode */
+.claro #headlines-frame.cdm {
+  height: auto !important;
 }
 
 /*******************
@@ -34,7 +38,7 @@
 .claro #headlines-frame .cdm {
     /* article separator */
     > hr { display: none; }
-    
+
     @include brdr-light;
     border-width: 0 1px 1px 0;
 }
@@ -74,22 +78,22 @@
     > img { display: inline; cursor: pointer; }
     > div { display: inline-block; }
   }
-  
+
   /* header - article title */
   .titleWrap,
   .hlTitle {
     max-width: 0;
     width: 100%;
     overflow: hidden;
-    
+
     > a,
     > .hlContent > a {
       @include normalize-link;
       color: $clr-fnt-main;
     }
-    
+
     > span.author { color: $clr-fnt-main-second; }
-    
+
     .collapseBtn img { vertical-align: middle; }
   }
 
@@ -102,7 +106,7 @@
     color: $clr-fnt-main-second;
     font-size: 10px;
     padding: 2px 8px;
-    
+
     &:hover {
       @include brdr-red;
       color: $clr-red;
@@ -151,13 +155,13 @@
 .claro #floatingTitle {
   position: absolute;
   top: 30px;
-  
+
   margin: 18px 25px 0 $card-gap-size;
-  
+
   @include brdr-light;
-  
+
   background-color: #eee;
-  
+
   @include drop-shadow(rgba(0, 0, 0, 0.15), 0px, 4px, 4px, -2px);
 
   z-index: 5 !important;
@@ -174,9 +178,9 @@
 .claro .cdm.expanded .cdmContent .cdmContentInner {
   display: block;
   padding: 0 $content-padding 0 $content-padding-to-header;
-  
+
   max-width: $max-content-width;
-  
+
   img { max-width: $max-content-width; }
 
   overflow: auto;
@@ -192,7 +196,7 @@
     width: auto;
     height: auto;
   }
-  
+
   /* images (except of main) and vides*/
   p > img,
   p > a:not([href*="feedburner"]) > img,
@@ -204,19 +208,19 @@
     margin-right: auto;
     text-align: center;
   }
-  
+
   p > img {
     display: inline-block;
     margin-right: 8px;
   }
-  
+
   /* tables */
   table {
     margin-left: auto;
     margin-right: auto;
     width: auto;
   }
-  
+
   /* first and last child not a p-element need padding */
   > span > span > *:not(p):first-child { padding-top: $content-padding; }
   > span > span > *:not(p):last-child { padding-bottom: $content-padding; }
@@ -227,7 +231,7 @@
 .claro .cdm.expanded .cdmContent .cdmFooter {
   padding: $content-padding / 2 $content-padding;
   background-color: $clr-bg-active-second;
-  
+
   > * { vertical-align: middle; }
 }
 
@@ -236,9 +240,9 @@
   left: $card-gap-size !important;
   right: $card-gap-size !important;
   margin-bottom: 9px !important;
-  
+
   width: auto !important;
-  
+
   @include brdr-card;
   border-left-width: 1px !important;
 }
@@ -249,7 +253,7 @@
 
   left: $card-gap-size !important;
   right: $card-gap-size !important;
-  
+
   width: auto !important;
   @include brdr-light;
   border-bottom-width: 0;
