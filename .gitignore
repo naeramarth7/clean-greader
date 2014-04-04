@@ -3,6 +3,10 @@
 *.sublime-project
 *.sublime-workspace
 
+# build tools #
+###############
+node_modules/
+
 # cached files #
 ################
 */.sass-cache
