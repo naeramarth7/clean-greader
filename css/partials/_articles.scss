@@ -186,15 +186,17 @@
   overflow: auto;
 
   /* main feed image */
-  div[xmlns="http://www.w3.org/1999/xhtml"]:first-child a img,
-  p:first-of-type img,
-  > span:first-child > span:first-child > img:first-child {
-    float: left;
-    margin: 0 32px 16px 0 !important;
-    max-height: 128px;
-    max-width: 128px;
-    width: auto;
-    height: auto;
+  @if $small-main-feed-image {
+    div[xmlns="http://www.w3.org/1999/xhtml"]:first-child a img,
+    p:first-of-type img,
+    > span:first-child > span:first-child > img:first-child {
+      float: left;
+      margin: 0 32px 16px 0 !important;
+      max-height: 128px;
+      max-width: 128px;
+      width: auto;
+      height: auto;
+    }
   }
 
   /* images (except of main) and vides*/

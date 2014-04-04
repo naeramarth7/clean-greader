@@ -3,10 +3,28 @@
   **************************
   *
   *  Description:   main scss file for the clean-greader theme
-  *  
+  *
   *  Author:        Sven Flickinger (naeramarth7)
   *  File Created:  2013-08-09
 **/
+/**********
+ * CONFIG *
+ ***********/
+/**
+  *  File:         _config.scss.sample
+  *****************************
+  *
+  *  Description:   configuration file for clean-greader theme
+  *
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2014-04-04
+**/
+/**
+ * Display the first image as a thumbnail to save some space.
+ * If you're using image feeds, this might not be what you want.
+ *
+ * @type {Boolean}
+ */
 /*******************
   * MODULE IMPORTS *
   *******************/
@@ -1293,13 +1311,6 @@ img[src="images/plugin.png"] {
   /* first and last child not a p-element need padding */ }
   .claro .cdm.active .cdmContent .cdmContentInner img, .claro .cdm.expanded .cdmContent .cdmContentInner img {
     max-width: 700px; }
-  .claro .cdm.active .cdmContent .cdmContentInner div[xmlns="http://www.w3.org/1999/xhtml"]:first-child a img, .claro .cdm.active .cdmContent .cdmContentInner p:first-of-type img, .claro .cdm.active .cdmContent .cdmContentInner > span:first-child > span:first-child > img:first-child, .claro .cdm.expanded .cdmContent .cdmContentInner div[xmlns="http://www.w3.org/1999/xhtml"]:first-child a img, .claro .cdm.expanded .cdmContent .cdmContentInner p:first-of-type img, .claro .cdm.expanded .cdmContent .cdmContentInner > span:first-child > span:first-child > img:first-child {
-    float: left;
-    margin: 0 32px 16px 0 !important;
-    max-height: 128px;
-    max-width: 128px;
-    width: auto;
-    height: auto; }
   .claro .cdm.active .cdmContent .cdmContentInner p > img, .claro .cdm.active .cdmContent .cdmContentInner p > a:not([href*="feedburner"]) > img, .claro .cdm.active .cdmContent .cdmContentInner div > img, .claro .cdm.active .cdmContent .cdmContentInner div > a:not([href*="feedburner"]) > img, .claro .cdm.active .cdmContent .cdmContentInner p iframe, .claro .cdm.expanded .cdmContent .cdmContentInner p > img, .claro .cdm.expanded .cdmContent .cdmContentInner p > a:not([href*="feedburner"]) > img, .claro .cdm.expanded .cdmContent .cdmContentInner div > img, .claro .cdm.expanded .cdmContent .cdmContentInner div > a:not([href*="feedburner"]) > img, .claro .cdm.expanded .cdmContent .cdmContentInner p iframe {
     display: block;
     margin-left: auto;

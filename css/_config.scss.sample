@@ -1,0 +1,17 @@
+/**
+  *  File:         _config.scss.sample
+  *****************************
+  *
+  *  Description:   configuration file for clean-greader theme
+  *
+  *  Author:        Sven Flickinger (naeramarth7)
+  *  File Created:  2014-04-04
+**/
+
+/**
+ * Display the first image as a thumbnail to save some space.
+ * If you're using image feeds, this might not be what you want.
+ *
+ * @type {Boolean}
+ */
+$small-main-feed-image: false;

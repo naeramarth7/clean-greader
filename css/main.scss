@@ -3,10 +3,15 @@
   **************************
   *
   *  Description:   main scss file for the clean-greader theme
-  *  
+  *
   *  Author:        Sven Flickinger (naeramarth7)
   *  File Created:  2013-08-09
 **/
+
+/**********
+ * CONFIG *
+ ***********/
+@import 'config';
 
 /*******************
   * MODULE IMPORTS *
@@ -76,7 +81,7 @@ body#ttrssPrefs #header {
   border: 1px solid $clr-brdr-light;
   padding: $content-padding / 2 $content-padding;
   background: $clr-bg-active-second;
-  
+
   &:hover { background: $clr-bg-active; }
 }
 
@@ -99,7 +104,7 @@ div[widgetid="feeds-holder_splitter"] { display: none !important; }
 div#header-wrap {
   display: inline-block;
   float: left;
-  
+
   @include no-space;
 }
 
