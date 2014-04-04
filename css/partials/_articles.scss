@@ -14,7 +14,7 @@
 
 .claro #headlines-frame {
   position: absolute !important;
-  top: 48px !important;
+  top: $card-gap-size !important;
   bottom: $card-gap-size;
   left: $card-gap-size !important;
   right: $card-gap-size;

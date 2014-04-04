@@ -3,12 +3,12 @@
   ******************************
   *
   *  Description:   toolbars used in the clean-greader theme
-  *  
+  *
   *  Author:        Sven Flickinger (naeramarth7)
   *  File Created:  2013-08-29
 **/
 
-/********************** 
+/**********************
   * MAIN TOOLBAR CARD *
 ************************/
 
@@ -17,23 +17,24 @@
   top: $card-gap-size !important;
   left: $card-gap-size !important;
   right: $card-gap-size;
-  
+
   @include no-space;
   @include brdr-light;
   border-bottom-width: 0;
-  
+
   width: auto !important;
   height: auto !important;
-  
+  overflow: visible;
+
   #main-toolbar {
     background: $clr-bg-active;
     @include no-space;
     padding: $content-padding;
-    
+
     #main_toolbar_form {
       background: $clr-bg-active;
     }
-    
+
     /* action button */
     .actionChooser {
       position: absolute;
@@ -49,11 +50,11 @@
 /* toolbar card dock + feed card wrapper */
 .claro #headlines-wrap-inner {
   position: absolute !important;
-  top: 50px !important;
+  top: 90px !important;
   bottom: 0 !important;
   right: 0 !important;
   left: 0 !important;
-  
+
   width: auto !important;
   height: auto !important;
 }
@@ -67,19 +68,21 @@
 .claro #headlines-toolbar {
   display: block;
   position: absolute !important;
-  left: $card-gap-size !important;
-  right: $card-gap-size;
-  
+  left: -1px;
+  right: -1px;
+
   @include no-space;
   @include brdr-card;
   border-top-width: 0px;
   margin-top: 3px;
-  
+
   width: auto !important;
   height: auto !important;
-  
+
+  top: 40px;
+
   background: $clr-bg-active-second;
-  
+
   color: transparent;
 }
 
@@ -91,39 +94,39 @@
   position: relative;
   display: block;
   float: left;
-  
+
   @include no-space;
   margin: 0 6px;
-  
+
   @include normalize-link;
   font-weight: bold;
   color: $clr-fnt-main-second;
 }
 
 /* TOOLBAR CARD DOCK - selector (menu) */
-.claro #headlines-toolbar .dijitSelect{
+.claro #headlines-toolbar .dijitSelect {
   background: transparent;
-  
+
   @include trnstn-none;
-  
+
   .dijitButtonContents { @include no-space(!important); }
   .dijitButtonText { @include no-space; }
   .dijitSelectLabel { @include no-space; }
   .dijitArrowButtonContainer { display: none; }
 }
 
-.claro #headlines-toolbar > a,
+.claro #headlines-toolbar > .holder > .main a,
 .claro #headlines-toolbar .dijitSelect .dijitButtonContents .dijitButtonText .dijitSelectLabel,
-.claro #headlines-toolbar > span.r {
+.claro #headlines-toolbar > .holder > .r {
   @include brdr-dock-inactive;
   @include trnstn-all-fast;
-  
+
   &:hover {
     color: $clr-fnt-main;
     @include brdr-dock-active;
     @include trnstn-all-fast;
   }
-  
+
   &.r > a:hover {
     color: $clr-fnt-main;
   }
@@ -132,23 +135,23 @@
 
 
 /* TOOLBAR CARD DOCK - selected items counter */
-.claro #headlines-toolbar > span.r #selected_prompt {
+.claro #headlines-toolbar > .holder > .r #selected_prompt {
   display: none !important;
 }
 
 
 
 /* TOOLBAR CARD DOCK - both selector types (pseudo elements) */
-.claro #headlines-toolbar > a,
+.claro #headlines-toolbar > .holder > .main a,
 .claro #headlines-toolbar .dijitSelect .dijitButtonContents .dijitButtonText .dijitSelectLabel,
-.claro #headlines-toolbar > span.r > a {
+.claro #headlines-toolbar > .holder > .r > a {
   &:before {
     content: "";
     display: inline-block;
     position: relative;
     padding-left: 16px;
   }
-   
+
   &:after {
     content: "";
     display: inline-block;
@@ -156,38 +159,38 @@
     padding-right: 16px;
   }
 }
-  
+
 /* TOOLBAR CARD DOCK - both selector types (simple + menu / inner) */
-.claro #headlines-toolbar > a,
+.claro #headlines-toolbar > .holder > .main a,
 .claro #headlines-toolbar .dijitSelect .dijitButtonContents .dijitButtonText .dijitSelectLabel,
-.claro #headlines-toolbar > span.r > a:after {
+.claro #headlines-toolbar > .holder > .r > a:after {
   padding-top: 12px;
   &.r { padding-top: 10px; }
   padding-bottom: 4px;
   @include trnstn-all-fast;
-  
+
   text-align: center;
 }
 
 /* rss feed icon */
-.claro #headlines-toolbar > span.r {
+.claro #headlines-toolbar > .holder > .r {
   display: block;
   float: right;
   margin: 0 6px;
 
   /* selected feed title in toolbar */
   > #feed_title { display: none; }
-  
+
   /* rss feed icon for current feed */
   > a {
     @include normalize-link;
-    
+
     &:after {
       content: "RSS";
       font-weight: bold;
       bottom: 0;
     }
-    
+
     > img { display: none; }
   }
 }
