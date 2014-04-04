@@ -50,7 +50,7 @@
 /* toolbar card dock + feed card wrapper */
 .claro #headlines-wrap-inner {
   position: absolute !important;
-  top: 90px !important;
+  top: 90px + $card-gap-size !important;
   bottom: 0 !important;
   right: 0 !important;
   left: 0 !important;

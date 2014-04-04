@@ -1039,7 +1039,7 @@ img[src="images/plugin.png"] {
 /* toolbar card dock + feed card wrapper */
 .claro #headlines-wrap-inner {
   position: absolute !important;
-  top: 90px !important;
+  top: 102px !important;
   bottom: 0 !important;
   right: 0 !important;
   left: 0 !important;
@@ -1181,7 +1181,7 @@ img[src="images/plugin.png"] {
   ******************************/
 .claro #headlines-frame {
   position: absolute !important;
-  top: 12px !important;
+  top: 0 !important;
   bottom: 12px;
   left: 12px !important;
   right: 12px;
@@ -1286,8 +1286,8 @@ img[src="images/plugin.png"] {
 /* floating title - special settings */
 .claro #floatingTitle {
   position: absolute;
-  top: 30px;
-  margin: 18px 25px 0 12px;
+  top: 0;
+  margin: 0 25px 0 12px;
   border: 1px solid #d8d8d8;
   background-color: #eee;
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 4px -2px;

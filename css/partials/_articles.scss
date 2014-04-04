@@ -14,7 +14,7 @@
 
 .claro #headlines-frame {
   position: absolute !important;
-  top: $card-gap-size !important;
+  top: 0 !important;
   bottom: $card-gap-size;
   left: $card-gap-size !important;
   right: $card-gap-size;
@@ -154,9 +154,9 @@
 /* floating title - special settings */
 .claro #floatingTitle {
   position: absolute;
-  top: 30px;
+  top: 0;
 
-  margin: 18px 25px 0 $card-gap-size;
+  margin: 0 25px 0 $card-gap-size;
 
   @include brdr-light;
 
