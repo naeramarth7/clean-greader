@@ -31,6 +31,12 @@ hr {
 .claro .dijitDialog {
   @include brdr-card;
 
+  &#helpDlg {
+    top: 2% !important;
+    max-height: 96%;
+    overflow-y: scroll;
+  }
+
   /* title */
   .dijitDialogTitleBar {
     @include brdr-none;
@@ -40,6 +46,8 @@ hr {
 
   /* content */
   .dijitDialogPaneContent {
+    width: auto !important;
+    box-sizing: border-box;
     @include brdr-none;
   }
 
@@ -93,3 +101,19 @@ hr {
 .inactiveFeedHolder {
   padding: $content-padding;
 }
+
+/* keyboard shortcuts */
+.helpKbList {
+  list-style-type: none;
+  padding-left: 24px;
+
+  h2, h3 {
+    margin-left: -24px;
+  }
+
+  .hksequence {
+    display: inline-block;
+    width: 100px;
+  }
+}
+

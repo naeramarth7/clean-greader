@@ -51,7 +51,7 @@
   *********************************
   *
   *  Description:   dimensions used in the clean-greader theme
-  *  
+  *
   *  Author:        Sven Flickinger (naeramarth7)
   *  File Created:  2013-08-29
 **/
@@ -1703,11 +1703,17 @@ hr {
   border-width: 1px 1px 2px;
   /* title */
   /* content */ }
+  .claro .dijitDialog#helpDlg {
+    top: 2% !important;
+    max-height: 96%;
+    overflow-y: scroll; }
   .claro .dijitDialog .dijitDialogTitleBar {
     border: 0px solid transparent;
     background: #f5f5f5;
     background-image: none; }
   .claro .dijitDialog .dijitDialogPaneContent {
+    width: auto !important;
+    box-sizing: border-box;
     border: 0px solid transparent; }
   .claro .dijitDialog .dlgSec {
     font-weight: bold;
@@ -1743,3 +1749,13 @@ hr {
 /* feeds with errors */
 .inactiveFeedHolder {
   padding: 8px; }
+
+/* keyboard shortcuts */
+.helpKbList {
+  list-style-type: none;
+  padding-left: 24px; }
+  .helpKbList h2, .helpKbList h3 {
+    margin-left: -24px; }
+  .helpKbList .hksequence {
+    display: inline-block;
+    width: 100px; }
