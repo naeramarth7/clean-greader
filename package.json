@@ -18,6 +18,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^0.7.1",
     "gulp-util": "^2.2.14",
-    "run-sequence": "^1.0.2"
+    "run-sequence": "^1.0.2",
+    "streamqueue": "^0.1.1"
   }
 }

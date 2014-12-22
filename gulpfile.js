@@ -3,11 +3,11 @@ var $ = require('gulp-load-plugins') ();
 var pkg = require('./package.json');
 
 var gulp = require('gulp');
-var clean = require('gulp-clean');
-var runSequence = require('run-sequence');
+$.runSequence = require('run-sequence');
+$.streamqueue = require('streamqueue');
 
 gulp.task('build', function() {
-  runSequence(
+  $.runSequence(
     'backupConfig',
     'setDefaultConfig',
     'styles',
@@ -18,7 +18,7 @@ gulp.task('build', function() {
 gulp.task('backupConfig', function() {
   // move the custom config
   gulp.src('./css/_config.scss')
-  .pipe(clean())
+  .pipe($.clean())
   .pipe($.rename('_config.scss.tmp'))
   .pipe(gulp.dest('./css/'));
 });
@@ -33,18 +33,27 @@ gulp.task('setDefaultConfig', function() {
 gulp.task('setTempConfig', function() {
   // put the custom config back
   return gulp.src('./css/_config.scss.tmp')
-  .pipe(clean())
+  .pipe($.clean())
   .pipe($.rename('_config.scss'))
   .pipe(gulp.dest('./css/'));
 });
 
-gulp.task('styles', function() {
+var sass = function () {
   return gulp.src('./css/main.scss')
   .pipe($.sass({ compress: true, sourceMap: true }))
-  .on('error', $.util.log)
+  .on('error', $.util.log);
+};
+
+gulp.task('styles', function() {
+  return $.streamqueue(
+    { objectMode: true },
+    gulp.src('css/normalize.css'),
+    sass()
+  )
   .pipe($.cssmin())
   .pipe($.header('/* supports-version:<%= pkg.version %> */\n\n', { pkg : pkg }))
-  .pipe(gulp.dest('./css/'));
+  .pipe($.rename({ basename: 'clean-greader' }))
+  .pipe(gulp.dest('./'));
 });
 
 gulp.task('watch', function() {
