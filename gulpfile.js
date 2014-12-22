@@ -1,17 +1,16 @@
+var $ = require('gulp-load-plugins') ();
+
+var pkg = require('./package.json');
+
 var gulp = require('gulp');
-var gutil = require('gulp-util');
-var livereload = require('gulp-livereload');
-var watch = require('gulp-watch');
-var sass = require('gulp-sass');
-var rename = require('gulp-rename');
 var clean = require('gulp-clean');
-var runSequence = require('gulp-run-sequence');
+var runSequence = require('run-sequence');
 
 gulp.task('build', function() {
   runSequence(
     'backupConfig',
     'setDefaultConfig',
-    'sass',
+    'styles',
     'setTempConfig'
   );
 });
@@ -20,14 +19,14 @@ gulp.task('backupConfig', function() {
   // move the custom config
   gulp.src('./css/_config.scss')
   .pipe(clean())
-  .pipe(rename('_config.scss.tmp'))
+  .pipe($.rename('_config.scss.tmp'))
   .pipe(gulp.dest('./css/'));
 });
 
 gulp.task('setDefaultConfig', function() {
   // get the default config
   return gulp.src('./css/_config.scss.sample')
-  .pipe(rename('_config.scss'))
+  .pipe($.rename('_config.scss'))
   .pipe(gulp.dest('./css/'));
 });
 
@@ -35,19 +34,21 @@ gulp.task('setTempConfig', function() {
   // put the custom config back
   return gulp.src('./css/_config.scss.tmp')
   .pipe(clean())
-  .pipe(rename('_config.scss'))
+  .pipe($.rename('_config.scss'))
   .pipe(gulp.dest('./css/'));
 });
 
-gulp.task('sass', function() {
+gulp.task('styles', function() {
   return gulp.src('./css/main.scss')
-  .pipe(sass({ compress: true, sourceMap: true }))
-  .on('error', gutil.log)
+  .pipe($.sass({ compress: true, sourceMap: true }))
+  .on('error', $.util.log)
+  .pipe($.cssmin())
+  .pipe($.header('/* supports-version:<%= pkg.version %> */\n\n', { pkg : pkg }))
   .pipe(gulp.dest('./css/'));
 });
 
 gulp.task('watch', function() {
-  var server = livereload();
+  var server = $.livereload();
   gulp.watch([
     './css/**/*.css'
   ], function(evt) {
@@ -57,6 +58,6 @@ gulp.task('watch', function() {
   gulp.watch([
     './css/**/*.scss'
   ], [
-    'sass'
+    'styles'
   ]);
 });
