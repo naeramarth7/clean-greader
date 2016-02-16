@@ -1,6 +1,7 @@
 {
   "name": "clean-greader",
-  "version": "1.16.1",
+  "version": "2.0.0",
+  "ttrssVersion": "16.1",
   "description": "clean-greader - a Google Reader inspired Tiny Tiny RSS theme",
   "main": "css/main.css",
   "author": "Sven Flickinger <hc4e2k@gmail.com>",

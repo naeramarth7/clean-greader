@@ -51,7 +51,7 @@ gulp.task('styles', function() {
     sass()
   )
   .pipe($.cssmin())
-  .pipe($.header('/* supports-version:<%= pkg.version.slice(2) %> */\n\n', { pkg : pkg }))
+  .pipe($.header('/* supports-version:<%= pkg.ttrssVersion %> */\n\n', { pkg : pkg }))
   .pipe($.rename({ basename: 'clean-greader' }))
   .pipe(gulp.dest('./'));
 });
