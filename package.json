@@ -10,8 +10,8 @@
     "url": "https://github.com/naeramarth7/clean-greader.git"
   },
   "devDependencies": {
+    "del": "^2.2.0",
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.2.4",
     "gulp-cssmin": "^0.1.7",
     "gulp-header": "^1.7.1",
     "gulp-livereload": "^3.8.1",
