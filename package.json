@@ -1,6 +1,7 @@
 {
   "name": "clean-greader",
-  "version": "1.15.7",
+  "version": "2.0.0",
+  "ttrssVersion": "16.1",
   "description": "clean-greader - a Google Reader inspired Tiny Tiny RSS theme",
   "main": "css/main.css",
   "author": "Sven Flickinger <hc4e2k@gmail.com>",
@@ -9,16 +10,16 @@
     "url": "https://github.com/naeramarth7/clean-greader.git"
   },
   "devDependencies": {
-    "gulp": "^3.5.6",
+    "gulp": "^3.9.1",
     "gulp-clean": "^0.2.4",
-    "gulp-cssmin": "^0.1.6",
-    "gulp-header": "^1.2.2",
-    "gulp-livereload": "^1.2.0",
-    "gulp-load-plugins": "^0.8.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^0.7.1",
-    "gulp-util": "^2.2.14",
-    "run-sequence": "^1.0.2",
-    "streamqueue": "^0.1.1"
+    "gulp-cssmin": "^0.1.7",
+    "gulp-header": "^1.7.1",
+    "gulp-livereload": "^1.5.0",
+    "gulp-load-plugins": "^0.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-util": "^2.2.20",
+    "run-sequence": "^1.1.5",
+    "streamqueue": "^0.1.3"
   }
 }

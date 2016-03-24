@@ -61,7 +61,7 @@ $ cd /usr/share/tt-rss/themes/clean-greader
 $ # Install / update the dev dependencies
 $ npm install
 $ # Rebuild the .css file
-$ gulp sass
+$ gulp styles
 ```
 
 ## Maintenance
@@ -76,7 +76,7 @@ $ npm install
 $ # Run gulp as background task ...
 $ gulp watch
 $ # ... or let it build the .css file once
-$ gulp sass
+$ gulp styles
 ```
 
 ### Building
