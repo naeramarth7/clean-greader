@@ -14,4 +14,4 @@
  *
  * @type {Boolean}
  */
-$small-main-feed-image: false;
+$small-main-feed-image: true;
