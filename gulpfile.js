@@ -1,4 +1,4 @@
-var $ = require('gulp-load-plugins') ();
+var $ = require('gulp-load-plugins')();
 
 var pkg = require('./package.json');
 
@@ -66,16 +66,11 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
-  var server = $.livereload();
-  gulp.watch([
-    './css/**/*.css'
-  ], function(evt) {
-    server.changed(evt.path);
+  $.livereload.listen();
+
+  gulp.watch('./**/*.css', function(evt) {
+    $.livereload.changed(evt.path);
   });
 
-  gulp.watch([
-    './css/**/*.scss'
-  ], [
-    'styles'
-  ]);
+  gulp.watch('./**/*.scss', [ 'styles' ]);
 });
