@@ -3,22 +3,24 @@ var $ = require('gulp-load-plugins') ();
 var pkg = require('./package.json');
 
 var gulp = require('gulp');
+var del = require('del');
+
 $.runSequence = require('run-sequence');
 $.streamqueue = require('streamqueue');
 
 gulp.task('build', function() {
   $.runSequence(
-    'backupConfig',
+    'backupCustomConfig',
     'setDefaultConfig',
     'styles',
-    'setTempConfig'
+    'resetCustomConfig',
+    'cleanupTmp'
   );
 });
 
-gulp.task('backupConfig', function() {
+gulp.task('backupCustomConfig', function() {
   // move the custom config
   gulp.src('./css/_config.scss')
-  .pipe($.clean())
   .pipe($.rename('_config.scss.tmp'))
   .pipe(gulp.dest('./css/'));
 });
@@ -30,12 +32,19 @@ gulp.task('setDefaultConfig', function() {
   .pipe(gulp.dest('./css/'));
 });
 
-gulp.task('setTempConfig', function() {
+gulp.task('resetCustomConfig', function() {
   // put the custom config back
   return gulp.src('./css/_config.scss.tmp')
-  .pipe($.clean())
   .pipe($.rename('_config.scss'))
   .pipe(gulp.dest('./css/'));
+});
+
+gulp.task('cleanupTmp', function() {
+  return del('./css/_config.scss.tmp')
+});
+
+gulp.task('deleteCustomConfig', function() {
+  return del('./css/_config.scss')
 });
 
 var sass = function () {
