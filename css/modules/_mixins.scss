@@ -15,16 +15,16 @@
 }
 
 @mixin center-item { margin-left: auto; margin-right: auto; text-align: center; }
-@mixin no-space($important: "") { margin: 0 #{$important}; padding: 0 #{$important}; border-width: 0 #{$important}; }
+@mixin no-space($important: '') { margin: 0 #{$important}; padding: 0 #{$important}; border-width: 0 #{$important}; }
 
 @mixin brdr-none { border: 0px solid transparent; }
 @mixin brdr-trans { border: 1px solid transparent; }
 @mixin brdr-light { border: 1px solid $clr-brdr-light; }
 @mixin brdr-red { border: 1px solid $clr-red; }
-@mixin brdr-card {
-  border-color: $clr-brdr-light;
-  border-style: solid;
-  border-width: 1px 1px 2px;
+@mixin brdr-card ($important: '') {
+  border-color: $clr-brdr-light #{$important};
+  border-style: solid #{$important};
+  border-width: 1px 1px 2px #{$important};
 }
 
 @mixin brdr-dock-inactive { border: 0px solid transparent; border-bottom-width: 2px; }

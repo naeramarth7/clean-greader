@@ -18,9 +18,10 @@
   bottom: $card-gap-size;
   left: $card-gap-size !important;
   right: $card-gap-size;
+  height: auto !important;
 
   @include no-space;
-  @include brdr-card;
+  @include brdr-card(!important);
 
   &:not(.wide) {
     width: auto !important;
@@ -182,7 +183,6 @@
   padding: 0 $content-padding 0 $content-padding-to-header;
 
   max-width: $max-content-width;
-
   img { max-width: $max-content-width; }
 
   overflow: auto;
@@ -241,7 +241,8 @@
 
 /* article content in non combined display mode */
 #content-insert {
-  margin-bottom: 9px !important;
+  bottom: $card-gap-size !important;
+  // height: auto !important;
 
   #headlines-frame:not(.wide) ~ & {
     left: $card-gap-size !important;
@@ -251,18 +252,38 @@
 
   @include brdr-card;
   border-left-width: 1px !important;
+
+  .postHeader {
+    margin: -$content-padding;
+    padding: $content-padding;
+    background: $clr-bg-active-second;
+    color: $clr-fnt-main-second;
+    border-bottom: 1px solid $clr-brdr-light;
+
+    .postTitle {
+      a {
+        color: $clr-red;
+        font-weight: bold;
+      }
+      margin-bottom: $content-padding;
+    }
+  }
 }
 
-/* h-resizer in non combined display mode */
+/* resizer in non combined display mode */
 #content-insert_splitter {
   background: $clr-bg-active;
+
+  #headlines-frame.wide ~ & {
+    bottom: $card-gap-size !important;
+    height: auto !important;
+    @include brdr-card;
+  }
 
   #headlines-frame:not(.wide) ~ & {
     left: $card-gap-size !important;
     right: $card-gap-size !important;
     width: auto !important;
+    border-bottom-width: 0;
   }
-
-  @include brdr-light;
-  border-bottom-width: 0;
 }

@@ -1,0 +1,10 @@
+#cmdline {
+  position: fixed;
+  z-index: 999;
+  bottom: $card-gap-size;
+  left: $card-gap-size + 1px;
+  width: $card-nav-width - $card-gap-size - 3px;
+
+  background: $clr-bg-active;
+  @include brdr-light();
+}

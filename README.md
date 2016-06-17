@@ -1,6 +1,6 @@
 # clean-greader
 
-clean-greader is a tiny tiny rss (1.8+) theme based on the latest Google Reader and inspired by other Google Services.  
+clean-greader is a tiny tiny rss (1.8+) theme based on the latest Google Reader and inspired by other Google Services.
 As of 2013/08/29 the theme is build from scratch to be independent from changes to the tt-rss default.css.
 
 ## Preview
@@ -33,7 +33,7 @@ Same as Installation - just overwrite the files.
 
 ## Custom settings
 
-There is a sample file called `_config.scss.sample` in the themes `css/` folder.  
+There is a sample file called `_config.scss.sample` in the themes `css/` folder.
 Before running gulp.js tasks, make sure to create this file, since you'll get an error otherwise.
 
 ```sh
@@ -49,8 +49,16 @@ $ ln -s _config.scss{.sample,}
 - type: `boolean`
 - default: `true`
 
-Display the first image as a thumbnail to save some space.  
+Display the first image as a thumbnail to save some space.
 If you're using image feeds, this might not be what you want.
+
+### Use fullscreen ( `$use-fullscreen` )
+
+- type: `boolean`
+- default: `false`
+
+This enables the theme to use the full page width instead of a limited container width.
+Initially, the clean-greader theme was supposed to be used in combined mode and therefore was always fixed to a specific container max-width. In 16.3.0, support for non-combined mode, and therefore also widescreen mode, was added - which might need a bit more space then the regular container's max-width.
 
 ### Rebuild the main.css file
 
@@ -94,7 +102,7 @@ The clean-greader theme is build on Google Chrome (33) using Arch Linux and test
 
 ### Theme's not displayed in the Settings
 
-As of tiny tiny rss 1.15.3, themes require to provide a version they support. Sadly, tiny tiny rss supports only providing a single specific version number. If this number provided by the theme does not match your tiny tiny rss version, the theme won't be available.  
+As of tiny tiny rss 1.15.3, themes require to provide a version they support. Sadly, tiny tiny rss supports only providing a single specific version number. If this number provided by the theme does not match your tiny tiny rss version, the theme won't be available.
 To manually change this number, see the version attribute with "1." prefix in [package.json](https://github.com/naeramarth7/clean-greader/blob/fa682dcb2d0f0d3f45daf1b9d77a4bde01e10f11/package.json#L3), change it to the tiny tiny rss version and rebuild the css file (see *Rebuild the main.css file* above).
 
 Please, feel free to open a PR if needed.
@@ -116,3 +124,6 @@ Please, feel free to open a PR if needed.
 
 ### Feed Settings
 ![](img/preview_04.png)
+
+### Main Page (disabled combined mode, enabled widescreen mode, set `$use-fullscreen: true`)
+![](img/preview_full_01.png)
