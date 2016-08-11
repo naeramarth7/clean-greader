@@ -12,21 +12,24 @@
   * MAIN CARDS - ARTICLE CARD *
   ******************************/
 
-.claro #headlines-frame {
+#headlines-frame {
   position: absolute !important;
   top: 0 !important;
   bottom: $card-gap-size;
   left: $card-gap-size !important;
   right: $card-gap-size;
-
-  width: auto !important;
+  height: auto !important;
 
   @include no-space;
-  @include brdr-card;
+  @include brdr-card(!important);
+
+  &:not(.wide) {
+    width: auto !important;
+  }
 }
 
 /* tweak combined mode */
-.claro #headlines-frame.cdm {
+#headlines-frame.cdm {
   height: auto !important;
 }
 
@@ -34,8 +37,8 @@
   * SINGLE ARTICLE *
   *******************/
 
-.claro #headlines-frame .hl,
-.claro #headlines-frame .cdm {
+#headlines-frame .hl,
+#headlines-frame .cdm {
     /* article separator */
     > hr { display: none; }
 
@@ -44,8 +47,8 @@
 }
 
 /* single article - scroll fix via pseudo element */
-.claro #headlines-frame .hl:before,
-.claro #headlines-frame .cdm:before {
+#headlines-frame .hl:before,
+#headlines-frame .cdm:before {
   content: "";
   display: block;
   position: absolute;
@@ -57,9 +60,9 @@
 }
 
 /* single article header */
-.claro #headlines-frame .hl,
-.claro #headlines-frame .cdm .cdmHeader,
-.claro #floatingTitle {
+#headlines-frame .hl,
+#headlines-frame .cdm .cdmHeader,
+#floatingTitle {
   display: table;
   background: $clr-bg-active-second;
 
@@ -134,8 +137,8 @@
 }
 
 /* unread header */
-.claro #headlines-frame .hl.Unread,
-.claro #headlines-frame .cdm.Unread .cdmHeader {
+#headlines-frame .hl.Unread,
+#headlines-frame .cdm.Unread .cdmHeader {
   background: $clr-bg-active;
 
   .titleWrap > a {
@@ -145,14 +148,14 @@
 }
 
 /* active header */
-.claro #headlines-frame .hl.active .hlContent > a,
-.claro #headlines-frame .cdm.active .cdmHeader .titleWrap > a {
+#headlines-frame .hl.active .hlContent > a,
+#headlines-frame .cdm.active .cdmHeader .titleWrap > a {
   font-weight: bold;
   color: $clr-red;
 }
 
 /* floating title - special settings */
-.claro #floatingTitle {
+#floatingTitle {
   position: absolute;
   top: 0;
 
@@ -174,13 +177,12 @@
 }
 
 /* article content */
-.claro .cdm.active .cdmContent .cdmContentInner,
-.claro .cdm.expanded .cdmContent .cdmContentInner {
+.cdm.active .cdmContent .cdmContentInner,
+.cdm.expanded .cdmContent .cdmContentInner {
   display: block;
   padding: 0 $content-padding 0 $content-padding-to-header;
 
   max-width: $max-content-width;
-
   img { max-width: $max-content-width; }
 
   overflow: auto;
@@ -229,8 +231,8 @@
 }
 
 /* article footer */
-.claro .cdm.active .cdmContent .cdmFooter,
-.claro .cdm.expanded .cdmContent .cdmFooter {
+.cdm.active .cdmContent .cdmFooter,
+.cdm.expanded .cdmContent .cdmFooter {
   padding: $content-padding / 2 $content-padding;
   background-color: $clr-bg-active-second;
 
@@ -238,25 +240,50 @@
 }
 
 /* article content in non combined display mode */
-.claro #content-insert {
-  left: $card-gap-size !important;
-  right: $card-gap-size !important;
-  margin-bottom: 9px !important;
+#content-insert {
+  bottom: $card-gap-size !important;
+  // height: auto !important;
 
-  width: auto !important;
+  #headlines-frame:not(.wide) ~ & {
+    left: $card-gap-size !important;
+    right: $card-gap-size !important;
+    width: auto !important;
+  }
 
   @include brdr-card;
   border-left-width: 1px !important;
+
+  .postHeader {
+    margin: -$content-padding;
+    padding: $content-padding;
+    background: $clr-bg-active-second;
+    color: $clr-fnt-main-second;
+    border-bottom: 1px solid $clr-brdr-light;
+
+    .postTitle {
+      a {
+        color: $clr-red;
+        font-weight: bold;
+      }
+      margin-bottom: $content-padding;
+    }
+  }
 }
 
-/* h-resizer in non combined display mode */
-.claro #content-insert_splitter {
+/* resizer in non combined display mode */
+#content-insert_splitter {
   background: $clr-bg-active;
 
-  left: $card-gap-size !important;
-  right: $card-gap-size !important;
+  #headlines-frame.wide ~ & {
+    bottom: $card-gap-size !important;
+    height: auto !important;
+    @include brdr-card;
+  }
 
-  width: auto !important;
-  @include brdr-light;
-  border-bottom-width: 0;
+  #headlines-frame:not(.wide) ~ & {
+    left: $card-gap-size !important;
+    right: $card-gap-size !important;
+    width: auto !important;
+    border-bottom-width: 0;
+  }
 }

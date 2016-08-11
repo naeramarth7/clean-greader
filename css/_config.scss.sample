@@ -15,3 +15,10 @@
  * @type {Boolean}
  */
 $small-main-feed-image: true;
+
+/**
+ * Use the full screen instead of a given container size
+ *
+ * @type {Boolean}
+ */
+$use-fullscreen: false;

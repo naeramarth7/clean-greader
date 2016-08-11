@@ -65,7 +65,9 @@ body#ttrssPrefs {
 }
 
 #main {
-  max-width: 1140px;
+  @if not($use-fullscreen) {
+    max-width: 1140px;
+  }
   margin: 0 auto;
 }
 
@@ -111,6 +113,11 @@ div#header-wrap {
 /* dock splitter */
 div.dijitSplitterCover { display: none !important; }
 
+/* Fix images exceeding container width */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 
 /*********************
@@ -126,3 +133,4 @@ div.dijitSplitterCover { display: none !important; }
 @import "partials/accordion";
 @import "partials/notification";
 @import "partials/dialog";
+@import "partials/cmdline";
