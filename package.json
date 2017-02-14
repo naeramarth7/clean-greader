@@ -4,6 +4,7 @@
   "description": "clean-greader - a Google Reader inspired Tiny Tiny RSS theme",
   "main": "css/main.css",
   "author": "Sven Flickinger <hc4e2k@gmail.com>",
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/naeramarth7/clean-greader.git"
