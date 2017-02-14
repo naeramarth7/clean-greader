@@ -1,8 +1,9 @@
 # clean-greader
 
-clean-greader is a tiny tiny rss (1.8+) theme based on the latest Google Reader and inspired by other Google Services.
-As of 2013/08/29 the theme is build from scratch to be independent from changes to the tt-rss default.css.
-**As of 2017/02/14 the theme does not contain tt-rss version information. Please see the [FAQ](https://github.com/naeramarth7/clean-greader#themes-not-displayed-in-the-settings) to properly add the version of tt-rss**
+clean-greader is a tiny tiny rss (1.8+) theme based on the latest Google Reader and inspired by other Google Services.  
+**As of 2017/02/14 the theme does not contain tt-rss version information. Please see the [FAQ](https://github.com/naeramarth7/clean-greader#themes-not-displayed-in-the-settings) to properly add the version of tt-rss**  
+As of 2013/08/29 the theme is build from scratch to be independent from changes to the tt-rss default.css.  
+
 
 ## Preview
 ![](img/preview.png)
