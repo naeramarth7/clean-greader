@@ -1,7 +1,9 @@
 # clean-greader
 
-clean-greader is a tiny tiny rss (1.8+) theme based on the latest Google Reader and inspired by other Google Services.
-As of 2013/08/29 the theme is build from scratch to be independent from changes to the tt-rss default.css.
+clean-greader is a tiny tiny rss (1.8+) theme based on the latest Google Reader and inspired by other Google Services.  
+**As of 2017/02/14 the theme does not contain tt-rss version information. Please see the [FAQ](#themes-not-displayed-in-the-settings) to properly add the version of tt-rss**  
+As of 2013/08/29 the theme is build from scratch to be independent from changes to the tt-rss default.css.  
+
 
 ## Preview
 ![](img/preview.png)
@@ -12,13 +14,16 @@ As of 2013/08/29 the theme is build from scratch to be independent from changes 
 $ # Assuming, that your tt-rss instance is located at /usr/share/tt-rss
 $ cd /usr/share/tt-rss/themes
 $ git clone https://github.com/naeramarth7/clean-greader
-$ ln -s ./clean-greader/clean-greader.css ./clean-greader.css
+$ cp clean-greader/wrapper.css clean-greader.css
 ```
 
 ### Manual
 1. Download the package using the "Download ZIP" button on the right
 2. Copy the clean-greader-master folder into you tt-rss/themes folder (e. g. `/usr/share/tt-rss/themes`) and rename it to clean-greader
-3. Copy the clean-greader.css file from the clean-greader folder into you themes root folder (e. g. `/usr/share/tt-rss/themes`)
+3. In `/usr/share/tt-rss/themes` run
+```sh
+$ cp clean-greader/wrapper.css clean-greader.css
+```
 
 ## Update
 ### Using git
@@ -102,11 +107,14 @@ The clean-greader theme is build on Google Chrome (33) using Arch Linux and test
 
 ### Theme's not displayed in the Settings
 
-As of tiny tiny rss 1.15.3, themes require to provide a version they support. Sadly, tiny tiny rss supports only providing a single specific version number. If this number provided by the theme does not match your tiny tiny rss version, the theme won't be available.
-To manually change this number, see the version attribute with "1." prefix in [package.json](https://github.com/naeramarth7/clean-greader/blob/fa682dcb2d0f0d3f45daf1b9d77a4bde01e10f11/package.json#L3), change it to the tiny tiny rss version and rebuild the css file (see *Rebuild the main.css file* above).
+As of tiny tiny rss 1.15.3, themes require to provide a version they support. Sadly, tiny tiny rss supports only providing a single specific version number. If this number provided by the theme does not match your tiny tiny rss version, the theme won't be available.  
+The version, however, can be changed in the clean-greader.css file created in the `/usr/share/tt-rss/themes/` directory. This file should have the format  
+```css
+/* supports-version:17.1 */
 
-Please, feel free to open a PR if needed.
-
+@import "clean-greader/clean-greader.css";
+```
+To support a newer version of tt-rss, simply change the version number in the top line.
 
 ## Tiny Tiny RSS Settings
 | Setting                                          | Value      |
