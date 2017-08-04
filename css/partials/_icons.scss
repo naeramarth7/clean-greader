@@ -15,7 +15,7 @@
   *******************/
 
 /* disable system and folder icons */
-.claro .dijitTreeIcon.feedIcon:not([src^="feed-icons"]),
+.claro .dijitTreeIcon.tinyFeedIcon:not([src^="feed-icons"]),
 .claro .dijitFolderClosed,
 .claro .dijitFolderOpened {
   display: none;
@@ -40,36 +40,36 @@
 }
 
 /* icon: all articles */
-/* 1.8 */ .claro .dijitTreeIcon.feedIcon[src$="images/tag.png"],
-/* 1.9 */ .claro .dijitTreeIcon.feedIcon[src$="images/folder.png"] {
+/* 1.8 */ .claro .dijitTreeIcon.tinyFeedIcon[src$="images/tag.png"],
+/* 1.9 */ .claro .dijitTreeIcon.tinyFeedIcon[src$="images/folder.png"] {
   @include replace-tree-icon("\f00b");
 }
 
 /* icon: fresh articles */
-.claro .dijitTreeIcon.feedIcon[src$="images/fresh.png"] {
+.claro .dijitTreeIcon.tinyFeedIcon[src$="images/fresh.png"] {
   @include replace-tree-icon("\f06d");
 }
 
 /* icon: starred articles */
-/* 1.8 */ .claro .dijitTreeIcon.feedIcon[src$="images/mark_set.svg"],
-/* 1.9 */ .claro .dijitTreeIcon.feedIcon[src$="images/star.png"] {
+/* 1.8 */ .claro .dijitTreeIcon.tinyFeedIcon[src$="images/mark_set.svg"],
+/* 1.9 */ .claro .dijitTreeIcon.tinyFeedIcon[src$="images/star.png"] {
   @include replace-tree-icon("\f02e");
 }
 
 /* icon : published articles */
-/* 1.8 */ .claro .dijitTreeIcon.feedIcon[src$="images/pub_set.svg"],
-/* 1.9 */ .claro .dijitTreeIcon.feedIcon[src$="images/feed.png"] {
+/* 1.8 */ .claro .dijitTreeIcon.tinyFeedIcon[src$="images/pub_set.svg"],
+/* 1.9 */ .claro .dijitTreeIcon.tinyFeedIcon[src$="images/feed.png"] {
   @include replace-tree-icon("\f09e");
 }
 
 /* icon: archived articles */
-.claro .dijitTreeIcon.feedIcon[src$="images/archive.png"] {
+.claro .dijitTreeIcon.tinyFeedIcon[src$="images/archive.png"] {
   @include replace-tree-icon("\f01c");
 }
 
 /* icon: recently read articles */
-/* 1.8 */ .claro .dijitTreeIcon.feedIcon[src$="images/recently_read.png"],
-/* 1.9 */ .claro .dijitTreeIcon.feedIcon[src$="images/time.png"] {
+/* 1.8 */ .claro .dijitTreeIcon.tinyFeedIcon[src$="images/recently_read.png"],
+/* 1.9 */ .claro .dijitTreeIcon.tinyFeedIcon[src$="images/time.png"] {
   @include replace-tree-icon("\f017");
 }
 
