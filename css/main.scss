@@ -42,8 +42,8 @@ body { background: $clr-bg-passive; }
 
 /* scrollbars */
 ::-webkit-scrollbar { width: 12px; }
-::-webkit-scrollbar-track { background-color: #EEE; margin: 1px 0 2px 0; }
-::-webkit-scrollbar-thumb { background-color: #fff; }
+::-webkit-scrollbar-track { background-color: #fff; margin: 1px 0 2px 0; }
+::-webkit-scrollbar-thumb { background-color: #eee; }
 
 /* remove claro transitions */
 .claro .dijitSelect, .claro .dijitSelect .dijitButtonContents, .claro .dijitTextBox, .claro .dijitTextBox .dijitButtonNode {
