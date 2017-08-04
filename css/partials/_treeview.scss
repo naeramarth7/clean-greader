@@ -43,7 +43,7 @@
   padding: 4px $content-padding * 2;
 
   //     wrapper-width     gap-size         border      padding
-  width: $card-nav-width - $card-gap-size - (2 * 1px) - (2 * $content-padding * 2) !important;
+  min-width: $card-nav-width - $card-gap-size - (2 * 1px) - (2 * $content-padding * 2) !important;
 
   border-width: 0;
 
