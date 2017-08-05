@@ -40,10 +40,12 @@
 
 /* tree row */
 .claro .dijitTreeRow {
-  padding: 4px $content-padding * 2;
 
-  //     wrapper-width     gap-size         border      padding
-  width: $card-nav-width - $card-gap-size - (2 * 1px) - (2 * $content-padding * 2) !important;
+  // Overwrite inline styles
+  padding: 4px $content-padding * 2 !important;
+
+  //         wrapper-width     gap-size         border      padding
+  min-width: $card-nav-width - $card-gap-size - (2 * 1px) - (2 * $content-padding * 2) !important;
 
   border-width: 0;
 
@@ -57,7 +59,7 @@
     border-width: 0;
 
     /* system icon (hover) */
-    .dijitTreeIcon.feedIcon:not([src^="feed-icons"]),
+    .dijitTreeIcon .tinyFeedIcon:not([src^="feed-icons"]),
     .dijitFolderClosed,
     .dijitFolderOpened,
     .dijitTreeExpandoClosed,
@@ -147,7 +149,7 @@
   .dijitTreeLabel.Unread { font-weight: bold; }
 
   /* tree row - system icon formating */
-  .dijitTreeIcon.feedIcon:not([src^="feed-icons"]),
+  .dijitTreeIcon .tinyFeedIcon:not([src^="feed-icons"]),
   .dijitFolderClosed,
   .dijitFolderOpened,
   .dijitTreeExpandoClosed,
