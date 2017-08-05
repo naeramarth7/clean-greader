@@ -87,23 +87,12 @@
   }
 }
 
-@mixin replace-tree-icon($icon) {
-  display: none;
-
-  + span:before {
-    text-align: center;
-    width: 16px;
-    font-size: 14px;
-    @include awesome-icon($icon);
-    padding-right: 8px;
-    color: $clr-fnt-main-second;
-    @include trnstn-all-fast;
-  }
-
-  + span:hover:before {
-    color: $clr-fnt-main;
-    @include trnstn-all-fast;
-  }
+@mixin replace-tree-icon($dataUrl) {
+  display: block;
+  background-image: url($dataUrl);
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: center;
 }
 
 /* keyframes mixin */
